@@ -148,13 +148,11 @@ export default {
 
 .menu .brand {
   padding: 41px 24px 24px;
-  background: rgba(63, 81, 181, 0.5);
   transition: 0.2s ease-in-out;
 }
 
 .menuHide .brand {
   padding: 8px 4px;
-  background: #fff;
 }
 
 .menu .avatar {
@@ -223,7 +221,6 @@ export default {
 
   .menuHide .brand {
     padding: 41px 24px 24px;
-    background: rgba(63, 81, 181, 0.5);
   }
 
   .menuHide .iconfont {
