@@ -7,7 +7,7 @@ set -e
 npm run build
 
 # 进入生成的文件夹
-cd ./docs/dist
+cd ./dist
 
 git add -A
 git commit -m "$1"

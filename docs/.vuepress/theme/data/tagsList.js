@@ -4,7 +4,7 @@ export default {
       "name": "http"
     },
     {
-      "lastUpdated": "2019-05-16 17:47:00",
+      "lastUpdated": "2019-05-16 17:54:41",
       "tags": [
         "http",
         "缓存"
@@ -19,7 +19,7 @@ export default {
       "name": "缓存"
     },
     {
-      "lastUpdated": "2019-05-16 17:47:00",
+      "lastUpdated": "2019-05-16 17:54:41",
       "tags": [
         "http",
         "缓存"
