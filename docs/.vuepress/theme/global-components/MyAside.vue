@@ -7,7 +7,7 @@
     <el-menu
       @select="select"
       :default-active="$route.path.slice(0, 7)"
-      active-text-color="#3f51b5"
+      active-text-color="#43b168"
       class="menu-wrap"
     >
       <li>
@@ -40,14 +40,14 @@
         >{{$themeConfig.menus.home || '主页'}}</span>
       </el-menu-item>
       <el-menu-item index="/tags/">
-        <i class="iconfont icon-biaoqian"></i>
+        <i class="iconfont icon-tags"></i>
         <span
           class="item-title"
           slot="title"
         >{{$themeConfig.menus.tags || '标签分类'}}</span>
       </el-menu-item>
       <el-menu-item index="/all/">
-        <i class="iconfont icon-wenzhang"></i>
+        <i class="iconfont icon-archive"></i>
         <span
           class="item-title"
           slot="title"
@@ -64,7 +64,7 @@
         >{{$themeConfig.menus.github || 'GitHub'}}</span>
       </el-menu-item>
       <el-menu-item index="/about/">
-        <i class="iconfont icon-aboutme"></i>
+        <i class="iconfont icon-My"></i>
         <span
           class="item-title"
           slot="title"
@@ -99,14 +99,14 @@ export default {
 }
 
 .el-menu-item.is-active {
-  background-color: #ECEEF8;
+  background-color: #eefaf2;
 }
 
 .el-menu-item:hover {
-  color: #3f51b5;
+  color: #50C878;
 
   i {
-    color: #3f51b5;
+    color: #50C878;
   }
 }
 

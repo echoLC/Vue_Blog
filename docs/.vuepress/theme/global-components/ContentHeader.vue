@@ -74,14 +74,14 @@
     margin-left: -249px;
     width: 100%;
     color: #fff;
-    background: #3f51b5;
+    background: #50C878;
     text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
   }
 
   .content-header .subtitle {
     padding-top: 11px;
-    font-weight: 300;
-    color: #c5cae9;
+    font-weight: 400;
+    color: #fff;
     font-size: 18px;
     line-height: 24px;
   }

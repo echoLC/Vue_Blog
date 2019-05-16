@@ -114,11 +114,11 @@ export default {
       return this.$themeConfig.searchReply || "什么都没搜到，试一下其它搜索词~";
     },
     iconName () {
-      if (typeof window === "undefined") return "icon-caidan";
+      if (typeof window === "undefined") return "icon-menu";
       if (window.innerWidth <= 1190) {
-        return this.showIcon ? "icon-guanbi" : "icon-caidan";
+        return this.showIcon ? "icon-close" : "icon-menu";
       }
-      return this.showIcon ? "icon-caidan" : "icon-guanbi";
+      return this.showIcon ? "icon-menu" : "icon-close";
     }
   },
   methods: {
@@ -236,7 +236,7 @@ export default {
   width: 100%;
   color: #fff;
   height: 56px;
-  background: #3f51b5;
+  background: #50C878;
   padding-left: 260px;
   transition: padding-left 0.2s ease-in-out, background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.15s linear;
   z-index: 30;

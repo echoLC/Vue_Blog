@@ -6,7 +6,7 @@
       circle
       class="toc-btn"
     >
-      <i class="iconfont icon-service-directory"></i>
+      <i class="iconfont icon-top02"></i>
     </el-button>
     <el-button
       @click="GoTop"
