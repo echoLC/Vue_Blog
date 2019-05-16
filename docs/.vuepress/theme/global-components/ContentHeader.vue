@@ -70,18 +70,17 @@
 </script>
 <style lang="scss" scoped>
   .content-header {
-    padding: 49px 16px 45px 354px;
+    padding: 16px 16px 45px 354px;
     margin-left: -249px;
     width: 100%;
-    color: #fff;
-    background: #50C878;
+    color: #333;
     text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
   }
 
   .content-header .subtitle {
     padding-top: 11px;
     font-weight: 400;
-    color: #fff;
+    color: #666;
     font-size: 18px;
     line-height: 24px;
   }

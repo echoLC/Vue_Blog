@@ -14,22 +14,6 @@
         <p class="ellipsis">
         </p>
       </el-col>
-      <el-col
-        :span="24"
-        class="footer-bottom"
-      >
-        <p class="ellipsis">
-          <span v-if="content.length !== 0">
-            <span>
-              {{($site.title || "")
-              + ' © '
-              +content[content.length - 1].lastUpdated.slice(0, 7)
-              +" ~ "
-              +content[0].lastUpdated.slice(0, 7)}}
-            </span>
-          </span>
-        </p>
-      </el-col>
     </el-row>
   </el-footer>
 </template>
@@ -51,12 +35,10 @@ export default {
 <style lang="stylus" scoped>
 .el-footer {
   padding: 0;
-  margin-top: -113px;
 }
 
 .container-footer {
   overflow: hidden;
-  height: 113px !important;
   text-align: center;
   width: 100%;
   line-height: 1.6;

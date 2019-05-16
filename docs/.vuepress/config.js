@@ -53,9 +53,8 @@ module.exports = {
     },
     menus: {
       //侧边栏的文字
-      tags: '标签分类',
       home: '主页',
-      all: '时间归档',
+      all: '归档',
       github: 'Github',
       about: '自我介绍'
     }

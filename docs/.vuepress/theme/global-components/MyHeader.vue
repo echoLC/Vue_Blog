@@ -19,17 +19,11 @@
           align="middle"
         >
           <el-col :span="2">
-            <el-button
-              @click="clickMenu"
-              type="primary"
-              circle
-              key="menusBtn"
-            >
+            <div @click="clickMenu" class="menu-btn">
               <i
-                class="iconfont"
-                :class="[iconName]"
+                class="iconfont icon-menu"
               ></i>
-            </el-button>
+            </div>
           </el-col>
         </el-row>
       </el-col>
@@ -112,13 +106,6 @@ export default {
     },
     searchReply () {
       return this.$themeConfig.searchReply || "什么都没搜到，试一下其它搜索词~";
-    },
-    iconName () {
-      if (typeof window === "undefined") return "icon-menu";
-      if (window.innerWidth <= 1190) {
-        return this.showIcon ? "icon-close" : "icon-menu";
-      }
-      return this.showIcon ? "icon-menu" : "icon-close";
     }
   },
   methods: {
@@ -250,6 +237,10 @@ export default {
 
 .icon-caidan, .icon-guanbi {
   font-size: 24px;
+}
+
+.menu-btn {
+  cursor: pointer;
 }
 
 .search-ico {
