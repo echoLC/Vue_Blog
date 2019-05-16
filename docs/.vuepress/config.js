@@ -28,8 +28,8 @@ module.exports = {
     author: 'echoLC', //侧边栏的设置
     email: '651644100@qq.com',
     pagination: '5', //每一页显示的文章个数
-    avatar: '/avatar.jpg', //头像地址
-    brand: '/brand.jpg', //头像背景图片地址
+    avatar: '/avatar.jpeg', //头像地址
+    brand: '/avatar_bg.jpeg', //头像背景图片地址
     github: 'https://github.com/echoLC', //点击github跳转的地址
     vssue: {
       //评论的配置,
