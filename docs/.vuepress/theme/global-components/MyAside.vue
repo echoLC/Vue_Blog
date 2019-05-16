@@ -39,6 +39,13 @@
           slot="title"
         >{{$themeConfig.menus.home || '主页'}}</span>
       </el-menu-item>
+      <el-menu-item index="/tags/">
+        <i class="iconfont icon-tags"></i>
+        <span
+          class="item-title"
+          slot="title"
+        >{{$themeConfig.menus.tags || '标签分类'}}</span>
+      </el-menu-item>
       <el-menu-item index="/archieve/">
         <i class="iconfont icon-archive"></i>
         <span
