@@ -29,7 +29,7 @@
             t = this.$page.title;
             this.isPosts = true;
             this.description = this.$page.lastUpdated
-              ? "最后更新时间：" + this.$page.lastUpdated
+              ? this.$page.lastUpdated
               : "";
             break;
           case "all/":

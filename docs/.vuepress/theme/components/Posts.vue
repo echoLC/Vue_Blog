@@ -331,7 +331,7 @@ export default {
   text-align: right;
 }
 .nav-title {
-  color: #3f51b5;
+  color: #50c878;
 }
 
 .el-col-6 {
@@ -399,7 +399,7 @@ export default {
   height: 100%;
 }
 .toc-li.active > .toc-link:after {
-  border-left: 3px solid #3f51b5;
+  border-left: 3px solid #50c878;
   left: 3px;
 }
 .toc-li.active > .toc-link:before {
@@ -425,7 +425,7 @@ export default {
     }
 
     .active a {
-      color: #3f51b5;
+      color: #50c878;
     }
   }
 }
