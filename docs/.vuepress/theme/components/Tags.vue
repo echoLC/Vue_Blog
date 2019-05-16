@@ -113,7 +113,7 @@ export default {
   margin: 10px 10px 0;
 }
 .post-title-link {
-  color: #3f51b5;
+  color: #333;
   font-size: 19px;
   padding: 0 10px 10px;
   display: flex;

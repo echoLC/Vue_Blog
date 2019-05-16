@@ -54,7 +54,7 @@ module.exports = {
     menus: {
       //侧边栏的文字
       home: '主页',
-      all: '归档',
+      archive: '归档',
       github: 'Github',
       about: '自我介绍'
     }

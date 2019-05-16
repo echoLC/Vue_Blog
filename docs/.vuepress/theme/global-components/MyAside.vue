@@ -39,12 +39,12 @@
           slot="title"
         >{{$themeConfig.menus.home || '主页'}}</span>
       </el-menu-item>
-      <el-menu-item index="/all/">
+      <el-menu-item index="/archieve/">
         <i class="iconfont icon-archive"></i>
         <span
           class="item-title"
           slot="title"
-        >{{$themeConfig.menus.all || '时间归档'}}</span>
+        >{{$themeConfig.menus.archive || '归档'}}</span>
       </el-menu-item>
       <el-menu-item
         index="/github/"
