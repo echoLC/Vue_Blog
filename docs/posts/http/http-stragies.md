@@ -13,17 +13,17 @@ categories: [http]
     >>两者的共同点都是从客户端缓存中读取资源；不同点就是强缓存不会发请求，协商缓存会发送请求。
 
 ### 缓存有关的header
-####强缓存
+#### 强缓存
 **Expires**：response header里的过期时间，浏览器再次加载资源时，如果在这个时间内，则会使用强缓存；
 
 **Cache-Control**：当值设为max-age = 300时，则代表在这个请求正确返回时间的5分钟内再次加载资源，就会启用强缓存。这个参数的设置和Expires作用是差不多的，只不过Expire是http1.0就有的，Cache-Control是http1.1才有的，Cache-Control的优先级高。**现在配置Expires是为了兼容不能支持http1.1的环境**。
 
-####协商缓存
+#### 协商缓存
 **Etag和If-None-Match**：Etag是上一次加载资源时，服务器返回的对该资源的唯一标识，只要资源有变化，Etag就会重新生成。浏览器在下一次加载资源向服务器发送请求时，会将上一次返回的Etag值放到request header里的If-None-Match里，服务器接受到If-None-Match的值后，会拿来跟该资源文件的Etag值做比较，如果相同，则表示资源文件没有发生改变，命中协商缓存。
 
 **Last-Modified和If-Since-Modified**：Last-Modified是该资源文件最后一次更改时间，服务器会在response header里返回，同时浏览器会将这个值保存起来，在下一次发送请求时，放到request header里的If-Modified-Since里，服务器在接收到后也会做比对，如果相同则命中协商缓存。
->>ETag和Last-Modified的作用和用法差不多。对比下他们的不同。
-     1.首先在精度上，ETag要优于Last-Modified。Last-Modifed的时间单位是秒，如果某个文件在1秒内修改了很多次，那么他们的Last-Modified其实没有体现出来修改，但是ETag每次都会改变确保了精度，如果是负载均衡的服务器，各个服务器生成的Last-Modified也可能不一致。
+> ETag和Last-Modified的作用和用法差不多。对比下他们的不同。
+   1.首先在精度上，ETag要优于Last-Modified。Last-Modifed的时间单位是秒，如果某个文件在1秒内修改了很多次，那么他们的Last-Modified其实没有体现出来修改，但是ETag每次都会改变确保了精度，如果是负载均衡的服务器，各个服务器生成的Last-Modified也可能不一致。
    2.其次在性能上，ETag要逊于Last-Mdified，毕竟Last-Modified只需要记录时间，而Etag需要通过算法计算出来一个hash值。
    3.最后在优先级上，服务器经验优先考虑ETag。
 
