@@ -1,8 +1,8 @@
 module.exports = {
   base: '/', //部署站点的基础路径，如果你想让你的网站部署到一个子路径下，你将需要设置它。如 Github pages，如果你想将你的网站部署到 https://foo.github.io/bar/，那么 base 应该被设置成 "/bar/"，它的值应当总是以斜杠开始，并以斜杠结束。
   dest: './dist',
-  title: 'zhhlwd',
-  description: '三人行，必有我师焉，择其善者而从之，其不善者而改之。', //网站的描述，它将会以 <meta> 标签渲染到当前页面的 HTML 中,还显示在首页的文章列表上面
+  title: 'echoLC',
+  description: '天才就是百分之一的灵感加上百分之九十九的汗水。', //网站的描述，它将会以 <meta> 标签渲染到当前页面的 HTML 中,还显示在首页的文章列表上面
   head: [
     [
       'link',
@@ -12,12 +12,11 @@ module.exports = {
       }
     ]
   ],
-  theme: 'indigo-material',
   locales: {
     '/': {
       lang: 'zh-CN',
-      title: 'zhhlwd',
-      description: '三人行，必有我师焉，择其善者而从之，其不善者而改之。'
+      title: 'echoLC',
+      description: '天才就是百分之一的灵感加上百分之九十九的汗水。。'
     }
   },
   markdown: {
@@ -26,12 +25,12 @@ module.exports = {
   themeConfig: {
     placeholder: '搜搜看', //搜索框的默认文章
     searchReply: '什么都没搜到，试一下其它搜索词~',
-    author: 'zhhlwd', //侧边栏的设置
-    email: '1962421071@qq.com',
+    author: 'echoLC', //侧边栏的设置
+    email: '651644100@qq.com',
     pagination: '5', //每一页显示的文章个数
     avatar: '/avatar.jpg', //头像地址
     brand: '/brand.jpg', //头像背景图片地址
-    github: 'https://github.com/zhhlwd', //点击github跳转的地址
+    github: 'https://github.com/echoLC', //点击github跳转的地址
     vssue: {
       //评论的配置,
       need: false, //是否需要评论

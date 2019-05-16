@@ -8073,15 +8073,6 @@ vuepress-plugin-container@^2.0.0:
   dependencies:
     markdown-it-container "^2.0.0"
 
-vuepress-theme-indigo-material@^1.0.11:
-  version "1.0.11"
-  resolved "https://registry.npm.taobao.org/vuepress-theme-indigo-material/download/vuepress-theme-indigo-material-1.0.11.tgz#bda95c4ceef4c9c8286791f0d8a0d48dc65e2193"
-  integrity sha1-valcTO70ycgoZ5Hw2KDUjcZeIZM=
-  dependencies:
-    "@vssue/api-github-v3" "0.7.5"
-    element-ui "2.5.4"
-    vssue "0.9.1"
-
 vuepress@1.0.0-alpha.47:
   version "1.0.0-alpha.47"
   resolved "https://registry.npm.taobao.org/vuepress/download/vuepress-1.0.0-alpha.47.tgz#b6f06a5569aaf0b4016f9eb1da5fd4e01f295d45"
