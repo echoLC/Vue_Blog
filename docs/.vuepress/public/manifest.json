@@ -1,0 +1,25 @@
+{
+  "name": "echoLC-blog",
+  "short_name": "echoLC-lite",
+  "icons": [
+    {
+      "src": "./icons/48.jpeg",
+      "sizes": "48x48",
+      "type": "image/png"
+    },
+    {
+      "src": "./icons/96.jpeg",
+      "sizes": "96x96",
+      "type": "image/png"
+    },
+    {
+      "src": "./icons/144.jpeg",
+      "sizes": "144x144",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#fff",
+  "theme_color": "#50C878"
+}

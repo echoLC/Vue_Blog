@@ -4,7 +4,7 @@ export default {
       "name": "css"
     },
     {
-      "lastUpdated": "2019-05-16 18:28:56",
+      "lastUpdated": "2019-05-16 18:30:04",
       "tags": [
         "css"
       ],

@@ -1,5 +1,5 @@
 <template>
-  <div style="height:100%">
+  <div style="height:100%" @sw-ready="swReady">
     <el-container class="main-container">
       <my-aside :isHide="isHide"></my-aside>
       <el-container class="container-warp">
@@ -54,6 +54,9 @@ export default {
     close () {
       this.needOverlay = !this.needOverlay;
       this.isHide = !this.isHide;
+    },
+    swReady () {
+      console.log('sw ready')
     }
   }
 };

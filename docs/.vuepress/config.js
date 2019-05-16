@@ -19,6 +19,7 @@ module.exports = {
       description: '天才就是百分之一的灵感加上百分之九十九的汗水。。'
     }
   },
+  serviceWorker: true,
   markdown: {
     lineNumbers: true //是否开启文章代码左边的行号显示
   },
