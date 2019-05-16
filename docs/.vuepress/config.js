@@ -9,7 +9,9 @@ module.exports = {
       {
         rel: 'shortcut icon',
         href: '/favicon.ico'
-      },
+      }
+    ],
+    [
       'link',
       {
         rel: 'manifest',
