@@ -23,7 +23,7 @@
         id="post-toc"
         :class="{'open-toc': hasToc}"
       >
-        <h4 class="catalog-title">TOC</h4>
+        <h4 class="catalog-title">目录</h4>
         <div class="catalog-body">
           <ul
             id="catalog-list"
@@ -33,13 +33,13 @@
               v-for="(item,index) in catalogList"
               :key="index"
               class="toc-li"
-              :class="{active:currentIndex === index}"
+              :class="{ active:currentIndex === index }"
             >
               <a
                 class="toc-link ellipsis"
                 :href="'#' + item"
                 :style="{marginLeft: offsetList[index] * 12 + 'px'}"
-              >{{'H' + (offsetList[index] + 1) + ' . ' + item}}</a>
+              >{{ formatDirName(index, item) }}</a>
             </li>
           </ul>
         </div>
@@ -85,7 +85,22 @@
   </div>
 </template>
 <script>
-import TocBtn from "imComponents/TocBtn";
+import TocBtn from 'imComponents/TocBtn'
+
+function throttle (fn, wait, maxTimelong) {
+  var timeout = null,
+    startTime = Date.parse(new Date())
+  return function () {
+    if (timeout !== null) clearTimeout(timeout);
+    var curTime = Date.parse(new Date());
+    if (curTime - startTime >= maxTimelong) {
+      fn.call(this);
+      startTime = curTime;
+    } else {
+      timeout = setTimeout(fn.bind(this), wait);
+    }
+  }
+}
 export default {
   name: "Posts",
   components: {
@@ -122,21 +137,6 @@ export default {
     }, 20);
   },
   methods: {
-    throttle (fn, wait, maxTimelong) {
-      var timeout = null,
-        startTime = Date.parse(new Date());
-
-      return function () {
-        if (timeout !== null) clearTimeout(timeout);
-        var curTime = Date.parse(new Date());
-        if (curTime - startTime >= maxTimelong) {
-          fn();
-          startTime = curTime;
-        } else {
-          timeout = setTimeout(fn, wait);
-        }
-      };
-    },
     changeToc () {
       this.hasToc = !this.hasToc;
     },
@@ -144,7 +144,6 @@ export default {
       this.catalogList.splice(0, this.catalogList.length);
       this.offsetList.splice(0, this.offsetList.length);
       this.allH.splice(0, this.allH.length);
-      if (typeof window === "undefined") return;
       if (!document.querySelector(".content,default")) {
         return;
       }
@@ -209,7 +208,6 @@ export default {
       }
     },
     getScrollTop () {
-      if (typeof window === "undefined") return;
       var scrollPos;
       if (window.pageYOffset) {
         scrollPos = window.pageYOffset;
@@ -220,46 +218,56 @@ export default {
       }
       return scrollPos;
     },
+    handleTocActive: throttle(function (e) {
+      this.curIndex = undefined
+      this.subIndex = undefined
+      if (this.$route.path.slice(0, 7) !== "/posts/") return;
+      let h = this.getScrollTop();
+      const postCard = document.getElementById("post-card");
+      for (let i = 0, len = this.allH.length; i < len; i++) {
+        if (i + 1 === this.allH.length || h < this.allH[i]) {
+          return (this.currentIndex = i);
+        }
+        if (h >= this.allH[i] && h < this.allH[i + 1]) {
+          return (this.currentIndex = i);
+        }
+      }
+    }, 60, 110),
+
+    handleTocPositionStyle () {
+      if (this.$route.path.slice(0, 7) !== "/posts/") return;
+      const toc = document.getElementById("post-toc");
+      let h = this.getScrollTop();
+      if (h >= 240) {
+        toc.classList.add("fixed");
+      } else {
+        toc.classList.remove("fixed");
+      }
+      const navH = document.getElementById("footerPost").offsetTop;
+      if (h >= navH - 20) {
+        toc.classList.remove("fixed");
+      }
+      if (h < navH && h >= navH - 500) {
+        toc.classList.add("fixed");
+      }
+    },
     changeIndex () {
-      if (typeof window === "undefined") return;
-      const _this = this;
-      window.addEventListener(
-        "scroll",
-        _this.throttle(
-          function (e) {
-            if (_this.$route.path.slice(0, 7) !== "/posts/") return;
-            let h = _this.getScrollTop();
-            const postCard = document.getElementById("post-card");
-            for (let i = 0, len = _this.allH.length; i < len; i++) {
-              if (i + 1 === _this.allH.length || h < _this.allH[i]) {
-                return (_this.currentIndex = i);
-              }
-              if (h >= _this.allH[i] && h < _this.allH[i + 1]) {
-                return (_this.currentIndex = i);
-              }
-            }
-          },
-          60,
-          110
-        )
-      );
-      window.addEventListener("scroll", function () {
-        if (_this.$route.path.slice(0, 7) !== "/posts/") return;
-        const toc = document.getElementById("post-toc");
-        let h = _this.getScrollTop();
-        if (h >= 240) {
-          toc.classList.add("fixed");
-        } else {
-          toc.classList.remove("fixed");
-        }
-        const navH = document.getElementById("footerPost").offsetTop;
-        if (h >= navH - 20) {
-          toc.classList.remove("fixed");
-        }
-        if (h < navH && h >= navH - 500) {
-          toc.classList.add("fixed");
-        }
-      });
+      window.addEventListener('scroll', this.handleTocActive, false)
+      window.addEventListener('scroll', this.handleTocPositionStyle, false)
+    },
+    formatDirName (index, item) {
+      let dirName
+      this.curIndex = this.curIndex || index
+      this.subIndex = this.subIndex || 0
+      if(this.offsetList[index] === 0) {
+        dirName = `${this.curIndex + 1}.${item}`
+        this.curIndex += 1
+        this.subIndex = undefined
+      } else {
+        this.subIndex += 1
+        dirName = `${this.curIndex}.${this.subIndex}.${item}`
+      }
+      return dirName
     }
   },
   watch: {
@@ -273,6 +281,16 @@ export default {
       }
     },
     deep: true
+  },
+  destroyed () {
+    window.removeEventListener('scroll', this.handleTocPositionStyle, false)
+  },
+  deactivated () {
+    window.removeEventListener('scroll', this.handleTocPositionStyle, false)
+  },
+  activated () {
+    this.curIndex = undefined
+    this.subIndex = undefined
   }
 };
 </script>
@@ -325,8 +343,9 @@ export default {
   width: 22%;
 }
 .catalog-title {
-  margin-bottom: -10px;
-  text-align: center;
+  font-size: 18px;
+  margin-bottom: 10px;
+  padding-left: 32px;
   transition: all 0.2s ease-in-out;
 }
 .post-toc {

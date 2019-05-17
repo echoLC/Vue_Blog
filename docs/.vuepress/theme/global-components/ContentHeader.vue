@@ -1,5 +1,5 @@
 <template>
-  <div class="content-header index-header" :class="$route.path === '/about/' ? 'about-header' : ''">
+  <div class="content-header index-header" :class="headerClassName">
     <div class="container fade-scale in">
       <h1 id="conentHeader" class="title" :class="{'post-content-header': isPosts}">{{title}}</h1>
       <h5 class="subtitle">{{description}}</h5>
@@ -24,15 +24,15 @@
     computed: {
       title() {
         let t;
-        switch (this.$route.path) {
-          case "/posts/":
+        switch (this.$route.path.slice(1, 6)) {
+          case "posts":
             t = this.$page.title;
             this.isPosts = true;
             this.description = this.$page.lastUpdated
               ? this.$page.lastUpdated
               : "";
             break;
-          case "/archive/":
+          case "archi":
             t = this.$themeConfig.menus.archieve || "文章归档";
             this.isPosts = false;
             if (this.content.length === 0) {
@@ -48,12 +48,12 @@
                 "篇";
             }, 20);
             break;
-          case "/tags/":
+          case "tags/":
             t = this.$themeConfig.menus.tags || '标签分类';
             this.isPosts = false;
             this.description = "";
             break;
-          case "/about/":
+          case "about":
             t = this.$themeConfig.menus.about || "自我介绍";
             this.isPosts = false;
             this.description = "";
@@ -64,6 +64,11 @@
             this.description = this.$site.description || "期待与你的交流";
         }
         return t;
+      },
+      headerClassName () {
+        const path = this.$route.path.slice(1, 6)
+        const classMap = new Map().set('about', 'about-header') .set('posts', 'post-header')
+        return classMap.get(path)
       }
     }
   };
@@ -78,6 +83,10 @@
     &.about-header {
       margin-left: 0;
       padding-left: 18px;
+    }
+    &.post-header {
+      margin-left: 0;
+      padding-left: 80px;
     }
   }
 
