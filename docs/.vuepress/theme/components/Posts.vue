@@ -53,34 +53,21 @@
       <el-col
         :span="7"
         class="post-prev"
-      >
-        <div v-if="!isNaN(prevPost)">
-          <router-link :to="content[prevPost].path || '/'">
-            <i class="el-icon-arrow-left"></i> Prev
-          </router-link>
-          <router-link
-            tag="p"
-            :to="content[prevPost].path || '/'"
-            class="nav-title"
-          >{{content[prevPost].title}}</router-link>
-        </div>
+        v-if="!isNaN(prevPost)">
+        <router-link :to="content[prevPost].path || '/'">
+          <i class="el-icon-arrow-left"></i>
+          <span>上一篇&nbsp;&nbsp;{{ content[prevPost].title }}</span>
+        </router-link>
       </el-col>
       <el-col
         class="post-next"
         :lg="{pull: 5}"
         :span="7"
-      >
-        <div v-if="!isNaN(nextPost)">
-          <router-link :to="content[nextPost].path || '/'">
-            Next
-            <i class="el-icon-arrow-right"></i>
-          </router-link>
-          <router-link
-            tag="p"
-            :to="content[nextPost].path || '/'"
-            class="nav-title"
-          >{{content[nextPost].title}}</router-link>
-        </div>
+        v-if="!isNaN(nextPost)">
+        <router-link :to="content[nextPost].path || '/'">
+          <span>下一篇&nbsp;&nbsp;{{ content[nextPost].title }}</span>
+          <i class="el-icon-arrow-right"></i>
+        </router-link>
       </el-col>
     </el-row>
     <el-row
@@ -315,13 +302,13 @@ export default {
   flex-direction: column;
   font-size: 18px;
   vertical-align: middle;
+  justify-content: center;
   i {
     vertical-align: bottom;
   }
-  a:hover,
-  p:hover {
-    background-color: #e8e8e8;
-    cursor: pointer;
+  a {
+    display: flex;
+    align-items: center;
   }
 }
 .post-prev {

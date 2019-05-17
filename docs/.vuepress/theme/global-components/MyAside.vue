@@ -6,7 +6,7 @@
   >
     <el-menu
       @select="select"
-      :default-active="$route.path.slice(0, 7)"
+      :default-active="$route.path"
       active-text-color="#43b168"
       class="menu-wrap"
     >
@@ -46,7 +46,7 @@
           slot="title"
         >{{$themeConfig.menus.tags || '标签分类'}}</span>
       </el-menu-item>
-      <el-menu-item index="/archieve/">
+      <el-menu-item index="/archive/">
         <i class="iconfont icon-archive"></i>
         <span
           class="item-title"

@@ -127,7 +127,6 @@ export default {
   padding: 20px;
   background: #fff;
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
   align-content: center;
   border-radius: 4px;

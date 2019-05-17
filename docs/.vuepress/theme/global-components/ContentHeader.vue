@@ -24,16 +24,16 @@
     computed: {
       title() {
         let t;
-        switch (this.$route.path.slice(1, 6)) {
-          case "posts":
+        switch (this.$route.path) {
+          case "/posts/":
             t = this.$page.title;
             this.isPosts = true;
             this.description = this.$page.lastUpdated
               ? this.$page.lastUpdated
               : "";
             break;
-          case "all/":
-            t = this.$themeConfig.menus.all || "时间归档";
+          case "/archive/":
+            t = this.$themeConfig.menus.archieve || "文章归档";
             this.isPosts = false;
             if (this.content.length === 0) {
               return (this.description = "");
@@ -48,12 +48,12 @@
                 "篇";
             }, 20);
             break;
-          case "tags/":
-            t = "";
+          case "/tags/":
+            t = this.$themeConfig.menus.tags || '标签分类';
             this.isPosts = false;
             this.description = "";
             break;
-          case "about":
+          case "/about/":
             t = this.$themeConfig.menus.about || "自我介绍";
             this.isPosts = false;
             this.description = "";
