@@ -1,5 +1,5 @@
 <template>
-  <div class="content-header index-header">
+  <div class="content-header index-header" :class="$route.path === '/about/' ? 'about-header' : ''">
     <div class="container fade-scale in">
       <h1 id="conentHeader" class="title" :class="{'post-content-header': isPosts}">{{title}}</h1>
       <h5 class="subtitle">{{description}}</h5>
@@ -75,6 +75,10 @@
     width: 100%;
     color: #333;
     text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+    &.about-header {
+      margin-left: 0;
+      padding-left: 18px;
+    }
   }
 
   .content-header .subtitle {
