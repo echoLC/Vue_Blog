@@ -35,8 +35,8 @@ export default {
     },
     hasShow () {
       window.addEventListener('scroll', () => {
-        const h = this.getScrollTop()
-        this.show = h > 400 ? true : false
+        const scrollTop = this.getScrollTop()
+        this.show = scrollTop > 400 ? true : false
       })
     },
     goTop () {
