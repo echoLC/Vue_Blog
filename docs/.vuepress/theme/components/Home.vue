@@ -5,23 +5,20 @@
       justify="center"
       align="middle"
       v-for="item in posts"
-      :key="item.id"
-    >
+      :key="item.id">
       <el-col
         :span="20"
         :xs="{span: 23}"
         :sm="{span: 23}"
         :md="{span: 23}"
         :lg="{span: 20}"
-        class="post-card"
-      >
+        class="post-card">
         <el-card class="box-card">
           <div slot="header">
-            <p class="post-title-time">{{item.lastUpdated}}</p>
+            <p class="post-title-time">{{ item.lastUpdated }}</p>
             <router-link
               :to="item.path"
-              class="post-title-link"
-            >{{item.title}}</router-link>
+              class="post-title-link">{{ item.title }}</router-link>
           </div>
           <div v-if="(item.excerpt && item.tags.length)">
             <div v-if="item.excerpt">
@@ -29,15 +26,14 @@
             </div>
             <div
               class="post-footer"
-              v-if="item.tags.length"
-            >
+              v-if="item.tags.length">
               <el-tag
                 @click="toTaglist"
                 v-for="(tag, index) in item.tags"
                 :key="index"
                 size="medium"
                 :hit="true"
-              >{{tag}}</el-tag>
+              >{{ tag }}</el-tag>
             </div>
           </div>
         </el-card>
@@ -48,15 +44,13 @@
       type="flex"
       justify="center"
       align="middle"
-      v-show="content.length"
-    >
+      v-show="content.length">
       <el-col
         :span="16"
         :xs="{span: 24}"
         :sm="{span: 20}"
         :md="{span: 18}"
-        :lg="{span: 16}"
-      >
+        :lg="{span: 16}">
         <el-pagination
           :current-page="currentPage"
           class="pagination"
@@ -65,19 +59,19 @@
           layout="prev, pager, next"
           :page-size="pagination"
           :total="content.length"
-          key="fenyei"
-        ></el-pagination>
+          key="fenyei"></el-pagination>
       </el-col>
     </el-row>
   </div>
 </template>
+
 <script>
 export default {
-  name: "Home",
+  name: 'Home',
   data () {
     return {
       currentPage: 1
-    };
+    }
   },
   props: {
     content: {
@@ -87,25 +81,25 @@ export default {
   },
   computed: {
     pagination () {
-      return +this.$themeConfig.pagination || 5;
+      return +this.$themeConfig.pagination || 5
     },
     posts () {
       return this.content.slice(
         this.pagination * this.currentPage - this.pagination,
         this.pagination * this.currentPage
-      );
+      )
     }
   },
   methods: {
     changePage (index) {
-      this.currentPage = index;
-      window.scrollTo({ top: 0 });
+      this.currentPage = index
+      window.scrollTo({ top: 0 })
     },
     toTaglist (e) {
-      this.$router.push("/tags/" + e.target.innerText);
+      this.$router.push(`/tags/${e.target.innerText}`)
     }
   }
-};
+}
 </script>
 
 <style lang="stylus" scoped>

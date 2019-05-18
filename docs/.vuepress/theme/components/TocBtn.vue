@@ -1,68 +1,67 @@
 <template>
   <span>
     <el-button
-      @click="OpenToc"
+      @click="openToc"
       type="primary"
       circle
-      class="toc-btn"
-    >
+      class="toc-btn">
       <i class="iconfont icon-top02"></i>
     </el-button>
     <el-button
-      @click="GoTop"
-      :class="{show: show}"
+      @click="goTop"
+      :class="{ show: show }"
       type="primary"
       circle
-      class="gotop-btn"
-    >
+      class="gotop-btn">
       <i class="el-icon-arrow-up"></i>
     </el-button>
   </span>
 </template>
+
 <script>
 export default {
-  name: "GoTop",
+  name: 'GoTop',
   data () {
     return {
       show: false
-    };
+    }
   },
   mounted () {
-    this.hasShow();
+    this.hasShow()
   },
   methods: {
-    OpenToc () {
-      this.$emit("toc");
+    openToc () {
+      this.$emit('toc')
     },
     hasShow () {
-      const _this = this;
-      window.addEventListener("scroll", function (e) {
-        let h = _this.getScrollTop();
-        if (h > 400) {
-          _this.show = true;
-        } else {
-          _this.show = false;
-        }
-      });
+      window.addEventListener('scroll', () => {
+        const h = this.getScrollTop()
+        this.show = h > 400 ? true : false
+      })
     },
-    GoTop () {
-      window.scrollTo({ top: 0, behavior: "smooth" });
+    goTop () {
+      let scrollTop = this.getScrollTop()
+      if (scrollTop > 0) {
+        window.requestAnimationFrame(this.goTop)
+        window.scrollTo(0, scrollTop - scrollTop / 8)
+      }
     },
     getScrollTop () {
-      var scrollPos;
-      if (typeof window === "undefined") return;
+      let scrollPos
+      const doc = document
       if (window.pageYOffset) {
-        scrollPos = window.pageYOffset;
-      } else if (document.compatMode && document.compatMode != "BackCompat") {
-        scrollPos = document.documentElement.scrollTop;
-      } else if (document.body) {
-        scrollPos = document.body.scrollTop;
+        scrollPos = window.pageYOffset
+      } else if (doc.compatMode && doc.compatMode !== 'BackCompat') {
+        scrollPos = doc.documentElement.scrollTop
+      } else if (doc.body) {
+        scrollPos = doc.body.scrollTop
       }
-      return scrollPos;
+      return scrollPos
     }
   }
 };
 </script>
+
 <style lang="scss" scoped>
 .gotop-btn,
 .toc-btn {

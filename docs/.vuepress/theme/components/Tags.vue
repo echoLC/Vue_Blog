@@ -3,35 +3,31 @@
     <el-row
       type="flex"
       align="center"
-      justify="center"
-    >
+      justify="center">
       <el-col
         :span="20"
         :xs="{span: 23}"
         :sm="{span: 22}"
         :md="{span: 22}"
         :lg="{span: 20}"
-        class="tag-card"
-      >
+        class="tag-card">
         <el-tag
-          @click="whatTag"
+          @click="setTag"
           v-for="(tag, index) in tagsList"
           :key="index"
           size="medium"
           :hit="true"
-        >{{tag[0].name}}</el-tag>
+        >{{ tag[0].name }}</el-tag>
       </el-col>
     </el-row>
     <div
       v-if="hasTagsList.length"
-      class="tag-warp"
-    >
+      class="tag-warp">
       <el-row
         type="flex"
         align="center"
         justify="center"
-        class="post-list"
-      >
+        class="post-list">
         <el-col
           v-for="(post, index) in hasTagsList"
           :key="index"
@@ -40,28 +36,29 @@
           :sm="{span: 11}"
           :md="{span: 11}"
           :lg="{span: 10}"
-          class="list"
-        >
+          class="list">
           <el-card>
-            <div class="post-title-time ellipsis">{{post.lastUpdated}}</div>
+            <div class="post-title-time ellipsis">{{ post.lastUpdated }}</div>
             <router-link
               :to="post.path"
               class="post-title-link"
-            >{{post.title}}</router-link>
+            >{{ post.title }}</router-link>
           </el-card>
         </el-col>
       </el-row>
     </div>
   </div>
 </template>
+
 <script>
 import tagsList from 'imData/tagsList.js'
+
 export default {
-  name: "Tags",
+  name: 'Tags',
   data () {
     return {
-      tagName: "",
-      tagsList: tagsList
+      tagName: '',
+      tagsList
     };
   },
   props: {
@@ -72,39 +69,35 @@ export default {
   },
   computed: {
     hasTagsList () {
-      if (!this.tagsList[this.tagName]) {
-        return [];
+      const hasTagsList = this.tagsList[this.tagName]
+      if (!hasTagsList) {
+        return []
       }
-      return this.tagsList[this.tagName].slice(1);
+      return hasTagsList.slice(1)
     }
   },
   methods: {
-    whatTag (e) {
-      this.tagName = e.target.innerText;
-      if (typeof window === "undefined") return;
-      document.getElementById("conentHeader").innerText = e.target.innerText;
+    setTag (e) {
+      this.tagName = e.target.innerText
+      this.setContentHeaderInnerText(this.tagName)
     },
     checkRouter () {
-      if (this.$route.params.tag) {
-        this.tagName = this.$route.params.tag;
-        if (typeof window === "undefined") return;
-        document.getElementById(
-          "conentHeader"
-        ).innerText = this.$route.params.tag;
+      const tagName = this.$route.params.tag
+      if (tagName) {
+        this.tagName = tagName
+        this.setContentHeaderInnerText(tagName)
       }
+    },
+    setContentHeaderInnerText (text) {
+      document.getElementById('conentHeader').innerText = text
     }
   },
-  watch: {
-    $route (to, from) {
-      if (to.params.tag) {
-        this.tagName = to.params.tag;
-        if (typeof window === "undefined") return;
-        document.getElementById("conentHeader").innerText = to.params.tag;
-      }
-    }
+  created () {
+    this.checkRouter()
   }
-};
+}
 </script>
+
 <style lang="scss" scoped>
 .post-title-time {
   font-weight: 500;

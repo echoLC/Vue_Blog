@@ -2,32 +2,32 @@
   <el-row
     type="flex"
     justify="center"
-    class="post-content"
-  >
+    class="post-content">
     <el-col
       :xs="{span: 24}"
       :sm="{span: 23}"
       :md="{span: 23}"
       :lg="{span: 23}"
       class="post-card"
-      id="post-card"
-    >
+      id="post-card">
       <Content></Content>
       <span id="footerPost"></span>
     </el-col>
   </el-row>
 </template>
+
 <script>
 export default {
-  name: "About",
+  name: 'About',
   props: {
     content: {
       type: Array,
       default: () => []
     }
   }
-};
+}
 </script>
+
 <style lang="stylus" scoped>
 .post-content {
   margin-top: -34px;

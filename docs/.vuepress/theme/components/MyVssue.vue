@@ -1,16 +1,15 @@
 <template>
   <div v-if="$themeConfig.vssue.need">
-      <Vssue
-        :title="$page.title"
-        :options="options"
-        class="vssue-warp"
-      />
+    <Vssue
+      :title="$page.title"
+      :options="options"
+      class="vssue-warp"/>
   </div>
 </template>
 
 <script>
-import "imStyles/vssue.styl";
 import { VssueComponent } from 'vssue'
+import 'imStyles/vssue.styl'
 import GithubV3 from '@vssue/api-github-v3'
 
 export default {
@@ -25,16 +24,13 @@ export default {
   },
   computed:{
     options(){
-      if (process.env.NODE_ENV === "development") {
-        var name = "development";
-      } else {
-        var name = "production";
-      }
-      return Object.assign({api: GithubV3},this.$themeConfig.vssue[name]);
+      const name = process.env.NODE_ENV === 'development' ? 'development' : 'production'
+      return Object.assign({ api: GithubV3 }, this.$themeConfig.vssue[name])
     }
   }
 }
 </script>
+
 <style lang="stylus">
 .vssue-warp {
   box-shadow: 0 8px 10px -5px rgba(0, 0, 0, 0.2), 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12);
