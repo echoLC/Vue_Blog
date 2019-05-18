@@ -3,8 +3,7 @@
     <el-row
       type="flex"
       justify="center"
-      class="post-content"
-    >
+      class="post-content">
       <el-col
         :span="16"
         :xs="{span: 24}"
@@ -12,8 +11,7 @@
         :md="{span: 23}"
         :lg="{span: 16}"
         class="post-card"
-        id="post-card"
-      >
+        id="post-card">
         <Content></Content>
         <span id="footerPost"></span>
       </el-col>
@@ -21,24 +19,21 @@
         :span="6"
         class="post-toc"
         id="post-toc"
-        :class="{'open-toc': hasToc}"
-      >
+        :class="{ 'open-toc': hasToc }">
         <h4 class="catalog-title">目录</h4>
         <div class="catalog-body">
           <ul
             id="catalog-list"
-            class="catalog-list"
-          >
+            class="catalog-list">
             <li
-              v-for="(item,index) in catalogList"
+              v-for="(item, index) in catalogList"
               :key="index"
               class="toc-li"
-              :class="{ active:currentIndex === index }"
-            >
+              :class="{ active:currentIndex === index }">
               <a
                 class="toc-link ellipsis"
                 :href="'#' + item"
-                :style="{marginLeft: offsetList[index] * 12 + 'px'}"
+                :style="{ marginLeft: offsetList[index] * 12 + 'px' }"
               >{{ formatDirName(index, item) }}</a>
             </li>
           </ul>
@@ -48,8 +43,7 @@
     <el-row
       type="flex"
       justify="space-around"
-      class="post-nav"
-    >
+      class="post-nav">
       <el-col
         :span="7"
         class="post-prev"
@@ -72,40 +66,27 @@
     </el-row>
     <el-row
       type="flex"
-      justify="center"
-    >
+      justify="center">
       <el-col
         :span="23"
-        v-if="$themeConfig.vssue.need && $page.title"
-      >
+        v-if="$themeConfig.vssue.need && $page.title">
         <my-vssue />
       </el-col>
     </el-row>
     <toc-btn @toc="changeToc"></toc-btn>
   </div>
 </template>
+
 <script>
 import TocBtn from 'imComponents/TocBtn'
+import { throttle } from '../utils/throttle'
+import { getScrollTop } from '../utils/dom'
 
-function throttle (fn, wait, maxTimelong) {
-  var timeout = null,
-    startTime = Date.parse(new Date())
-  return function () {
-    if (timeout !== null) clearTimeout(timeout);
-    var curTime = Date.parse(new Date());
-    if (curTime - startTime >= maxTimelong) {
-      fn.call(this);
-      startTime = curTime;
-    } else {
-      timeout = setTimeout(fn.bind(this), wait);
-    }
-  }
-}
 export default {
-  name: "Posts",
+  name: 'Posts',
   components: {
     TocBtn,
-    MyVssue: () => import("imComponents/MyVssue")
+    MyVssue: () => import('imComponents/MyVssue')
   },
   data () {
     return {
@@ -116,7 +97,7 @@ export default {
       currentIndex: 0,
       offsetList: [],
       hasToc: false
-    };
+    }
   },
   props: {
     content: {
@@ -125,130 +106,120 @@ export default {
     }
   },
   created () {
-    this.getPageIndex();
+    this.getPageIndex()
     setTimeout(() => {
-      this.getPageIndex();
-    }, 100);
+      this.getPageIndex()
+    }, 100)
   },
   mounted () {
     setTimeout(() => {
-      this.getH();
-      this.changeIndex();
-    }, 20);
+      this.getH()
+      this.changeIndex()
+    }, 20)
   },
   methods: {
     changeToc () {
-      this.hasToc = !this.hasToc;
+      this.hasToc = !this.hasToc
     },
     getH () {
-      this.catalogList.splice(0, this.catalogList.length);
-      this.offsetList.splice(0, this.offsetList.length);
-      this.allH.splice(0, this.allH.length);
-      if (!document.querySelector(".content,default")) {
-        return;
+      this.catalogList = []
+      this.offsetList = []
+      this.allH = []
+      const contentEl = document.querySelector('.content,default')
+      if (!contentEl) {
+        return
       }
-      let a = [];
-      let allH = document
-        .querySelector(".content,default")
-        .querySelectorAll("h1,h2,h3,h4,h5,h6");
+      const a = []
+      const allH = contentEl.querySelectorAll('h1,h2,h3,h4,h5,h6')
       if (allH.length === 0) {
-        return;
+        return
       }
-      let nodeArr = [].slice.call(allH);
+      const nodeArr = Array.from(allH)
       nodeArr.forEach((val, i) => {
-        this.allH.push(val.offsetTop);
-        this.catalogList.push(val.id);
+        this.allH.push(val.offsetTop)
+        this.catalogList.push(val.id)
         if (i === 0) {
-          a.push(0);
+          a.push(0)
         } else {
-          let hNow = Number(val.tagName.slice(1));
-          let hPrev = Number(nodeArr[i - 1].tagName.slice(1));
+          const hNow = Number(val.tagName.slice(1))
+          const hPrev = Number(nodeArr[i - 1].tagName.slice(1))
+          const aItem = a[i - 1]
           if (hNow > hPrev) {
-            a.push(a[i - 1] + (hNow - hPrev));
+            a.push(aItem + (hNow - hPrev))
           } else if (hNow < hPrev) {
-            a.push(a[i - 1] - (hPrev - hNow));
+            a.push(aItem - (hPrev - hNow))
           } else {
-            a.push(a[i - 1]);
+            a.push(aItem)
           }
         }
       });
-      let min = a.reduce((x, y) => {
-        return x > y ? y : x;
-      });
-      let offset = Math.abs(min);
+      const min = a.reduce((x, y) => {
+        return x > y ? y : x
+      })
+      const offset = Math.abs(min)
       a.forEach(val => {
         if (min < 0) {
-          val += offset;
+          val += offset
         }
         if (min > 0) {
-          val -= offset;
+          val -= offset
         }
-        this.offsetList.push(val);
-      });
+        this.offsetList.push(val)
+      })
     },
     getPageIndex () {
-      if (this.content.length === 0 || this.content.length === 1) {
-        this.nextPost = NaN;
-        this.prevPost = NaN;
-        return;
+      const contentLen = this.content.length
+      if (contentLen === 0 || contentLen === 1) {
+        this.nextPost = NaN
+        this.prevPost = NaN
+        return
       }
-      for (var i = 0, len = this.content.length; i < len; i++) {
+      for (let i = 0, len = contentLen; i < len; i++) {
         if (this.content[i].path === this.$page.path) {
-          if (i + 1 === this.content.length) {
-            this.nextPost = NaN;
-            this.prevPost = i - 1;
+          if (i + 1 === contentLen) {
+            this.nextPost = NaN
+            this.prevPost = i - 1
           } else if (i - 1 < 0) {
-            this.nextPost = i + 1;
-            this.prevPost = NaN;
+            this.nextPost = i + 1
+            this.prevPost = NaN
           } else {
-            this.nextPost = i + 1;
-            this.prevPost = i - 1;
+            this.nextPost = i + 1
+            this.prevPost = i - 1
           }
         }
       }
-    },
-    getScrollTop () {
-      var scrollPos;
-      if (window.pageYOffset) {
-        scrollPos = window.pageYOffset;
-      } else if (document.compatMode && document.compatMode != "BackCompat") {
-        scrollPos = document.documentElement.scrollTop;
-      } else if (document.body) {
-        scrollPos = document.body.scrollTop;
-      }
-      return scrollPos;
     },
     handleTocActive: throttle(function (e) {
       this.curIndex = undefined
       this.subIndex = undefined
-      if (this.$route.path.slice(0, 7) !== "/posts/") return;
-      let h = this.getScrollTop();
-      const postCard = document.getElementById("post-card");
-      for (let i = 0, len = this.allH.length; i < len; i++) {
-        if (i + 1 === this.allH.length || h < this.allH[i]) {
-          return (this.currentIndex = i);
+      if (this.$route.path.slice(0, 7) !== '/posts/') return
+      let h = getScrollTop()
+      const postCard = document.getElementById('post-card')
+      const len = this.allH.length
+      for (let i = 0; i < len; i++) {
+        if (i + 1 === len || h < this.allH[i]) {
+          return (this.currentIndex = i)
         }
         if (h >= this.allH[i] && h < this.allH[i + 1]) {
-          return (this.currentIndex = i);
+          return (this.currentIndex = i)
         }
       }
     }, 60, 110),
-
     handleTocPositionStyle () {
-      if (this.$route.path.slice(0, 7) !== "/posts/") return;
-      const toc = document.getElementById("post-toc");
-      let h = this.getScrollTop();
+      if (!this.isPostsPage()) return
+      const toc = document.getElementById('post-toc')
+      let h = getScrollTop()
       if (h >= 240) {
-        toc.classList.add("fixed");
+        toc.classList.add('fixed')
       } else {
-        toc.classList.remove("fixed");
+        toc.classList.remove('fixed')
       }
-      const navH = document.getElementById("footerPost").offsetTop;
+      const navH = document.getElementById('footerPost').offsetTop
       if (h >= navH - 20) {
-        toc.classList.remove("fixed");
+        toc.classList.remove('fixed')
       }
       if (h < navH && h >= navH - 500) {
-        toc.classList.add("fixed");
+        toc.classList.add('fixed')
       }
     },
     changeIndex () {
@@ -268,16 +239,20 @@ export default {
         dirName = `${this.curIndex}.${this.subIndex}.${item}`
       }
       return dirName
+    },
+    isPostsPage (route) {
+      route = route || this.$route
+      return route.path.slice(0, 7) === '/posts/'
     }
   },
   watch: {
     $route (to, from) {
-      if (to.path.slice(0, 7) === "/posts/") {
-        this.getPageIndex();
+      if (this.isPostsPage(to)) {
+        this.getPageIndex()
         setTimeout(() => {
-          this.getH();
-          this.changeIndex();
-        }, 20);
+          this.getH()
+          this.changeIndex()
+        }, 20)
       }
     },
     deep: true
@@ -292,8 +267,9 @@ export default {
     this.curIndex = undefined
     this.subIndex = undefined
   }
-};
+}
 </script>
+
 <style lang="scss" scoped>
 .post-content {
   position: relative;

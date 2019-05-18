@@ -19,6 +19,8 @@
 </template>
 
 <script>
+import { getScrollTop } from '../utils/dom'
+
 export default {
   name: 'GoTop',
   data () {
@@ -35,31 +37,19 @@ export default {
     },
     hasShow () {
       window.addEventListener('scroll', () => {
-        const scrollTop = this.getScrollTop()
+        const scrollTop = getScrollTop()
         this.show = scrollTop > 400 ? true : false
       })
     },
     goTop () {
-      let scrollTop = this.getScrollTop()
+      let scrollTop = getScrollTop()
       if (scrollTop > 0) {
         window.requestAnimationFrame(this.goTop)
         window.scrollTo(0, scrollTop - scrollTop / 8)
       }
-    },
-    getScrollTop () {
-      let scrollPos
-      const doc = document
-      if (window.pageYOffset) {
-        scrollPos = window.pageYOffset
-      } else if (doc.compatMode && doc.compatMode !== 'BackCompat') {
-        scrollPos = doc.documentElement.scrollTop
-      } else if (doc.body) {
-        scrollPos = doc.body.scrollTop
-      }
-      return scrollPos
     }
   }
-};
+}
 </script>
 
 <style lang="scss" scoped>
