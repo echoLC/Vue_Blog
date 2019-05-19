@@ -10,7 +10,7 @@ categories: [http]
    请求资源时不会向服务器发送请求，直接从缓存中读取资源，在chrome控制台的network中看到请求返回200的状态码，并且status code后面显示from disk cache 或者from memory cache；
 #### 协商缓存
    向服务器发送请求，服务器会根据这个请求的request header一些参数来判断是否符合协商缓存类型，如果符合在返回304状态码并带上新的response header通知浏览器从缓存中读取资源。
-    >>两者的共同点都是从客户端缓存中读取资源；不同点就是强缓存不会发请求，协商缓存会发送请求。
+   >两者的共同点都是从客户端缓存中读取资源；不同点就是强缓存不会发请求，协商缓存会发送请求。
 
 ### 缓存有关的header
 #### 强缓存
@@ -22,10 +22,13 @@ categories: [http]
 **Etag和If-None-Match**：Etag是上一次加载资源时，服务器返回的对该资源的唯一标识，只要资源有变化，Etag就会重新生成。浏览器在下一次加载资源向服务器发送请求时，会将上一次返回的Etag值放到request header里的If-None-Match里，服务器接受到If-None-Match的值后，会拿来跟该资源文件的Etag值做比较，如果相同，则表示资源文件没有发生改变，命中协商缓存。
 
 **Last-Modified和If-Since-Modified**：Last-Modified是该资源文件最后一次更改时间，服务器会在response header里返回，同时浏览器会将这个值保存起来，在下一次发送请求时，放到request header里的If-Modified-Since里，服务器在接收到后也会做比对，如果相同则命中协商缓存。
-> ETag和Last-Modified的作用和用法差不多。对比下他们的不同。
-   1.首先在精度上，ETag要优于Last-Modified。Last-Modifed的时间单位是秒，如果某个文件在1秒内修改了很多次，那么他们的Last-Modified其实没有体现出来修改，但是ETag每次都会改变确保了精度，如果是负载均衡的服务器，各个服务器生成的Last-Modified也可能不一致。
-   2.其次在性能上，ETag要逊于Last-Mdified，毕竟Last-Modified只需要记录时间，而Etag需要通过算法计算出来一个hash值。
-   3.最后在优先级上，服务器经验优先考虑ETag。
+<br>
+<br>
+那LastModified是如何计算缓存是否过期了？前面介绍过强缓存都是通过Expires和Cache-Control中的max-age值来计算缓存失效时间，当浏览器检测到LastModified的头部时，缓存的寿命就等于header里面Date的值减去Last-Modified的值乘以10%。不同浏览器略微有不同，火狐浏览器则是在上面的基础上与一星期的时间取最小值，然后以这个值作为缓存过期时间。
+> ETag和Last-Modified的作用和用法差不多。对比下他们的不同。<br>
+   1.在精度上，ETag要优于Last-Modified。Last-Modifed的时间单位是秒，如果某个文件在1秒内修改了很多次，那么他们的Last-Modified其实没有体现出来修改，但是ETag每次都会改变确保了精度，如果是负载均衡的服务器，各个服务器生成的Last-Modified也可能不一致。<br>
+   2.在性能上，ETag要逊于Last-Mdified，毕竟Last-Modified只需要记录时间，而Etag需要通过算法计算出来一个hash值。<br>
+   3.最后在优先级上，服务器优先考虑ETag。
 
 ### 用户行为对浏览器缓存的控制
 *  地址栏访问，链接跳转是正常用户行为，将会触发浏览器缓存机制；
