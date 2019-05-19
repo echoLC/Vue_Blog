@@ -1,4 +1,34 @@
 export default {
+  "JavaScript": [
+    {
+      "name": "JavaScript"
+    },
+    {
+      "lastUpdated": "2019-05-19 12:41:40",
+      "tags": [
+        "JavaScript",
+        "设计模式"
+      ],
+      "id": 0,
+      "title": "策略模式",
+      "path": "/posts/design-pattern/strategy-pattern.html"
+    }
+  ],
+  "设计模式": [
+    {
+      "name": "设计模式"
+    },
+    {
+      "lastUpdated": "2019-05-19 12:41:40",
+      "tags": [
+        "JavaScript",
+        "设计模式"
+      ],
+      "id": 0,
+      "title": "策略模式",
+      "path": "/posts/design-pattern/strategy-pattern.html"
+    }
+  ],
   "http": [
     {
       "name": "http"
@@ -9,7 +39,7 @@ export default {
         "http",
         "缓存"
       ],
-      "id": 0,
+      "id": 1,
       "title": "浅谈http缓存",
       "path": "/posts/http/http-stragies.html"
     }
@@ -24,7 +54,7 @@ export default {
         "http",
         "缓存"
       ],
-      "id": 0,
+      "id": 1,
       "title": "浅谈http缓存",
       "path": "/posts/http/http-stragies.html"
     }
