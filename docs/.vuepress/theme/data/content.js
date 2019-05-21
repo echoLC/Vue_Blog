@@ -1,11 +1,22 @@
 export default [
   {
-    "excerpt": " 定义 定义一系列算法，把它们一个个封装成策略类，具体的算法封装在策略类的内部方法里，并且使这些策略类可以互相替换。一个基于策略模式的设计至少由两部分组成，第一部分是一组策略类，每个策略类里封装了具体的算法。第二部分是环境类Context，Context主要接受客户的请求，然后把请求委托给某一个策略类。   应用 下面主要通过两个具体的案例来介绍策略类的使用。  使用策略模式计......",
+    "excerpt": " 定义 代理模式是为对象提供一个代用品或者占位符，以便控制对对象的直接访问。当一个对象不想被外界直接访问，就可以使用代理，提供一个替身对象来控制对对象的访问，替身对象对请求进行处理之后，再把请求转交给本体对象。 <br> <center> ![proxy image1](/proxy2.png) <br> 不使用代理模式 </center> <br> <center> ![proxy ima......",
     "tags": [
       "JavaScript",
       "设计模式"
     ],
     "id": 0,
+    "title": "代理模式",
+    "lastUpdated": "2019-05-21 22:29:34",
+    "path": "/posts/design-pattern/proxy-patten.html"
+  },
+  {
+    "excerpt": " 定义 定义一系列算法，把它们一个个封装成策略类，具体的算法封装在策略类的内部方法里，并且使这些策略类可以互相替换。一个基于策略模式的设计至少由两部分组成，第一部分是一组策略类，每个策略类里封装了具体的算法。第二部分是环境类Context，Context主要接受客户的请求，然后把请求委托给某一个策略类。   应用 下面主要通过两个具体的案例来介绍策略类的使用。  使用策略模式计......",
+    "tags": [
+      "JavaScript",
+      "设计模式"
+    ],
+    "id": 1,
     "title": "策略模式",
     "lastUpdated": "2019-05-19 14:15:12",
     "path": "/posts/design-pattern/strategy-pattern.html"
@@ -16,7 +27,7 @@ export default [
       "http",
       "缓存"
     ],
-    "id": 1,
+    "id": 2,
     "title": "浅谈http缓存",
     "lastUpdated": "2019-05-19 10:40:26",
     "path": "/posts/http/http-stragies.html"

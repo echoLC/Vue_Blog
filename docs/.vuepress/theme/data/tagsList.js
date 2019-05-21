@@ -4,12 +4,22 @@ export default {
       "name": "JavaScript"
     },
     {
-      "lastUpdated": "2019-05-19 14:15:12",
+      "lastUpdated": "2019-05-21 22:29:34",
       "tags": [
         "JavaScript",
         "设计模式"
       ],
       "id": 0,
+      "title": "代理模式",
+      "path": "/posts/design-pattern/proxy-patten.html"
+    },
+    {
+      "lastUpdated": "2019-05-19 14:15:12",
+      "tags": [
+        "JavaScript",
+        "设计模式"
+      ],
+      "id": 1,
       "title": "策略模式",
       "path": "/posts/design-pattern/strategy-pattern.html"
     }
@@ -19,12 +29,22 @@ export default {
       "name": "设计模式"
     },
     {
-      "lastUpdated": "2019-05-19 14:15:12",
+      "lastUpdated": "2019-05-21 22:29:34",
       "tags": [
         "JavaScript",
         "设计模式"
       ],
       "id": 0,
+      "title": "代理模式",
+      "path": "/posts/design-pattern/proxy-patten.html"
+    },
+    {
+      "lastUpdated": "2019-05-19 14:15:12",
+      "tags": [
+        "JavaScript",
+        "设计模式"
+      ],
+      "id": 1,
       "title": "策略模式",
       "path": "/posts/design-pattern/strategy-pattern.html"
     }
@@ -39,7 +59,7 @@ export default {
         "http",
         "缓存"
       ],
-      "id": 1,
+      "id": 2,
       "title": "浅谈http缓存",
       "path": "/posts/http/http-stragies.html"
     }
@@ -54,7 +74,7 @@ export default {
         "http",
         "缓存"
       ],
-      "id": 1,
+      "id": 2,
       "title": "浅谈http缓存",
       "path": "/posts/http/http-stragies.html"
     }
