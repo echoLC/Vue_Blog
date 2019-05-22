@@ -20,7 +20,7 @@
               to="/"
               class="avatar waves-effect waves-circle waves-light"
             >
-              <img :src="$withBase($themeConfig.avatar || '')">
+              <img :src="$withBase($themeConfig.avatar || '')" alt="user avatar">
             </router-link>
             <hgroup class="introduce">
               <div class="nickname">{{$themeConfig.author || '欢迎光临'}}</div>
