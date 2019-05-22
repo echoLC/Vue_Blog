@@ -2,14 +2,25 @@ export default [
   [
     "2019-05",
     {
-      "excerpt": " 定义 代理模式是为对象提供一个代用品或者占位符，以便控制对对象的直接访问。当一个对象不想被外界直接访问，就可以使用代理，提供一个替身对象来控制对对象的访问，替身对象对请求进行处理之后，再把请求转交给本体对象。 <br> <center> ![proxy image1](/proxy2.png) <br> 不使用代理模式 </center> <br> <center> ![proxy ima......",
+      "excerpt": " 定义 迭代器模式就是提供一种方法顺序访问一个聚合对象中的各个元素，而又不需要暴露该对象的内部表示。在JavaScript中，例如forEach的实现就是一种迭代器模式，它可以遍历数组。jQuery中的each方法既可以遍历数组也可以遍历对象，它也是迭代器模式的一种实现。   内部迭代器和外部迭代器  内部迭代器 内部迭代器的内部一定定义好了迭代规则，它完全接手整个迭代过程，外......",
       "tags": [
         "JavaScript",
         "设计模式"
       ],
       "id": 0,
+      "title": "迭代器模式",
+      "lastUpdated": "2019-05-22 21:34:26",
+      "path": "/posts/design-pattern/iterator-pattern.html"
+    },
+    {
+      "excerpt": " 定义 代理模式是为对象提供一个代用品或者占位符，以便控制对它的直接访问。当一个对象不想被外界直接访问，就可以使用代理，提供一个替身对象来控制对它的访问，替身对象对请求进行处理之后，再把请求转交给本体对象。 <br> <center> ![proxy image1](/proxy2.png) <br> 不使用代理模式 </center> <br> <center> ![proxy image......",
+      "tags": [
+        "JavaScript",
+        "设计模式"
+      ],
+      "id": 1,
       "title": "代理模式",
-      "lastUpdated": "2019-05-21 22:29:34",
+      "lastUpdated": "2019-05-21 22:42:38",
       "path": "/posts/design-pattern/proxy-patten.html"
     },
     {
@@ -18,7 +29,7 @@ export default [
         "JavaScript",
         "设计模式"
       ],
-      "id": 1,
+      "id": 2,
       "title": "策略模式",
       "lastUpdated": "2019-05-19 14:15:12",
       "path": "/posts/design-pattern/strategy-pattern.html"
@@ -29,7 +40,7 @@ export default [
         "http",
         "缓存"
       ],
-      "id": 2,
+      "id": 3,
       "title": "浅谈http缓存",
       "lastUpdated": "2019-05-19 10:40:26",
       "path": "/posts/http/http-stragies.html"
