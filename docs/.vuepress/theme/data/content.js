@@ -7,7 +7,7 @@ export default [
     ],
     "id": 0,
     "title": "发布-订阅模式",
-    "lastUpdated": "2019-05-23 17:31:15",
+    "lastUpdated": "2019-05-23 17:55:46",
     "path": "/posts/design-pattern/publisher-subscriber-pattern.html"
   },
   {
