@@ -4,7 +4,7 @@ export default {
       "name": "JavaScript"
     },
     {
-      "lastUpdated": "2019-05-24 21:00:36",
+      "lastUpdated": "2019-05-24 21:10:23",
       "tags": [
         "JavaScript",
         "设计模式"
@@ -59,7 +59,7 @@ export default {
       "name": "设计模式"
     },
     {
-      "lastUpdated": "2019-05-24 21:00:36",
+      "lastUpdated": "2019-05-24 21:10:23",
       "tags": [
         "JavaScript",
         "设计模式"
