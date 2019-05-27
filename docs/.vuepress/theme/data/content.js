@@ -1,11 +1,22 @@
 export default [
   {
-    "excerpt": " 定义 模板方法模式是一种只需要使用继承就可以实现的设计模式，它通常由两部分组成，第一部分是抽象父类，第二部分是具体的实现子类。在抽象父类中封装了子类的算法框架，包括一些公共的方法以及子类中所有方法的执行顺序。子类通过继承父类，也继承了整个算法结构，以及重写父类中一些具体的方法。   Coffee和Tea 下面通过咖啡与茶的经典例子来讲解模板方法模式的具体实现。 <br> **先泡一杯......",
+    "excerpt": " 定义 享元模式是一种用于性能优化的模式，享元模式的核心是运用共享对象的技术来有效支持大量细粒度的对象。如果系统因为创建了大量对象而导致内存占用过高，享元模式就能发挥作用了。   一个简单的例子 假设有个制衣工厂，目前的产品有50种男款衣服和50种女款衣服，为了推销产品，工厂决定生产一些塑料模特来穿上他们的衣服拍成广告照片，正常情况下需要50个男模特和50个女模特，用程序表达： ```......",
     "tags": [
       "JavaScript",
       "设计模式"
     ],
     "id": 0,
+    "title": "享元模式",
+    "lastUpdated": "2019-05-27 22:03:53",
+    "path": "/posts/design-pattern/fly-weight-pattern.html"
+  },
+  {
+    "excerpt": " 定义 模板方法模式是一种只需要使用继承就可以实现的设计模式，它通常由两部分组成，第一部分是抽象父类，第二部分是具体的实现子类。在抽象父类中封装了子类的算法框架，包括一些公共的方法以及子类中所有方法的执行顺序。子类通过继承父类，也继承了整个算法结构，以及重写父类中一些具体的方法。   Coffee和Tea 下面通过咖啡与茶的经典例子来讲解模板方法模式的具体实现。 <br> **先泡一杯......",
+    "tags": [
+      "JavaScript",
+      "设计模式"
+    ],
+    "id": 1,
     "title": "模板方法模式",
     "lastUpdated": "2019-05-27 16:23:51",
     "path": "/posts/design-pattern/template-way-pattern.html"
@@ -16,7 +27,7 @@ export default [
       "JavaScript",
       "设计模式"
     ],
-    "id": 1,
+    "id": 2,
     "title": "命令模式",
     "lastUpdated": "2019-05-24 21:10:23",
     "path": "/posts/design-pattern/command-pattern.html"
@@ -27,7 +38,7 @@ export default [
       "JavaScript",
       "设计模式"
     ],
-    "id": 2,
+    "id": 3,
     "title": "发布-订阅模式",
     "lastUpdated": "2019-05-23 17:55:46",
     "path": "/posts/design-pattern/publisher-subscriber-pattern.html"
@@ -38,7 +49,7 @@ export default [
       "JavaScript",
       "设计模式"
     ],
-    "id": 3,
+    "id": 4,
     "title": "迭代器模式",
     "lastUpdated": "2019-05-22 22:37:28",
     "path": "/posts/design-pattern/iterator-pattern.html"
@@ -49,7 +60,7 @@ export default [
       "JavaScript",
       "设计模式"
     ],
-    "id": 4,
+    "id": 5,
     "title": "代理模式",
     "lastUpdated": "2019-05-21 22:42:38",
     "path": "/posts/design-pattern/proxy-patten.html"
@@ -60,7 +71,7 @@ export default [
       "JavaScript",
       "设计模式"
     ],
-    "id": 5,
+    "id": 6,
     "title": "策略模式",
     "lastUpdated": "2019-05-19 14:15:12",
     "path": "/posts/design-pattern/strategy-pattern.html"
@@ -71,7 +82,7 @@ export default [
       "http",
       "缓存"
     ],
-    "id": 6,
+    "id": 7,
     "title": "浅谈http缓存",
     "lastUpdated": "2019-05-19 10:40:26",
     "path": "/posts/http/http-stragies.html"
