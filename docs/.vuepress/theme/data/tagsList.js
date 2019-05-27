@@ -4,12 +4,22 @@ export default {
       "name": "JavaScript"
     },
     {
-      "lastUpdated": "2019-05-24 21:10:23",
+      "lastUpdated": "2019-05-27 16:00:49",
       "tags": [
         "JavaScript",
         "设计模式"
       ],
       "id": 0,
+      "title": "模板方法模式",
+      "path": "/posts/design-pattern/template-way-pattern.html"
+    },
+    {
+      "lastUpdated": "2019-05-24 21:10:23",
+      "tags": [
+        "JavaScript",
+        "设计模式"
+      ],
+      "id": 1,
       "title": "命令模式",
       "path": "/posts/design-pattern/command-pattern.html"
     },
@@ -19,7 +29,7 @@ export default {
         "JavaScript",
         "设计模式"
       ],
-      "id": 1,
+      "id": 2,
       "title": "发布-订阅模式",
       "path": "/posts/design-pattern/publisher-subscriber-pattern.html"
     },
@@ -29,7 +39,7 @@ export default {
         "JavaScript",
         "设计模式"
       ],
-      "id": 2,
+      "id": 3,
       "title": "迭代器模式",
       "path": "/posts/design-pattern/iterator-pattern.html"
     },
@@ -39,7 +49,7 @@ export default {
         "JavaScript",
         "设计模式"
       ],
-      "id": 3,
+      "id": 4,
       "title": "代理模式",
       "path": "/posts/design-pattern/proxy-patten.html"
     },
@@ -49,7 +59,7 @@ export default {
         "JavaScript",
         "设计模式"
       ],
-      "id": 4,
+      "id": 5,
       "title": "策略模式",
       "path": "/posts/design-pattern/strategy-pattern.html"
     }
@@ -59,12 +69,22 @@ export default {
       "name": "设计模式"
     },
     {
-      "lastUpdated": "2019-05-24 21:10:23",
+      "lastUpdated": "2019-05-27 16:00:49",
       "tags": [
         "JavaScript",
         "设计模式"
       ],
       "id": 0,
+      "title": "模板方法模式",
+      "path": "/posts/design-pattern/template-way-pattern.html"
+    },
+    {
+      "lastUpdated": "2019-05-24 21:10:23",
+      "tags": [
+        "JavaScript",
+        "设计模式"
+      ],
+      "id": 1,
       "title": "命令模式",
       "path": "/posts/design-pattern/command-pattern.html"
     },
@@ -74,7 +94,7 @@ export default {
         "JavaScript",
         "设计模式"
       ],
-      "id": 1,
+      "id": 2,
       "title": "发布-订阅模式",
       "path": "/posts/design-pattern/publisher-subscriber-pattern.html"
     },
@@ -84,7 +104,7 @@ export default {
         "JavaScript",
         "设计模式"
       ],
-      "id": 2,
+      "id": 3,
       "title": "迭代器模式",
       "path": "/posts/design-pattern/iterator-pattern.html"
     },
@@ -94,7 +114,7 @@ export default {
         "JavaScript",
         "设计模式"
       ],
-      "id": 3,
+      "id": 4,
       "title": "代理模式",
       "path": "/posts/design-pattern/proxy-patten.html"
     },
@@ -104,7 +124,7 @@ export default {
         "JavaScript",
         "设计模式"
       ],
-      "id": 4,
+      "id": 5,
       "title": "策略模式",
       "path": "/posts/design-pattern/strategy-pattern.html"
     }
@@ -119,7 +139,7 @@ export default {
         "http",
         "缓存"
       ],
-      "id": 5,
+      "id": 6,
       "title": "浅谈http缓存",
       "path": "/posts/http/http-stragies.html"
     }
@@ -134,7 +154,7 @@ export default {
         "http",
         "缓存"
       ],
-      "id": 5,
+      "id": 6,
       "title": "浅谈http缓存",
       "path": "/posts/http/http-stragies.html"
     }
