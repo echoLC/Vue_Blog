@@ -269,7 +269,7 @@ export default {
   .name {
     border-radius: 5px;
     padding: 0 11px;
-    background-color: #3f51b5;
+    background-color: #50C878;
     white-space: nowrap;
     overflow: hidden;
     color: white;
@@ -286,7 +286,7 @@ export default {
   }
 
   .addr-active {
-    background-color: #6973a8;
+    background-color: #50C878;
     border-radius: 3px;
     color: #fff;
     padding: 0 3px 0 2px;
