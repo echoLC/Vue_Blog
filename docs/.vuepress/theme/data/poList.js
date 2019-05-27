@@ -9,7 +9,7 @@ export default [
       ],
       "id": 0,
       "title": "享元模式",
-      "lastUpdated": "2019-05-27 22:03:53",
+      "lastUpdated": "2019-05-27 22:32:44",
       "path": "/posts/design-pattern/fly-weight-pattern.html"
     },
     {
