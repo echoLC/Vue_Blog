@@ -4,14 +4,14 @@ export default {
       "name": "JavaScript"
     },
     {
-      "lastUpdated": "2019-05-28 22:59:54",
+      "lastUpdated": "2019-05-28 23:39:56",
       "tags": [
         "JavaScript",
         "设计模式"
       ],
       "id": 0,
-      "title": "代理模式",
-      "path": "/posts/design-pattern/proxy-pattern.html"
+      "title": "中介者模式",
+      "path": "/posts/design-pattern/mediator-pattern.html"
     },
     {
       "lastUpdated": "2019-05-28 22:59:54",
@@ -20,8 +20,8 @@ export default {
         "设计模式"
       ],
       "id": 1,
-      "title": "中介者模式",
-      "path": "/posts/design-pattern/mediator-pattern.html"
+      "title": "代理模式",
+      "path": "/posts/design-pattern/proxy-pattern.html"
     },
     {
       "lastUpdated": "2019-05-28 16:19:29",
@@ -99,14 +99,14 @@ export default {
       "name": "设计模式"
     },
     {
-      "lastUpdated": "2019-05-28 22:59:54",
+      "lastUpdated": "2019-05-28 23:39:56",
       "tags": [
         "JavaScript",
         "设计模式"
       ],
       "id": 0,
-      "title": "代理模式",
-      "path": "/posts/design-pattern/proxy-pattern.html"
+      "title": "中介者模式",
+      "path": "/posts/design-pattern/mediator-pattern.html"
     },
     {
       "lastUpdated": "2019-05-28 22:59:54",
@@ -115,8 +115,8 @@ export default {
         "设计模式"
       ],
       "id": 1,
-      "title": "中介者模式",
-      "path": "/posts/design-pattern/mediator-pattern.html"
+      "title": "代理模式",
+      "path": "/posts/design-pattern/proxy-pattern.html"
     },
     {
       "lastUpdated": "2019-05-28 16:19:29",

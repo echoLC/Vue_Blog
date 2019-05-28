@@ -1,25 +1,25 @@
 export default [
   {
-    "excerpt": " 定义 代理模式是为对象提供一个代用品或者占位符，以便控制对它的直接访问。当一个对象不想被外界直接访问，就可以使用代理，提供一个替身对象来控制对它的访问，替身对象对请求进行处理之后，再把请求转交给本体对象。 <br> <center> ![proxy image1](/proxy2.png) <br> 不使用代理模式 </center> <br> <center> ![proxy image......",
-    "tags": [
-      "JavaScript",
-      "设计模式"
-    ],
-    "id": 0,
-    "title": "代理模式",
-    "lastUpdated": "2019-05-28 22:59:54",
-    "path": "/posts/design-pattern/proxy-pattern.html"
-  },
-  {
     "excerpt": " 定义 中介者模式的作用就是解除对象与对象之间的紧耦合关系，所有对象通过中介者来通信，而不是互相引用，所以当一个对象发生改变时，只需要通知中介者对象即可。 <br> <center> ![objects image](/objects.png) <br> 图一 </center> <br> <center> ![mediator image](/mediator.png) <br> 图二 <......",
     "tags": [
       "JavaScript",
       "设计模式"
     ],
-    "id": 1,
+    "id": 0,
     "title": "中介者模式",
-    "lastUpdated": "2019-05-28 22:59:54",
+    "lastUpdated": "2019-05-28 23:39:56",
     "path": "/posts/design-pattern/mediator-pattern.html"
+  },
+  {
+    "excerpt": " 定义 代理模式是为对象提供一个代用品或者占位符，以便控制对它的直接访问。当一个对象不想被外界直接访问，就可以使用代理，提供一个替身对象来控制对它的访问，替身对象对请求进行处理之后，再把请求转交给本体对象。 <br> <center> ![proxy image1](/proxy2.png) <br> 不使用代理模式 </center> <br> <center> ![proxy image......",
+    "tags": [
+      "JavaScript",
+      "设计模式"
+    ],
+    "id": 1,
+    "title": "代理模式",
+    "lastUpdated": "2019-05-28 22:59:54",
+    "path": "/posts/design-pattern/proxy-pattern.html"
   },
   {
     "excerpt": " 定义 职责链模式的定义：使多个对象都有机会处理请求，从而避免了请求的发送者与多个接收者直接的耦合关系，将这些接收者连接成一条链，顺着这条链传递该请求，直到找到能处理该请求的对象。   应用 假设我们负责一个售卖手机的网站，需求的定义是：经过分别缴纳500元定金和200元定金的两轮预订，现在到了正式购买阶段。公司对于交了定金的用户有一定的优惠政策，规则如下：缴纳500元定金的用户可以收......",
