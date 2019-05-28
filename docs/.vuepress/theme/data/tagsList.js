@@ -4,7 +4,7 @@ export default {
       "name": "JavaScript"
     },
     {
-      "lastUpdated": "2019-05-28 22:34:35",
+      "lastUpdated": "2019-05-28 22:59:54",
       "tags": [
         "JavaScript",
         "设计模式"
@@ -14,7 +14,7 @@ export default {
       "path": "/posts/design-pattern/proxy-pattern.html"
     },
     {
-      "lastUpdated": "2019-05-28 22:34:35",
+      "lastUpdated": "2019-05-28 22:59:54",
       "tags": [
         "JavaScript",
         "设计模式"
@@ -99,7 +99,7 @@ export default {
       "name": "设计模式"
     },
     {
-      "lastUpdated": "2019-05-28 22:34:35",
+      "lastUpdated": "2019-05-28 22:59:54",
       "tags": [
         "JavaScript",
         "设计模式"
@@ -109,7 +109,7 @@ export default {
       "path": "/posts/design-pattern/proxy-pattern.html"
     },
     {
-      "lastUpdated": "2019-05-28 22:34:35",
+      "lastUpdated": "2019-05-28 22:59:54",
       "tags": [
         "JavaScript",
         "设计模式"

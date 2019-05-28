@@ -9,7 +9,7 @@ export default [
       ],
       "id": 0,
       "title": "代理模式",
-      "lastUpdated": "2019-05-28 22:34:35",
+      "lastUpdated": "2019-05-28 22:59:54",
       "path": "/posts/design-pattern/proxy-pattern.html"
     },
     {
@@ -20,7 +20,7 @@ export default [
       ],
       "id": 1,
       "title": "中介者模式",
-      "lastUpdated": "2019-05-28 22:34:35",
+      "lastUpdated": "2019-05-28 22:59:54",
       "path": "/posts/design-pattern/mediator-pattern.html"
     },
     {
