@@ -117,7 +117,7 @@ function orderNormal (orderType, pay, stock) {
 接下来需要定义一个Chain类将三个函数包装进职责链节点：
 ```javascript
 class Chain {
-  construct (fn) {
+  constructor (fn) {
     this.fn = fn
     this.successor = null
   }
@@ -167,7 +167,7 @@ chainOrder300.setNextSuccessor(chainOrder200)
 在上面的例子中，每个节点函数都是同步返回一个特定值来表示是否把请求传递给下一个节点。但是在实际应用中，我们经常会遇到一些异步的问题，比如要在某个节点中通过发起一个ajax异步请求，需要根据异步请求返回的结果才决定是否继续传递请求，这时候我们需要再添加一个函数，手动传递请求给职责链中的下一个节点：
 ```javascript
 class Chain {
-  construct (fn) {
+  constructor (fn) {
     this.fn = fn
     this.successor = null
   }

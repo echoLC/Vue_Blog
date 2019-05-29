@@ -10,7 +10,7 @@ categories: [design-pattern]
 假设有个制衣工厂，目前的产品有50种男款衣服和50种女款衣服，为了推销产品，工厂决定生产一些塑料模特来穿上他们的衣服拍成广告照片，正常情况下需要50个男模特和50个女模特，用程序表达：
 ```javascript
 class Model {
-  construct (sex, underwear) {
+  constructor (sex, underwear) {
     this.sex = sex
     this.underwear = underwear
   }
@@ -36,7 +36,7 @@ for (let j = 0; j < 50; j++) {
 换种思路，上面的例子中最需要区分的是男女模特，那我们把其它参数从构造函数中移除，只接受sex参数：
 ```javascript
 class Model {
-  construct (sex) {
+  constructor (sex) {
     this.sex = sex
   }
 
@@ -85,7 +85,7 @@ window.startUpload = function (uploadType, files) {
 下面实现Upload类：
 ```javascript
 class Upload {
-  construct (uploadType, fileName, fileSize) {
+  constructor (uploadType, fileName, fileSize) {
     this.uploadType = uploadType
     this.fileName = fileName
     this.fileSize = fileSize
@@ -152,7 +152,7 @@ startUpload('flash', [
 <br>
 ```javascript
 class Upload {
-  construct (uploadType) {
+  constructor (uploadType) {
     this.uploadType = uploadType
   }
 

@@ -33,7 +33,7 @@ const calculateBonus = function (performanceLevel, salary) {
 ```javascript
 // S
 class PerformanceS {
-  construct (salary) {
+  constructor (salary) {
     this.salary = salary
   }
 
@@ -44,7 +44,7 @@ class PerformanceS {
 
 // A
 class PerformanceA {
-  construct (salary) {
+  constructor (salary) {
     this.salary = salary
   }
 
@@ -55,7 +55,7 @@ class PerformanceA {
 
 // B
 class PerformanceB {
-  construct (salary) {
+  constructor (salary) {
     this.salary = salary
   }
 
@@ -67,7 +67,7 @@ class PerformanceB {
 第二步，定义环境类，Bonus：
 ```javascript
 class Bonus {
-  construct (salary) {
+  constructor (salary) {
     this.salary = salary
   }
 
