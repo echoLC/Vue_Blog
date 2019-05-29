@@ -1,11 +1,22 @@
 export default [
   {
-    "excerpt": " 定义 定义一系列算法，把它们一个个封装成策略类，具体的算法封装在策略类的内部方法里，并且使这些策略类可以互相替换。一个基于策略模式的设计至少由两部分组成，第一部分是一组策略类，每个策略类里封装了具体的算法。第二部分是环境类Context，Context主要接受客户的请求，然后把请求委托给某一个策略类。   应用 下面主要通过两个具体的案例来介绍策略类的使用。  使用策略模式计......",
+    "excerpt": " 定义 装饰者模式可以动态地给某个对象添加一些额外的职责，而不会影响这个类中派生的其他对象。装饰模式能够在不改变对象自身的基础上，在程序远行期间给对象动态地添加职责，跟继承相比，装饰者更加轻便灵活。   使用面向对象实现装饰者模式 假设我们编写一个飞机大战的游戏，飞机会根据经验值的增加升级子弹的类型，一开始飞机只能发射普通子弹，升到二级可以发射导弹，升到三级可以发射原子弹。用代码实现如......",
     "tags": [
       "JavaScript",
       "设计模式"
     ],
     "id": 0,
+    "title": "装饰者模式",
+    "lastUpdated": "2019-05-29 22:35:26",
+    "path": "/posts/design-pattern/decoraroe-pattern.html"
+  },
+  {
+    "excerpt": " 定义 定义一系列算法，把它们一个个封装成策略类，具体的算法封装在策略类的内部方法里，并且使这些策略类可以互相替换。一个基于策略模式的设计至少由两部分组成，第一部分是一组策略类，每个策略类里封装了具体的算法。第二部分是环境类Context，Context主要接受客户的请求，然后把请求委托给某一个策略类。   应用 下面主要通过两个具体的案例来介绍策略类的使用。  使用策略模式计......",
+    "tags": [
+      "JavaScript",
+      "设计模式"
+    ],
+    "id": 1,
     "title": "策略模式",
     "lastUpdated": "2019-05-29 14:28:29",
     "path": "/posts/design-pattern/strategy-pattern.html"
@@ -16,7 +27,7 @@ export default [
       "JavaScript",
       "设计模式"
     ],
-    "id": 1,
+    "id": 2,
     "title": "职责链模式",
     "lastUpdated": "2019-05-29 14:28:29",
     "path": "/posts/design-pattern/chain-of-responsibility.html"
@@ -27,7 +38,7 @@ export default [
       "JavaScript",
       "设计模式"
     ],
-    "id": 2,
+    "id": 3,
     "title": "享元模式",
     "lastUpdated": "2019-05-29 14:28:29",
     "path": "/posts/design-pattern/fly-weight-pattern.html"
@@ -38,7 +49,7 @@ export default [
       "JavaScript",
       "设计模式"
     ],
-    "id": 3,
+    "id": 4,
     "title": "中介者模式",
     "lastUpdated": "2019-05-28 23:39:56",
     "path": "/posts/design-pattern/mediator-pattern.html"
@@ -49,7 +60,7 @@ export default [
       "JavaScript",
       "设计模式"
     ],
-    "id": 4,
+    "id": 5,
     "title": "代理模式",
     "lastUpdated": "2019-05-28 22:59:54",
     "path": "/posts/design-pattern/proxy-pattern.html"
@@ -60,7 +71,7 @@ export default [
       "JavaScript",
       "设计模式"
     ],
-    "id": 5,
+    "id": 6,
     "title": "模板方法模式",
     "lastUpdated": "2019-05-27 16:23:51",
     "path": "/posts/design-pattern/template-way-pattern.html"
@@ -71,7 +82,7 @@ export default [
       "JavaScript",
       "设计模式"
     ],
-    "id": 6,
+    "id": 7,
     "title": "命令模式",
     "lastUpdated": "2019-05-24 21:10:23",
     "path": "/posts/design-pattern/command-pattern.html"
@@ -82,7 +93,7 @@ export default [
       "JavaScript",
       "设计模式"
     ],
-    "id": 7,
+    "id": 8,
     "title": "发布-订阅模式",
     "lastUpdated": "2019-05-23 17:55:46",
     "path": "/posts/design-pattern/publisher-subscriber-pattern.html"
@@ -93,7 +104,7 @@ export default [
       "JavaScript",
       "设计模式"
     ],
-    "id": 8,
+    "id": 9,
     "title": "迭代器模式",
     "lastUpdated": "2019-05-22 22:37:28",
     "path": "/posts/design-pattern/iterator-pattern.html"
@@ -104,7 +115,7 @@ export default [
       "http",
       "缓存"
     ],
-    "id": 9,
+    "id": 10,
     "title": "浅谈http缓存",
     "lastUpdated": "2019-05-19 10:40:26",
     "path": "/posts/http/http-stragies.html"
