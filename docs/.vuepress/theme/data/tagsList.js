@@ -4,12 +4,42 @@ export default {
       "name": "JavaScript"
     },
     {
-      "lastUpdated": "2019-05-28 23:39:56",
+      "lastUpdated": "2019-05-29 14:28:29",
       "tags": [
         "JavaScript",
         "设计模式"
       ],
       "id": 0,
+      "title": "策略模式",
+      "path": "/posts/design-pattern/strategy-pattern.html"
+    },
+    {
+      "lastUpdated": "2019-05-29 14:28:29",
+      "tags": [
+        "JavaScript",
+        "设计模式"
+      ],
+      "id": 1,
+      "title": "职责链模式",
+      "path": "/posts/design-pattern/chain-of-responsibility.html"
+    },
+    {
+      "lastUpdated": "2019-05-29 14:28:29",
+      "tags": [
+        "JavaScript",
+        "设计模式"
+      ],
+      "id": 2,
+      "title": "享元模式",
+      "path": "/posts/design-pattern/fly-weight-pattern.html"
+    },
+    {
+      "lastUpdated": "2019-05-28 23:39:56",
+      "tags": [
+        "JavaScript",
+        "设计模式"
+      ],
+      "id": 3,
       "title": "中介者模式",
       "path": "/posts/design-pattern/mediator-pattern.html"
     },
@@ -19,29 +49,9 @@ export default {
         "JavaScript",
         "设计模式"
       ],
-      "id": 1,
+      "id": 4,
       "title": "代理模式",
       "path": "/posts/design-pattern/proxy-pattern.html"
-    },
-    {
-      "lastUpdated": "2019-05-28 16:19:29",
-      "tags": [
-        "JavaScript",
-        "设计模式"
-      ],
-      "id": 2,
-      "title": "职责链模式",
-      "path": "/posts/design-pattern/chain-of-responsibility.html"
-    },
-    {
-      "lastUpdated": "2019-05-27 22:32:44",
-      "tags": [
-        "JavaScript",
-        "设计模式"
-      ],
-      "id": 3,
-      "title": "享元模式",
-      "path": "/posts/design-pattern/fly-weight-pattern.html"
     },
     {
       "lastUpdated": "2019-05-27 16:23:51",
@@ -49,7 +59,7 @@ export default {
         "JavaScript",
         "设计模式"
       ],
-      "id": 4,
+      "id": 5,
       "title": "模板方法模式",
       "path": "/posts/design-pattern/template-way-pattern.html"
     },
@@ -59,7 +69,7 @@ export default {
         "JavaScript",
         "设计模式"
       ],
-      "id": 5,
+      "id": 6,
       "title": "命令模式",
       "path": "/posts/design-pattern/command-pattern.html"
     },
@@ -69,7 +79,7 @@ export default {
         "JavaScript",
         "设计模式"
       ],
-      "id": 6,
+      "id": 7,
       "title": "发布-订阅模式",
       "path": "/posts/design-pattern/publisher-subscriber-pattern.html"
     },
@@ -79,19 +89,9 @@ export default {
         "JavaScript",
         "设计模式"
       ],
-      "id": 7,
+      "id": 8,
       "title": "迭代器模式",
       "path": "/posts/design-pattern/iterator-pattern.html"
-    },
-    {
-      "lastUpdated": "2019-05-19 14:15:12",
-      "tags": [
-        "JavaScript",
-        "设计模式"
-      ],
-      "id": 8,
-      "title": "策略模式",
-      "path": "/posts/design-pattern/strategy-pattern.html"
     }
   ],
   "设计模式": [
@@ -99,12 +99,42 @@ export default {
       "name": "设计模式"
     },
     {
-      "lastUpdated": "2019-05-28 23:39:56",
+      "lastUpdated": "2019-05-29 14:28:29",
       "tags": [
         "JavaScript",
         "设计模式"
       ],
       "id": 0,
+      "title": "策略模式",
+      "path": "/posts/design-pattern/strategy-pattern.html"
+    },
+    {
+      "lastUpdated": "2019-05-29 14:28:29",
+      "tags": [
+        "JavaScript",
+        "设计模式"
+      ],
+      "id": 1,
+      "title": "职责链模式",
+      "path": "/posts/design-pattern/chain-of-responsibility.html"
+    },
+    {
+      "lastUpdated": "2019-05-29 14:28:29",
+      "tags": [
+        "JavaScript",
+        "设计模式"
+      ],
+      "id": 2,
+      "title": "享元模式",
+      "path": "/posts/design-pattern/fly-weight-pattern.html"
+    },
+    {
+      "lastUpdated": "2019-05-28 23:39:56",
+      "tags": [
+        "JavaScript",
+        "设计模式"
+      ],
+      "id": 3,
       "title": "中介者模式",
       "path": "/posts/design-pattern/mediator-pattern.html"
     },
@@ -114,29 +144,9 @@ export default {
         "JavaScript",
         "设计模式"
       ],
-      "id": 1,
+      "id": 4,
       "title": "代理模式",
       "path": "/posts/design-pattern/proxy-pattern.html"
-    },
-    {
-      "lastUpdated": "2019-05-28 16:19:29",
-      "tags": [
-        "JavaScript",
-        "设计模式"
-      ],
-      "id": 2,
-      "title": "职责链模式",
-      "path": "/posts/design-pattern/chain-of-responsibility.html"
-    },
-    {
-      "lastUpdated": "2019-05-27 22:32:44",
-      "tags": [
-        "JavaScript",
-        "设计模式"
-      ],
-      "id": 3,
-      "title": "享元模式",
-      "path": "/posts/design-pattern/fly-weight-pattern.html"
     },
     {
       "lastUpdated": "2019-05-27 16:23:51",
@@ -144,7 +154,7 @@ export default {
         "JavaScript",
         "设计模式"
       ],
-      "id": 4,
+      "id": 5,
       "title": "模板方法模式",
       "path": "/posts/design-pattern/template-way-pattern.html"
     },
@@ -154,7 +164,7 @@ export default {
         "JavaScript",
         "设计模式"
       ],
-      "id": 5,
+      "id": 6,
       "title": "命令模式",
       "path": "/posts/design-pattern/command-pattern.html"
     },
@@ -164,7 +174,7 @@ export default {
         "JavaScript",
         "设计模式"
       ],
-      "id": 6,
+      "id": 7,
       "title": "发布-订阅模式",
       "path": "/posts/design-pattern/publisher-subscriber-pattern.html"
     },
@@ -174,19 +184,9 @@ export default {
         "JavaScript",
         "设计模式"
       ],
-      "id": 7,
+      "id": 8,
       "title": "迭代器模式",
       "path": "/posts/design-pattern/iterator-pattern.html"
-    },
-    {
-      "lastUpdated": "2019-05-19 14:15:12",
-      "tags": [
-        "JavaScript",
-        "设计模式"
-      ],
-      "id": 8,
-      "title": "策略模式",
-      "path": "/posts/design-pattern/strategy-pattern.html"
     }
   ],
   "http": [

@@ -1,11 +1,44 @@
 export default [
   {
-    "excerpt": " 定义 中介者模式的作用就是解除对象与对象之间的紧耦合关系，所有对象通过中介者来通信，而不是互相引用，所以当一个对象发生改变时，只需要通知中介者对象即可。 <br> <center> ![objects image](/objects.png) <br> 图一 </center> <br> <center> ![mediator image](/mediator.png) <br> 图二 <......",
+    "excerpt": " 定义 定义一系列算法，把它们一个个封装成策略类，具体的算法封装在策略类的内部方法里，并且使这些策略类可以互相替换。一个基于策略模式的设计至少由两部分组成，第一部分是一组策略类，每个策略类里封装了具体的算法。第二部分是环境类Context，Context主要接受客户的请求，然后把请求委托给某一个策略类。   应用 下面主要通过两个具体的案例来介绍策略类的使用。  使用策略模式计......",
     "tags": [
       "JavaScript",
       "设计模式"
     ],
     "id": 0,
+    "title": "策略模式",
+    "lastUpdated": "2019-05-29 14:28:29",
+    "path": "/posts/design-pattern/strategy-pattern.html"
+  },
+  {
+    "excerpt": " 定义 职责链模式的定义：使多个对象都有机会处理请求，从而避免了请求的发送者与多个接收者直接的耦合关系，将这些接收者连接成一条链，顺着这条链传递该请求，直到找到能处理该请求的对象。   应用 假设我们负责一个售卖手机的网站，需求的定义是：经过分别缴纳500元定金和200元定金的两轮预订，现在到了正式购买阶段。公司对于交了定金的用户有一定的优惠政策，规则如下：缴纳500元定金的用户可以收......",
+    "tags": [
+      "JavaScript",
+      "设计模式"
+    ],
+    "id": 1,
+    "title": "职责链模式",
+    "lastUpdated": "2019-05-29 14:28:29",
+    "path": "/posts/design-pattern/chain-of-responsibility.html"
+  },
+  {
+    "excerpt": " 定义 享元模式是一种用于性能优化的模式，享元模式的核心是运用共享对象的技术来有效支持大量细粒度的对象。如果系统因为创建了大量对象而导致内存占用过高，享元模式就能发挥作用了。   一个简单的例子 假设有个制衣工厂，目前的产品有50种男款衣服和50种女款衣服，为了推销产品，工厂决定生产一些塑料模特来穿上他们的衣服拍成广告照片，正常情况下需要50个男模特和50个女模特，用程序表达： ```......",
+    "tags": [
+      "JavaScript",
+      "设计模式"
+    ],
+    "id": 2,
+    "title": "享元模式",
+    "lastUpdated": "2019-05-29 14:28:29",
+    "path": "/posts/design-pattern/fly-weight-pattern.html"
+  },
+  {
+    "excerpt": " 定义 中介者模式的作用就是解除对象与对象之间的紧耦合关系，所有对象通过中介者来通信，而不是互相引用，所以当一个对象发生改变时，只需要通知中介者对象即可。 <br> <center> ![objects image](/objects.png) <br> 图一 </center> <br> <center> ![mediator image](/mediator.png) <br> 图二 <......",
+    "tags": [
+      "JavaScript",
+      "设计模式"
+    ],
+    "id": 3,
     "title": "中介者模式",
     "lastUpdated": "2019-05-28 23:39:56",
     "path": "/posts/design-pattern/mediator-pattern.html"
@@ -16,32 +49,10 @@ export default [
       "JavaScript",
       "设计模式"
     ],
-    "id": 1,
+    "id": 4,
     "title": "代理模式",
     "lastUpdated": "2019-05-28 22:59:54",
     "path": "/posts/design-pattern/proxy-pattern.html"
-  },
-  {
-    "excerpt": " 定义 职责链模式的定义：使多个对象都有机会处理请求，从而避免了请求的发送者与多个接收者直接的耦合关系，将这些接收者连接成一条链，顺着这条链传递该请求，直到找到能处理该请求的对象。   应用 假设我们负责一个售卖手机的网站，需求的定义是：经过分别缴纳500元定金和200元定金的两轮预订，现在到了正式购买阶段。公司对于交了定金的用户有一定的优惠政策，规则如下：缴纳500元定金的用户可以收......",
-    "tags": [
-      "JavaScript",
-      "设计模式"
-    ],
-    "id": 2,
-    "title": "职责链模式",
-    "lastUpdated": "2019-05-28 16:19:29",
-    "path": "/posts/design-pattern/chain-of-responsibility.html"
-  },
-  {
-    "excerpt": " 定义 享元模式是一种用于性能优化的模式，享元模式的核心是运用共享对象的技术来有效支持大量细粒度的对象。如果系统因为创建了大量对象而导致内存占用过高，享元模式就能发挥作用了。   一个简单的例子 假设有个制衣工厂，目前的产品有50种男款衣服和50种女款衣服，为了推销产品，工厂决定生产一些塑料模特来穿上他们的衣服拍成广告照片，正常情况下需要50个男模特和50个女模特，用程序表达： ```......",
-    "tags": [
-      "JavaScript",
-      "设计模式"
-    ],
-    "id": 3,
-    "title": "享元模式",
-    "lastUpdated": "2019-05-27 22:32:44",
-    "path": "/posts/design-pattern/fly-weight-pattern.html"
   },
   {
     "excerpt": " 定义 模板方法模式是一种只需要使用继承就可以实现的设计模式，它通常由两部分组成，第一部分是抽象父类，第二部分是具体的实现子类。在抽象父类中封装了子类的算法框架，包括一些公共的方法以及子类中所有方法的执行顺序。子类通过继承父类，也继承了整个算法结构，以及重写父类中一些具体的方法。   Coffee和Tea 下面通过咖啡与茶的经典例子来讲解模板方法模式的具体实现。 <br> **先泡一杯......",
@@ -49,7 +60,7 @@ export default [
       "JavaScript",
       "设计模式"
     ],
-    "id": 4,
+    "id": 5,
     "title": "模板方法模式",
     "lastUpdated": "2019-05-27 16:23:51",
     "path": "/posts/design-pattern/template-way-pattern.html"
@@ -60,7 +71,7 @@ export default [
       "JavaScript",
       "设计模式"
     ],
-    "id": 5,
+    "id": 6,
     "title": "命令模式",
     "lastUpdated": "2019-05-24 21:10:23",
     "path": "/posts/design-pattern/command-pattern.html"
@@ -71,7 +82,7 @@ export default [
       "JavaScript",
       "设计模式"
     ],
-    "id": 6,
+    "id": 7,
     "title": "发布-订阅模式",
     "lastUpdated": "2019-05-23 17:55:46",
     "path": "/posts/design-pattern/publisher-subscriber-pattern.html"
@@ -82,21 +93,10 @@ export default [
       "JavaScript",
       "设计模式"
     ],
-    "id": 7,
+    "id": 8,
     "title": "迭代器模式",
     "lastUpdated": "2019-05-22 22:37:28",
     "path": "/posts/design-pattern/iterator-pattern.html"
-  },
-  {
-    "excerpt": " 定义 定义一系列算法，把它们一个个封装成策略类，具体的算法封装在策略类的内部方法里，并且使这些策略类可以互相替换。一个基于策略模式的设计至少由两部分组成，第一部分是一组策略类，每个策略类里封装了具体的算法。第二部分是环境类Context，Context主要接受客户的请求，然后把请求委托给某一个策略类。   应用 下面主要通过两个具体的案例来介绍策略类的使用。  使用策略模式计......",
-    "tags": [
-      "JavaScript",
-      "设计模式"
-    ],
-    "id": 8,
-    "title": "策略模式",
-    "lastUpdated": "2019-05-19 14:15:12",
-    "path": "/posts/design-pattern/strategy-pattern.html"
   },
   {
     "excerpt": " 概念 浏览器缓存是在前端开发中经常遇到的问题，它是提升页面性能同时减少服务器压力的有效手段之一。  类型  强缓存    请求资源时不会向服务器发送请求，直接从缓存中读取资源，在chrome控制台的network中看到请求返回200的状态码，并且status code后面显示from disk cache 或者from memory cache；  协商缓存    向......",
