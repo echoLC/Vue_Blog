@@ -9,7 +9,7 @@ export default [
       ],
       "id": 0,
       "title": "装饰者模式",
-      "lastUpdated": "2019-06-01 11:33:41",
+      "lastUpdated": "2019-06-01 11:42:50",
       "path": "/posts/design-pattern/decorator-pattern.html"
     }
   ],
@@ -27,26 +27,26 @@ export default [
       "path": "/posts/design-pattern/strategy-pattern.html"
     },
     {
-      "excerpt": " 定义 职责链模式的定义：使多个对象都有机会处理请求，从而避免了请求的发送者与多个接收者直接的耦合关系，将这些接收者连接成一条链，顺着这条链传递该请求，直到找到能处理该请求的对象。   应用 假设我们负责一个售卖手机的网站，需求的定义是：经过分别缴纳500元定金和200元定金的两轮预订，现在到了正式购买阶段。公司对于交了定金的用户有一定的优惠政策，规则如下：缴纳500元定金的用户可以收......",
-      "tags": [
-        "JavaScript",
-        "设计模式"
-      ],
-      "id": 2,
-      "title": "职责链模式",
-      "lastUpdated": "2019-05-29 14:28:29",
-      "path": "/posts/design-pattern/chain-of-responsibility.html"
-    },
-    {
       "excerpt": " 定义 享元模式是一种用于性能优化的模式，享元模式的核心是运用共享对象的技术来有效支持大量细粒度的对象。如果系统因为创建了大量对象而导致内存占用过高，享元模式就能发挥作用了。   一个简单的例子 假设有个制衣工厂，目前的产品有50种男款衣服和50种女款衣服，为了推销产品，工厂决定生产一些塑料模特来穿上他们的衣服拍成广告照片，正常情况下需要50个男模特和50个女模特，用程序表达： ```......",
       "tags": [
         "JavaScript",
         "设计模式"
       ],
-      "id": 3,
+      "id": 2,
       "title": "享元模式",
       "lastUpdated": "2019-05-29 14:28:29",
       "path": "/posts/design-pattern/fly-weight-pattern.html"
+    },
+    {
+      "excerpt": " 定义 职责链模式的定义：使多个对象都有机会处理请求，从而避免了请求的发送者与多个接收者直接的耦合关系，将这些接收者连接成一条链，顺着这条链传递该请求，直到找到能处理该请求的对象。   应用 假设我们负责一个售卖手机的网站，需求的定义是：经过分别缴纳500元定金和200元定金的两轮预订，现在到了正式购买阶段。公司对于交了定金的用户有一定的优惠政策，规则如下：缴纳500元定金的用户可以收......",
+      "tags": [
+        "JavaScript",
+        "设计模式"
+      ],
+      "id": 3,
+      "title": "职责链模式",
+      "lastUpdated": "2019-05-29 14:28:29",
+      "path": "/posts/design-pattern/chain-of-responsibility.html"
     },
     {
       "excerpt": " 定义 中介者模式的作用就是解除对象与对象之间的紧耦合关系，所有对象通过中介者来通信，而不是互相引用，所以当一个对象发生改变时，只需要通知中介者对象即可。 <br> <center> ![objects image](/objects.png) <br> 图一 </center> <br> <center> ![mediator image](/mediator.png) <br> 图二 <......",
