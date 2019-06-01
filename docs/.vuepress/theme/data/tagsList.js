@@ -4,14 +4,14 @@ export default {
       "name": "JavaScript"
     },
     {
-      "lastUpdated": "2019-05-29 22:37:15",
+      "lastUpdated": "2019-06-01 11:33:41",
       "tags": [
         "JavaScript",
         "设计模式"
       ],
       "id": 0,
       "title": "装饰者模式",
-      "path": "/posts/design-pattern/decoraroe-pattern.html"
+      "path": "/posts/design-pattern/decorator-pattern.html"
     },
     {
       "lastUpdated": "2019-05-29 14:28:29",
@@ -109,14 +109,14 @@ export default {
       "name": "设计模式"
     },
     {
-      "lastUpdated": "2019-05-29 22:37:15",
+      "lastUpdated": "2019-06-01 11:33:41",
       "tags": [
         "JavaScript",
         "设计模式"
       ],
       "id": 0,
       "title": "装饰者模式",
-      "path": "/posts/design-pattern/decoraroe-pattern.html"
+      "path": "/posts/design-pattern/decorator-pattern.html"
     },
     {
       "lastUpdated": "2019-05-29 14:28:29",
