@@ -7,7 +7,7 @@ export default [
     ],
     "id": 0,
     "title": "装饰者模式",
-    "lastUpdated": "2019-05-29 22:35:26",
+    "lastUpdated": "2019-05-29 22:37:15",
     "path": "/posts/design-pattern/decoraroe-pattern.html"
   },
   {
