@@ -67,5 +67,6 @@ module.exports = {
       github: 'Github',
       about: '自我介绍'
     }
-  }
+  },
+  port: 7000
 };
