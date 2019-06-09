@@ -101,11 +101,11 @@ module.exports = (options, ctx) => ({
       if (_strippedContent) {
         excerpt =
           excerpt ||
-          (_strippedContent.slice(0, 200)
-            ? _strippedContent.slice(0, 200) + '......'
+          (_strippedContent.slice(0, 100)
+            ? _strippedContent.slice(0, 100) + '......'
             : false) ||
           '';
-        excerpt = excerpt.replace(/#/g, '');
+        excerpt = excerpt.replace(/#/g, '').replace(/^\!(.+)(\.png\))$/, 'image');
       } else {
         excerpt = '';
       }
