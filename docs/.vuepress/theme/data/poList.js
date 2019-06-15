@@ -2,12 +2,23 @@ export default [
   [
     "2019-06",
     {
+      "excerpt": " 背景 到目前，JavaScript常见的设计模式系列我已经写得差不多了。在设计模式的一系列文章中，总是先写一段反例代码，然后再通过设计模式重构之前的代码，这种强烈的对比会加深我们对该设计模式的......",
+      "tags": [
+        "JavaScript",
+        "重构代码"
+      ],
+      "id": 0,
+      "title": "代码重构",
+      "lastUpdated": "2019-06-15 18:15:51",
+      "path": "/posts/design-pattern/refactor-code.html"
+    },
+    {
       "excerpt": " 单一职责原则  定义 对于一个类而言，应该只有一个引起它变化的原因。在JavaScript中，单一职责原则更多地是被运用在对象或者方法级别上。单一职责原则（SRP）的职责定义为“引起变......",
       "tags": [
         "JavaScript",
         "设计模式"
       ],
-      "id": 0,
+      "id": 1,
       "title": "设计模式中的一些原则",
       "lastUpdated": "2019-06-15 14:32:58",
       "path": "/posts/design-pattern/design-principle.html"
@@ -18,7 +29,7 @@ export default [
         "JavaScript",
         "设计模式"
       ],
-      "id": 1,
+      "id": 2,
       "title": "状态模式",
       "lastUpdated": "2019-06-09 17:47:53",
       "path": "/posts/design-pattern/state-pattern.html"
@@ -29,7 +40,7 @@ export default [
         "JavaScript",
         "设计模式"
       ],
-      "id": 2,
+      "id": 3,
       "title": "装饰者模式",
       "lastUpdated": "2019-06-01 11:42:50",
       "path": "/posts/design-pattern/decorator-pattern.html"
@@ -43,7 +54,7 @@ export default [
         "JavaScript",
         "设计模式"
       ],
-      "id": 3,
+      "id": 4,
       "title": "策略模式",
       "lastUpdated": "2019-05-29 14:28:29",
       "path": "/posts/design-pattern/strategy-pattern.html"
@@ -54,7 +65,7 @@ export default [
         "JavaScript",
         "设计模式"
       ],
-      "id": 4,
+      "id": 5,
       "title": "职责链模式",
       "lastUpdated": "2019-05-29 14:28:29",
       "path": "/posts/design-pattern/chain-of-responsibility.html"
@@ -65,7 +76,7 @@ export default [
         "JavaScript",
         "设计模式"
       ],
-      "id": 5,
+      "id": 6,
       "title": "享元模式",
       "lastUpdated": "2019-05-29 14:28:29",
       "path": "/posts/design-pattern/fly-weight-pattern.html"
@@ -76,7 +87,7 @@ export default [
         "JavaScript",
         "设计模式"
       ],
-      "id": 6,
+      "id": 7,
       "title": "中介者模式",
       "lastUpdated": "2019-05-28 23:39:56",
       "path": "/posts/design-pattern/mediator-pattern.html"
@@ -87,7 +98,7 @@ export default [
         "JavaScript",
         "设计模式"
       ],
-      "id": 7,
+      "id": 8,
       "title": "代理模式",
       "lastUpdated": "2019-05-28 22:59:54",
       "path": "/posts/design-pattern/proxy-pattern.html"
@@ -98,7 +109,7 @@ export default [
         "JavaScript",
         "设计模式"
       ],
-      "id": 8,
+      "id": 9,
       "title": "模板方法模式",
       "lastUpdated": "2019-05-27 16:23:51",
       "path": "/posts/design-pattern/template-way-pattern.html"
@@ -109,7 +120,7 @@ export default [
         "JavaScript",
         "设计模式"
       ],
-      "id": 9,
+      "id": 10,
       "title": "命令模式",
       "lastUpdated": "2019-05-24 21:10:23",
       "path": "/posts/design-pattern/command-pattern.html"
@@ -120,7 +131,7 @@ export default [
         "JavaScript",
         "设计模式"
       ],
-      "id": 10,
+      "id": 11,
       "title": "发布-订阅模式",
       "lastUpdated": "2019-05-23 17:55:46",
       "path": "/posts/design-pattern/publisher-subscriber-pattern.html"
@@ -131,7 +142,7 @@ export default [
         "JavaScript",
         "设计模式"
       ],
-      "id": 11,
+      "id": 12,
       "title": "迭代器模式",
       "lastUpdated": "2019-05-22 22:37:28",
       "path": "/posts/design-pattern/iterator-pattern.html"
@@ -142,7 +153,7 @@ export default [
         "http",
         "缓存"
       ],
-      "id": 12,
+      "id": 13,
       "title": "浅谈http缓存",
       "lastUpdated": "2019-05-19 10:40:26",
       "path": "/posts/http/http-stragies.html"
