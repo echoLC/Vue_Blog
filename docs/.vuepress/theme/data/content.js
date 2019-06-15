@@ -7,7 +7,7 @@ export default [
     ],
     "id": 0,
     "title": "设计模式中的一些原则",
-    "lastUpdated": "2019-06-15 14:08:56",
+    "lastUpdated": "2019-06-15 14:32:58",
     "path": "/posts/design-pattern/design-principle.html"
   },
   {
