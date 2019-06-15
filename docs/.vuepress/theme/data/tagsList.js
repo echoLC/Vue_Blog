@@ -4,12 +4,22 @@ export default {
       "name": "JavaScript"
     },
     {
-      "lastUpdated": "2019-06-09 17:47:53",
+      "lastUpdated": "2019-06-15 14:08:56",
       "tags": [
         "JavaScript",
         "设计模式"
       ],
       "id": 0,
+      "title": "设计模式中的一些原则",
+      "path": "/posts/design-pattern/design-principle.html"
+    },
+    {
+      "lastUpdated": "2019-06-09 17:47:53",
+      "tags": [
+        "JavaScript",
+        "设计模式"
+      ],
+      "id": 1,
       "title": "状态模式",
       "path": "/posts/design-pattern/state-pattern.html"
     },
@@ -19,7 +29,7 @@ export default {
         "JavaScript",
         "设计模式"
       ],
-      "id": 1,
+      "id": 2,
       "title": "装饰者模式",
       "path": "/posts/design-pattern/decorator-pattern.html"
     },
@@ -29,19 +39,9 @@ export default {
         "JavaScript",
         "设计模式"
       ],
-      "id": 2,
+      "id": 3,
       "title": "策略模式",
       "path": "/posts/design-pattern/strategy-pattern.html"
-    },
-    {
-      "lastUpdated": "2019-05-29 14:28:29",
-      "tags": [
-        "JavaScript",
-        "设计模式"
-      ],
-      "id": 3,
-      "title": "享元模式",
-      "path": "/posts/design-pattern/fly-weight-pattern.html"
     },
     {
       "lastUpdated": "2019-05-29 14:28:29",
@@ -54,12 +54,22 @@ export default {
       "path": "/posts/design-pattern/chain-of-responsibility.html"
     },
     {
-      "lastUpdated": "2019-05-28 23:39:56",
+      "lastUpdated": "2019-05-29 14:28:29",
       "tags": [
         "JavaScript",
         "设计模式"
       ],
       "id": 5,
+      "title": "享元模式",
+      "path": "/posts/design-pattern/fly-weight-pattern.html"
+    },
+    {
+      "lastUpdated": "2019-05-28 23:39:56",
+      "tags": [
+        "JavaScript",
+        "设计模式"
+      ],
+      "id": 6,
       "title": "中介者模式",
       "path": "/posts/design-pattern/mediator-pattern.html"
     },
@@ -69,7 +79,7 @@ export default {
         "JavaScript",
         "设计模式"
       ],
-      "id": 6,
+      "id": 7,
       "title": "代理模式",
       "path": "/posts/design-pattern/proxy-pattern.html"
     },
@@ -79,7 +89,7 @@ export default {
         "JavaScript",
         "设计模式"
       ],
-      "id": 7,
+      "id": 8,
       "title": "模板方法模式",
       "path": "/posts/design-pattern/template-way-pattern.html"
     },
@@ -89,7 +99,7 @@ export default {
         "JavaScript",
         "设计模式"
       ],
-      "id": 8,
+      "id": 9,
       "title": "命令模式",
       "path": "/posts/design-pattern/command-pattern.html"
     },
@@ -99,7 +109,7 @@ export default {
         "JavaScript",
         "设计模式"
       ],
-      "id": 9,
+      "id": 10,
       "title": "发布-订阅模式",
       "path": "/posts/design-pattern/publisher-subscriber-pattern.html"
     },
@@ -109,7 +119,7 @@ export default {
         "JavaScript",
         "设计模式"
       ],
-      "id": 10,
+      "id": 11,
       "title": "迭代器模式",
       "path": "/posts/design-pattern/iterator-pattern.html"
     }
@@ -119,12 +129,22 @@ export default {
       "name": "设计模式"
     },
     {
-      "lastUpdated": "2019-06-09 17:47:53",
+      "lastUpdated": "2019-06-15 14:08:56",
       "tags": [
         "JavaScript",
         "设计模式"
       ],
       "id": 0,
+      "title": "设计模式中的一些原则",
+      "path": "/posts/design-pattern/design-principle.html"
+    },
+    {
+      "lastUpdated": "2019-06-09 17:47:53",
+      "tags": [
+        "JavaScript",
+        "设计模式"
+      ],
+      "id": 1,
       "title": "状态模式",
       "path": "/posts/design-pattern/state-pattern.html"
     },
@@ -134,7 +154,7 @@ export default {
         "JavaScript",
         "设计模式"
       ],
-      "id": 1,
+      "id": 2,
       "title": "装饰者模式",
       "path": "/posts/design-pattern/decorator-pattern.html"
     },
@@ -144,19 +164,9 @@ export default {
         "JavaScript",
         "设计模式"
       ],
-      "id": 2,
+      "id": 3,
       "title": "策略模式",
       "path": "/posts/design-pattern/strategy-pattern.html"
-    },
-    {
-      "lastUpdated": "2019-05-29 14:28:29",
-      "tags": [
-        "JavaScript",
-        "设计模式"
-      ],
-      "id": 3,
-      "title": "享元模式",
-      "path": "/posts/design-pattern/fly-weight-pattern.html"
     },
     {
       "lastUpdated": "2019-05-29 14:28:29",
@@ -169,12 +179,22 @@ export default {
       "path": "/posts/design-pattern/chain-of-responsibility.html"
     },
     {
-      "lastUpdated": "2019-05-28 23:39:56",
+      "lastUpdated": "2019-05-29 14:28:29",
       "tags": [
         "JavaScript",
         "设计模式"
       ],
       "id": 5,
+      "title": "享元模式",
+      "path": "/posts/design-pattern/fly-weight-pattern.html"
+    },
+    {
+      "lastUpdated": "2019-05-28 23:39:56",
+      "tags": [
+        "JavaScript",
+        "设计模式"
+      ],
+      "id": 6,
       "title": "中介者模式",
       "path": "/posts/design-pattern/mediator-pattern.html"
     },
@@ -184,7 +204,7 @@ export default {
         "JavaScript",
         "设计模式"
       ],
-      "id": 6,
+      "id": 7,
       "title": "代理模式",
       "path": "/posts/design-pattern/proxy-pattern.html"
     },
@@ -194,7 +214,7 @@ export default {
         "JavaScript",
         "设计模式"
       ],
-      "id": 7,
+      "id": 8,
       "title": "模板方法模式",
       "path": "/posts/design-pattern/template-way-pattern.html"
     },
@@ -204,7 +224,7 @@ export default {
         "JavaScript",
         "设计模式"
       ],
-      "id": 8,
+      "id": 9,
       "title": "命令模式",
       "path": "/posts/design-pattern/command-pattern.html"
     },
@@ -214,7 +234,7 @@ export default {
         "JavaScript",
         "设计模式"
       ],
-      "id": 9,
+      "id": 10,
       "title": "发布-订阅模式",
       "path": "/posts/design-pattern/publisher-subscriber-pattern.html"
     },
@@ -224,7 +244,7 @@ export default {
         "JavaScript",
         "设计模式"
       ],
-      "id": 10,
+      "id": 11,
       "title": "迭代器模式",
       "path": "/posts/design-pattern/iterator-pattern.html"
     }
@@ -239,7 +259,7 @@ export default {
         "http",
         "缓存"
       ],
-      "id": 11,
+      "id": 12,
       "title": "浅谈http缓存",
       "path": "/posts/http/http-stragies.html"
     }
@@ -254,7 +274,7 @@ export default {
         "http",
         "缓存"
       ],
-      "id": 11,
+      "id": 12,
       "title": "浅谈http缓存",
       "path": "/posts/http/http-stragies.html"
     }

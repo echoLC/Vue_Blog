@@ -1,11 +1,22 @@
 export default [
   {
-    "excerpt": " 定义 **允许一个对象在其内部状态改变时来改变它的行为**，对象看起来似乎修改了它的类。在状态模式中，我们把状态封装成独立的类，并将请求委托给当前的状态对象，所以当对象内部的状态改变时，对象会......",
+    "excerpt": " 单一职责原则  定义 对于一个类而言，应该只有一个引起它变化的原因。在JavaScript中，单一职责原则更多地是被运用在对象或者方法级别上。单一职责原则（SRP）的职责定义为“引起变......",
     "tags": [
       "JavaScript",
       "设计模式"
     ],
     "id": 0,
+    "title": "设计模式中的一些原则",
+    "lastUpdated": "2019-06-15 14:08:56",
+    "path": "/posts/design-pattern/design-principle.html"
+  },
+  {
+    "excerpt": " 定义 **允许一个对象在其内部状态改变时来改变它的行为**，对象看起来似乎修改了它的类。在状态模式中，我们把状态封装成独立的类，并将请求委托给当前的状态对象，所以当对象内部的状态改变时，对象会......",
+    "tags": [
+      "JavaScript",
+      "设计模式"
+    ],
+    "id": 1,
     "title": "状态模式",
     "lastUpdated": "2019-06-09 17:47:53",
     "path": "/posts/design-pattern/state-pattern.html"
@@ -16,7 +27,7 @@ export default [
       "JavaScript",
       "设计模式"
     ],
-    "id": 1,
+    "id": 2,
     "title": "装饰者模式",
     "lastUpdated": "2019-06-01 11:42:50",
     "path": "/posts/design-pattern/decorator-pattern.html"
@@ -27,21 +38,10 @@ export default [
       "JavaScript",
       "设计模式"
     ],
-    "id": 2,
+    "id": 3,
     "title": "策略模式",
     "lastUpdated": "2019-05-29 14:28:29",
     "path": "/posts/design-pattern/strategy-pattern.html"
-  },
-  {
-    "excerpt": " 定义 享元模式是一种用于性能优化的模式，享元模式的核心是运用共享对象的技术来有效支持大量细粒度的对象。如果系统因为创建了大量对象而导致内存占用过高，享元模式就能发挥作用了。   一个简单......",
-    "tags": [
-      "JavaScript",
-      "设计模式"
-    ],
-    "id": 3,
-    "title": "享元模式",
-    "lastUpdated": "2019-05-29 14:28:29",
-    "path": "/posts/design-pattern/fly-weight-pattern.html"
   },
   {
     "excerpt": " 定义 职责链模式的定义：使多个对象都有机会处理请求，从而避免了请求的发送者与多个接收者直接的耦合关系，将这些接收者连接成一条链，顺着这条链传递该请求，直到找到能处理该请求的对象。   应......",
@@ -55,12 +55,23 @@ export default [
     "path": "/posts/design-pattern/chain-of-responsibility.html"
   },
   {
-    "excerpt": " 定义 中介者模式的作用就是解除对象与对象之间的紧耦合关系，所有对象通过中介者来通信，而不是互相引用，所以当一个对象发生改变时，只需要通知中介者对象即可。 <br> <center> ![obj......",
+    "excerpt": " 定义 享元模式是一种用于性能优化的模式，享元模式的核心是运用共享对象的技术来有效支持大量细粒度的对象。如果系统因为创建了大量对象而导致内存占用过高，享元模式就能发挥作用了。   一个简单......",
     "tags": [
       "JavaScript",
       "设计模式"
     ],
     "id": 5,
+    "title": "享元模式",
+    "lastUpdated": "2019-05-29 14:28:29",
+    "path": "/posts/design-pattern/fly-weight-pattern.html"
+  },
+  {
+    "excerpt": " 定义 中介者模式的作用就是解除对象与对象之间的紧耦合关系，所有对象通过中介者来通信，而不是互相引用，所以当一个对象发生改变时，只需要通知中介者对象即可。 <br> <center> ![obj......",
+    "tags": [
+      "JavaScript",
+      "设计模式"
+    ],
+    "id": 6,
     "title": "中介者模式",
     "lastUpdated": "2019-05-28 23:39:56",
     "path": "/posts/design-pattern/mediator-pattern.html"
@@ -71,7 +82,7 @@ export default [
       "JavaScript",
       "设计模式"
     ],
-    "id": 6,
+    "id": 7,
     "title": "代理模式",
     "lastUpdated": "2019-05-28 22:59:54",
     "path": "/posts/design-pattern/proxy-pattern.html"
@@ -82,7 +93,7 @@ export default [
       "JavaScript",
       "设计模式"
     ],
-    "id": 7,
+    "id": 8,
     "title": "模板方法模式",
     "lastUpdated": "2019-05-27 16:23:51",
     "path": "/posts/design-pattern/template-way-pattern.html"
@@ -93,7 +104,7 @@ export default [
       "JavaScript",
       "设计模式"
     ],
-    "id": 8,
+    "id": 9,
     "title": "命令模式",
     "lastUpdated": "2019-05-24 21:10:23",
     "path": "/posts/design-pattern/command-pattern.html"
@@ -104,7 +115,7 @@ export default [
       "JavaScript",
       "设计模式"
     ],
-    "id": 9,
+    "id": 10,
     "title": "发布-订阅模式",
     "lastUpdated": "2019-05-23 17:55:46",
     "path": "/posts/design-pattern/publisher-subscriber-pattern.html"
@@ -115,7 +126,7 @@ export default [
       "JavaScript",
       "设计模式"
     ],
-    "id": 10,
+    "id": 11,
     "title": "迭代器模式",
     "lastUpdated": "2019-05-22 22:37:28",
     "path": "/posts/design-pattern/iterator-pattern.html"
@@ -126,7 +137,7 @@ export default [
       "http",
       "缓存"
     ],
-    "id": 11,
+    "id": 12,
     "title": "浅谈http缓存",
     "lastUpdated": "2019-05-19 10:40:26",
     "path": "/posts/http/http-stragies.html"
