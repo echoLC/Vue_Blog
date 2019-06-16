@@ -1,8 +1,8 @@
+importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
+
 workbox.setConfig({
   debug: false
 })
-
-console.log(workbox)
 
 const ONE_DAY_SECOND = 30 * 24 * 60 * 60  // 30 Days
 

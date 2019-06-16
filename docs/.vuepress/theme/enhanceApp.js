@@ -8,6 +8,8 @@ import 'imStyles/iconfont.css';
 import 'imStyles/code.styl';
 import 'imStyles/content.styl';
 
+import './registerServiceWorker';
+
 export default ({ Vue, router }) => {
   Vue.use(routes, { router });
   Vue.use(importElement);
