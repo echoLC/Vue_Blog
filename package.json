@@ -18,7 +18,7 @@
     "vssue": "0.9.1"
   },
   "devDependencies": {
-    "@vuepress/plugin-pwa": "^1.0.0-alpha.0",
+    "@vuepress/plugin-pwa": "^1.0.0-rc.1",
     "babel-eslint": "8.2.6",
     "babel-plugin-component": "1.1.1",
     "eslint": "5.0.0",
@@ -26,6 +26,6 @@
     "moment": "2.24.0",
     "node-sass": "4.11.0",
     "sass-loader": "7.1.0",
-    "vuepress": "1.0.0-alpha.47"
+    "vuepress": "^1.0.0-rc.1"
   }
 }

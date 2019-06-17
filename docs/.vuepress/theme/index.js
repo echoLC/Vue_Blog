@@ -15,6 +15,12 @@ module.exports = (options, ctx) => ({
           );
         }
       }
+    ],
+    ['@vuepress/pwa', 
+      {
+        serviceWorker: true,
+        updatePopup: true
+      }
     ]
   ],
   enhanceAppFiles: path.resolve(__dirname, 'enhanceApp.js'),
