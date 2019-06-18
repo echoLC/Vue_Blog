@@ -1,6 +1,10 @@
-const path = require('path');
-const moment = require('moment');
-const fs = require('fs');
+const path = require('path')
+const moment = require('moment')
+const fs = require('fs')
+
+const resolve = (filePath) => {
+  return path.resolve(__dirname, filePath)
+}
 
 module.exports = (options, ctx) => ({
   plugins: [
@@ -8,11 +12,10 @@ module.exports = (options, ctx) => ({
       '@vuepress/last-updated',
       {
         transformer: timestamp => {
-          const moment = require('moment');
-          moment.locale('zh-CN');
+          moment.locale('zh-CN')
           return moment(timestamp).format(
             'YYYY-MM-DD HH:mm:ss'
-          );
+          )
         }
       }
     ],
@@ -23,7 +26,7 @@ module.exports = (options, ctx) => ({
       }
     ]
   ],
-  enhanceAppFiles: path.resolve(__dirname, 'enhanceApp.js'),
+  enhanceAppFiles: resolve('enhanceApp.js'),
   chainMarkdown(config) {
     config
       .plugin('anchor')
@@ -31,62 +34,57 @@ module.exports = (options, ctx) => ({
         Object.assign(options, {
           level: [1, 2, 3, 4, 5, 6]
         })
-      ]);
+      ])
   },
   alias: {
-    imStyles: path.resolve(__dirname, 'styles'),
-    imRouter: path.resolve(__dirname, 'router'),
-    imComponents: path.resolve(__dirname, 'components'),
-    imData: path.resolve(__dirname, 'data'),
-    imUtils: path.resolve(__dirname, 'utils')
+    imStyles: resolve('styles'),
+    imRouter: resolve('router'),
+    imComponents: resolve('components'),
+    imData: resolve('data'),
+    imUtils: resolve('utils')
   },
   async ready() {
     //生成客户端所需的数据
     //只处理posts文件夹下的文件
-    const postsFilter = val =>
-      val.path.slice(1, 6) === 'posts';
+    const postsFilter = val => val.path.slice(1, 6) === 'posts'
     //排序函数
     const postsSorter = (prev, next) => {
-      const prevTime =
-        new Date(prev.frontmatter.date).getTime() ||
-        new Date(prev.lastUpdated).getTime() ||
-        new Date().getTime();
-      const nextTime =
-        new Date(next.frontmatter.date).getTime() ||
-        new Date(next.lastUpdated).getTime() ||
-        new Date().getTime();
-      return prevTime - nextTime > 0 ? -1 : 1;
-    };
-    const { pages } = ctx;
+      return getTime(prev) - getTime(next) > 0 ? -1 : 1
+    }
+    // 获取时间
+    const getTime = (dateObj) => {
+      const date = dateObj['frontmatter']['date'] || dateObj['lastUpdated ']
+      return (new Date(date) || new Date()).getTime()
+    } 
+    const { pages } = ctx
     //格式化 lastUpdated
     function changeDate(dateStr) {
-      if (dateStr.length === undefined) {
-        let str = JSON.stringify(dateStr, null, 2);
-        return str.slice(1, 11) + ' ' + str.slice(12, -6);
-      } else {
-        return dateStr;
+      if(dateStr.length === undefined) {
+        const str = JSON.stringify(dateStr, null, 2)
+        return str.slice(1, 11) + ' ' + str.slice(12, -6)
       }
+      return dateStr
     }
     //进一步个性化 lastUpdated,全部文章页中使用
     function changeTime(dateStr) {
-      let str = '';
-      str = dateStr.slice(0, 7);
-      const arr = str.split('-');
+      let str = ''
+      str = dateStr.slice(0, 7)
+      const arr = str.split('-')
       let result = [
         arr[0] + '-' + arr[1],
         Number(arr[0]) + Number(arr[1])
-      ];
-      return result;
+      ]
+      return result
     }
     //开始格式化和排序
-    const posts = pages.filter(postsFilter);
-    posts.sort(postsSorter);
+    const posts = pages.filter(postsFilter)
+    posts.sort(postsSorter)
 
     //存放最终数据的变量
-    let archived = [];
-    let tagsList = {};
-    let poList = [];
-    let search = [];
+    let archived = []
+    let tagsList = {}
+    let poList = []
+    let search = []
 
     posts.forEach((val, index) => {
       //遍历posts目录生成包含所有文章信息的 archived
