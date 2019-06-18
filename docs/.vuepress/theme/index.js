@@ -6,6 +6,10 @@ const resolve = (filePath) => {
   return path.resolve(__dirname, filePath)
 }
 
+const log = msg => {
+  console.log(msg)
+}
+
 module.exports = (options, ctx) => ({
   plugins: [
     [
@@ -59,16 +63,13 @@ module.exports = (options, ctx) => ({
     const { pages } = ctx
     //格式化 lastUpdated
     function changeDate(dateStr) {
-      if(dateStr.length === undefined) {
-        const str = JSON.stringify(dateStr, null, 2)
-        return str.slice(1, 11) + ' ' + str.slice(12, -6)
-      }
-      return dateStr
+      const str = JSON.stringify(dateStr, null, 2)
+      const lastStr = str.slice(1, 11) + ' ' + str.slice(12, -6)
+      return dateStr.length === undefined ? lastStr : dateStr
     }
     //进一步个性化 lastUpdated,全部文章页中使用
     function changeTime(dateStr) {
-      let str = ''
-      str = dateStr.slice(0, 7)
+      const str = dateStr.slice(0, 7)
       const arr = str.split('-')
       let result = [
         arr[0] + '-' + arr[1],
@@ -88,172 +89,157 @@ module.exports = (options, ctx) => ({
 
     posts.forEach((val, index) => {
       //遍历posts目录生成包含所有文章信息的 archived
-      let page = {};
-      let sear = {};
+      let page = {}
+      let sear = {}
       let {
         excerpt,
         lastUpdated,
         path,
         _strippedContent
-      } = val;
-      let { tags, title } = val.frontmatter;
+      } = val
+      let { tags, title } = val.frontmatter
       if (_strippedContent) {
         _strippedContent = _strippedContent
           .replace(/[\n\r]/g, ' ')
-          .replace(/\s+/, ' ');
+          .replace(/\s+/, ' ')
       }
       if (_strippedContent) {
-        excerpt =
-          excerpt ||
-          (_strippedContent.slice(0, 100)
-            ? _strippedContent.slice(0, 100) + '......'
-            : false) ||
-          '';
-        excerpt = excerpt.replace(/#/g, '').replace(/^\!(.+)(\.png\))$/, 'image');
+        const newStrippedContent = _strippedContent.slice(0, 100)
+        const newExcerpt = newStrippedContent ? newStrippedContent + '......' : false
+        excerpt = excerpt || newExcerpt || ''
+        excerpt = excerpt.replace(/#/g, '').replace(/^\!(.+)(\.png\))$/, 'image')
       } else {
-        excerpt = '';
+        excerpt = ''
       }
 
       lastUpdated =
         val.frontmatter.date ||
         lastUpdated ||
-        moment().format('YYYY-MM-DD HH:mm:ss');
-      lastUpdated = changeDate(lastUpdated);
-      tags = tags || '';
-      title = title || '你忘记写title字段了';
+        moment().format('YYYY-MM-DD HH:mm:ss')
+      lastUpdated = changeDate(lastUpdated)
+      tags = tags || ''
+      title = title || '你忘记写title字段了'
 
-      page.excerpt = excerpt;
-      page.tags = tags;
-      page.id = index;
-      page.title = title;
-      page.lastUpdated = lastUpdated;
-      page.path = path;
+      page.excerpt = excerpt
+      page.tags = tags
+      page.id = index
+      page.title = title
+      page.lastUpdated = lastUpdated
+      page.path = path
 
-      sear.title = title;
-      sear.path = path;
-      sear.strippedContent = _strippedContent;
+      sear.title = title
+      sear.path = path
+      sear.strippedContent = _strippedContent
 
-      archived.push(page);
-      search.push(sear);
+      archived.push(page)
+      search.push(sear)
 
       //生成标签页的数据
       //剔除不需要的数据
-      const t = {};
-      t.lastUpdated = lastUpdated;
-      t.tags = tags;
-      t.id = index;
-      t.title = title;
-      t.path = path;
+      const t = {}
+      t.lastUpdated = lastUpdated
+      t.tags = tags
+      t.id = index
+      t.title = title
+      t.path = path
 
       if (!tags) {
         if (!tagsList['未分类']) {
-          tagsList['未分类'] = [{ name: '未分类' }];
+          tagsList['未分类'] = [{ name: '未分类' }]
         }
-        tagsList['未分类'].push(t);
+        tagsList['未分类'].push(t)
       } else {
         tags.forEach(tag => {
           if (tag === undefined) {
             if (!tagsList['未分类']) {
-              tagsList['未分类'] = [{ name: '未分类' }];
+              tagsList['未分类'] = [{ name: '未分类' }]
             }
-            tagsList['未分类'].push(t);
+            tagsList['未分类'].push(t)
           }
           if (!tagsList[tag]) {
-            tagsList[tag] = [{ name: tag }];
+            tagsList[tag] = [{ name: tag }]
           }
-          tagsList[tag].push(t);
-        });
+          tagsList[tag].push(t)
+        })
       }
-    });
+    })
 
     //生成全部文章页所需要的数据
-    let index = 0;
+    let index = 0
     archived.forEach((val, i) => {
-      let result1 = changeTime(val.lastUpdated);
+      let result1 = changeTime(val.lastUpdated)
       if (archived.length === 1) {
-        poList[0] = [result1[0]];
-        return poList[0].push(val);
+        poList[0] = [result1[0]]
+        return poList[0].push(val)
       }
       if (i + 1 !== archived.length) {
         var result2 = changeTime(
           archived[i + 1].lastUpdated
-        );
+        )
       } else {
         var result2 = changeTime(
           archived[i - 1].lastUpdated
-        );
+        )
       }
       if (!poList[index]) {
-        poList[index] = [result1[0]];
+        poList[index] = [result1[0]]
       }
       if (!poList[index]) {
-        poList[index] = [result2[0]];
+        poList[index] = [result2[0]]
       }
-      poList[index].push(val);
+      poList[index].push(val)
       if (result1[1] !== result2[1]) {
-        index++;
+        index++
       }
-    });
+    })
 
-    const dataPath = path.resolve(__dirname, 'data');
-    console.log('正在写入本地数据,加快在客户端的速度~~');
+    const dataPath = path.resolve(__dirname, 'data')
+    log('正在写入本地数据,加快在客户端的速度~~')
 
-    fs.writeFile(
-      `${dataPath}/content.js`,
-      `export default ${JSON.stringify(
-        archived,
-        null,
-        2
-      )};`,
-      error => {
-        if (error)
-          return console.log(
-            '写入首页content文件失败,原因是' + error.message
-          );
-        console.log('写入首页content文件成功');
+    const genDataFile = (filePath, fileData, errorCallback) => {
+      fs.writeFile(
+        `${dataPath}/${filePath}.js`,
+        `export default ${JSON.stringify(fileData, null, 2)};`,
+        error => {
+          errorCallback(error)
+        }
+      )
+    }
+
+    const genLogMsg = (type, error) => {
+      const errMsg = error ? error.message : ''
+      const msgMap = {
+        content: { errorMsg: `写入首页content文件失败,原因是${errMsg}`, successMsg: '写入首页content文件成功' },
+        tagsList: { errorMsg: `写入标签页tagsList文件失败,原因是${errMsg}`, successMsg: '写入标签页tagsList文件成功' },
+        search: { errorMsg: `写入搜索search文件失败,原因是${errMsg}`, successMsg: '写入搜索search文件成功' },
+        poList: { errorMsg: `写入归档页poList文件失败,原因是${errMsg}`, successMsg: '写入归档页poList文件成功' }
       }
-    );
 
-    fs.writeFile(
-      `${dataPath}/tagsList.js`,
-      `export default ${JSON.stringify(
-        tagsList,
-        null,
-        2
-      )};`,
-      error => {
-        if (error)
-          return console.log(
-            '写入标签页tagsList文件失败,原因是' +
-              error.message
-          );
-        console.log('写入标签页tagsList文件成功');
-      }
-    );
+      return msgMap[type]
+    }
 
-    fs.writeFile(
-      `${dataPath}/search.js`,
-      `export default ${JSON.stringify(search, null, 2)};`,
-      error => {
-        if (error)
-          return console.log(
-            '写入搜索search文件失败,原因是' + error.message
-          );
-        console.log('写入搜索search文件成功');
-      }
-    );
+    genDataFile('content', archived, error => {
+      const logObj = genLogMsg('content')
+      const logMsg = error ? logObj.errorMsg : logObj.successMsg
+      log(logMsg)
+    })
 
-    fs.writeFile(
-      `${dataPath}/poList.js`,
-      `export default ${JSON.stringify(poList, null, 2)};`,
-      error => {
-        if (error)
-          return console.log(
-            '写入归档页poList文件失败,原因是' +
-              error.message
-          );
-        console.log('写入归档页poList文件成功');
-      }
-    );
+    genDataFile('tagsList', tagsList, error => {
+      const logObj = genLogMsg('tagsList')
+      const logMsg = error ? logObj.errorMsg : logObj.successMsg
+      log(logMsg)
+    })
+
+    genDataFile('search', archived, error => {
+      const logObj = genLogMsg('search')
+      const logMsg = error ? logObj.errorMsg : logObj.successMsg
+      log(logMsg)
+    })
+
+    genDataFile('poList', archived, error => {
+      const logObj = genLogMsg('poList')
+      const logMsg = error ? logObj.errorMsg : logObj.successMsg
+      log(logMsg)
+    })
   }
-});
+})
