@@ -153,11 +153,12 @@ export default {
       this.$router.push(item.path)
     },
     bindScrl () {
-      let topScroll = getScrollTop() 
+      const topScroll = getScrollTop() 
 
       this.hasShadow = topScroll > 190 ? true : false
      
       window.onscroll = () => {
+        const topScroll = getScrollTop() 
         this.hasShadow = topScroll > 190 ? true : false
       }
     }
