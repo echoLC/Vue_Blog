@@ -10,9 +10,12 @@
     <i class="el-icon-arrow-up"></i>
   </el-button>
 </template>
+
 <script>
+import { getScrollTop } from '../utils/dom'
+
 export default {
-  name: "GoTop",
+  name: 'GoTop',
   data () {
     return {
       show: false
@@ -20,42 +23,25 @@ export default {
   },
   computed: {
     isPost () {
-      return this.$route.path.slice(1, 6) === "posts" ? true : false;
+      return this.$route.path.slice(1, 6) === "posts" ? true : false
     }
   },
   mounted () {
-    this.hasShow();
+    this.hasShow()
   },
   methods: {
     hasShow () {
-      const _this = this;
-      window.addEventListener("scroll", function (e) {
-        let h = _this.getScrollTop();
-        if (h > 400) {
-          _this.show = true;
-        } else {
-          _this.show = false;
-        }
-      });
+      window.addEventListener('scroll', () => {
+        this.show = getScrollTop() > 400 ? true : false
+      })
     },
     GoTop () {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    },
-    getScrollTop () {
-      var scrollPos;
-      if (typeof window === "undefined") return;
-      if (window.pageYOffset) {
-        scrollPos = window.pageYOffset;
-      } else if (document.compatMode && document.compatMode != "BackCompat") {
-        scrollPos = document.documentElement.scrollTop;
-      } else if (document.body) {
-        scrollPos = document.body.scrollTop;
-      }
-      return scrollPos;
+      window.scrollTo({ top: 0, behavior: 'smooth' })
     }
   }
-};
+}
 </script>
+
 <style lang="scss" scoped>
 .gotop-btn {
   transition: 0.3s cubic-bezier(0.25, 0.8, 0.5, 1);

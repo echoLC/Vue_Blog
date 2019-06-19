@@ -78,7 +78,10 @@
     </el-row>
   </el-header>
 </template>
+
 <script>
+import { getScrollTop } from '../utils/dom'
+
 export default {
   name: "Header",
   props: {
@@ -102,97 +105,72 @@ export default {
   },
   computed: {
     placeholder () {
-      return this.$themeConfig.placeholder || "";
+      return this.$themeConfig.placeholder || ''
     },
     searchReply () {
-      return this.$themeConfig.searchReply || "什么都没搜到，试一下其它搜索词~";
+      return this.$themeConfig.searchReply || '什么都没搜到，试一下其它搜索词~'
     }
   },
   methods: {
     clickMenu () {
-      this.$emit("clickMenu");
-      if (typeof window === "undefined") return;
+      this.$emit('clickMenu')
+      if (typeof window === 'undefined') return
       if (window.innerWidth <= 1190) {
-        return;
+        return
       }
-      if (this.headerLeft == 65) {
-        this.headerLeft = 260;
-      } else {
-        this.headerLeft = 65;
-      }
+      this.headerLeft = this.headerLeft === 65 ? 260 : 65
     },
     querySearch (queryString, cb) {
-      this.hasResults = true;
-      this.queryStrlen = queryString.length;
-      var restaurants = this.restaurants;
+      this.hasResults = true
+      this.queryStrlen = queryString.length
+      var restaurants = this.restaurants
       var results = queryString
         ? restaurants.filter(this.createFilter(queryString))
-        : restaurants;
+        : restaurants
       if (results.length === 0) {
-        this.hasResults = false;
+        this.hasResults = false
         results.push({
           title: this.searchReply,
           has: false
-        });
+        })
       }
-      cb(results);
+      cb(results)
     },
     createFilter (queryString) {
       return restaurant => {
-        let searchIndex = restaurant.strippedContent
+        const searchIndex = restaurant.strippedContent
           .toLowerCase()
-          .indexOf(queryString.toLowerCase());
+          .indexOf(queryString.toLowerCase())
         if (searchIndex > -1) {
-          restaurant.searchIndex = searchIndex;
-          return true;
-        } else {
-          return false;
+          restaurant.searchIndex = searchIndex
+          return true
         }
-        return searchIndex > -1;
-      };
+        return false
+      }
     },
     handleSelect (item) {
-      if (item.title === this.searchReply) return;
-      this.$router.push(item.path);
-    },
-    getScrollTop () {
-      var scrollPos;
-      if (typeof window === "undefined") return;
-      if (window.pageYOffset) {
-        scrollPos = window.pageYOffset;
-      } else if (document.compatMode && document.compatMode != "BackCompat") {
-        scrollPos = document.documentElement.scrollTop;
-      } else if (document.body) {
-        scrollPos = document.body.scrollTop;
-      }
-      return scrollPos;
+      if (item.title === this.searchReply) return
+      this.$router.push(item.path)
     },
     bindScrl () {
-      const _this = this;
-      let topScroll = _this.getScrollTop();
-      if (topScroll > 190) {
-        this.hasShadow = true;
-      } else {
-        this.hasShadow = false;
+      let topScroll = getScrollTop() 
+
+      this.hasShadow = topScroll > 190 ? true : false
+     
+      window.onscroll = () => {
+        this.hasShadow = topScroll > 190 ? true : false
       }
-      window.onscroll = function () {
-        let topScroll = _this.getScrollTop();
-        if (topScroll > 190) {
-          _this.hasShadow = true;
-        } else {
-          _this.hasShadow = false;
-        }
-      };
     }
   },
   mounted () {
-    this.bindScrl();
+    this.bindScrl()
   },
   activated () {
-    this.bindScrl();
+    this.bindScrl()
   }
-};
+}
 </script>
+
 <style>
 .header-warp {
   width: 100%;

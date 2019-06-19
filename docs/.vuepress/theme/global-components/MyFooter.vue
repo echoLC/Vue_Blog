@@ -20,9 +20,10 @@
     </el-row>
   </el-footer>
 </template>
+
 <script>
 export default {
-  name: "MyFooter",
+  name: 'MyFooter',
   props: {
     isHide: {
       type: Boolean,
@@ -33,8 +34,9 @@ export default {
       default: () => []
     }
   }
-};
+}
 </script>
+
 <style lang="stylus" scoped>
 .el-footer {
   padding: 0;

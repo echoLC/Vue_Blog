@@ -73,9 +73,10 @@
     </el-menu>
   </el-aside>
 </template>
+
 <script>
 export default {
-  name: "Aside",
+  name: 'Aside',
   props: {
     isHide: {
       type: Boolean,
@@ -84,15 +85,15 @@ export default {
   },
   methods: {
     select (key) {
-      if (key === "/github/") {
-        window.open(this.$themeConfig.github);
-      } else {
-        this.$router.push(key);
+      if (key === '/github/') {
+        return window.open(this.$themeConfig.github)
       }
+      this.$router.push(key)
     }
   }
-};
+}
 </script>
+
 <style lang="stylus" scoped>
 .el-menu {
   border-right: none;

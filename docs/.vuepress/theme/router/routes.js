@@ -1,36 +1,41 @@
-const Layout = () => import('../layouts/Layout.vue');
+const Layout = () => import('../layouts/Layout.vue')
 
 const install = (Vue, { router }) => {
-  let ru = ['/', '/all/', '/about/', '/tags/', '/tags/:tag', '/posts/:post'];
-  const routes = [];
+  let routeNames = ['/', '/all/', '/about/', '/tags/', '/tags/:tag', '/posts/:post']
+  const routes = []
 
-  for (var i = 0, len = ru.length; i < len; i++) {
+  for (var i = 0, len = routeNames.length; i < len; i++) {
     routes.push({
-      name: ru[i],
-      path: ru[i],
+      name: routeNames[i],
+      path: routeNames[i],
       component: Layout
-    });
+    })
   }
 
-  router.addRoutes(routes);
+  router.addRoutes(routes)
+  let loaderWrapper
+
   router.beforeEach((to, from, next) => {
     if (typeof window === 'undefined') {
-      return next();
+      return next()
     }
-    document.getElementById('loader-wrapper').style.display = 'block';
-    document.getElementById('loader-wrapper').style.opacity = '1';
-    next();
-  });
+    loaderWrapper = loaderWrapper || document.getElementById('loader-wrapper')
+    loaderWrapper.style.display = 'block'
+    loaderWrapper.style.opacity = '1'
+    next()
+  })
+
   router.afterEach(() => {
-    if (typeof window === 'undefined') return;
-    document.getElementById('loader-wrapper').style.opacity = '0';
+    if (typeof window === 'undefined') return
+
+    loaderWrapper.style.opacity = '0'
 
     setTimeout(() => {
-      document.getElementById('loader-wrapper').style.display = 'none';
-    }, 200);
-  });
-};
+      loaderWrapper.style.display = 'none'
+    }, 200)
+  })
+}
 
 export default {
   install
-};
+}

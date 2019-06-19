@@ -1,5 +1,5 @@
 <template>
-  <div style="height:100%" @sw-ready="swReady">
+  <div style="height:100%">
     <el-container class="main-container">
       <my-aside :isHide="isHide"></my-aside>
       <el-container class="container-warp">
@@ -27,39 +27,37 @@
   </div>
 </template>
 <script>
-import content from "imData/content.js";
+import content from 'imData/content.js'
+
 export default {
-  name: "Layout",
+  name: 'Layout',
   data () {
     return {
       isHide: false,
       needOverlay: false,
       content: content,
       search: []
-    };
+    }
   },
   created () {
-    import(/* webpackChunkName: "search" */ "imData/search.js").then(search => {
-      this.search = search.default;
-    });
+    import(/* webpackChunkName: "search" */ 'imData/search.js').then(search => {
+      this.search = search.default
+    })
   },
   methods: {
     clickMenu () {
       this.isHide = !this.isHide;
-      if (typeof window === "undefined") return;
+      if (typeof window === 'undefined') return
       if (window.innerWidth <= 1190) {
-        this.needOverlay = !this.needOverlay;
+        this.needOverlay = !this.needOverlay
       }
     },
     close () {
-      this.needOverlay = !this.needOverlay;
-      this.isHide = !this.isHide;
-    },
-    swReady () {
-      console.log('sw ready')
+      this.needOverlay = !this.needOverlay
+      this.isHide = !this.isHide
     }
   }
-};
+}
 </script>
 <style lang="stylus" scoped>
 .main-container {

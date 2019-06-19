@@ -210,7 +210,7 @@ module.exports = (options, ctx) => ({
     const genLogFileMsg = (type, error) => {
       const fileNameMap = {
         content: '首页content',
-        tagList: '标签页tagList',
+        tagsList: '标签页tagList',
         search: '搜索页search',
         poList: '归档页postList'
       }
@@ -222,8 +222,8 @@ module.exports = (options, ctx) => ({
 
     genDataFile('tagsList', tagsList)
 
-    genDataFile('search', archived)
+    genDataFile('search', search)
 
-    genDataFile('poList', archived)
+    genDataFile('poList', poList)
   }
 })

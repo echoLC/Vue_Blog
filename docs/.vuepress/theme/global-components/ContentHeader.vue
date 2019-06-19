@@ -6,6 +6,7 @@
     </div>
   </div>
 </template>
+
 <script>
   export default {
     name: "FixedHeader",
@@ -73,6 +74,7 @@
     }
   };
 </script>
+
 <style lang="scss" scoped>
   .content-header {
     padding: 16px 16px 45px 354px;
