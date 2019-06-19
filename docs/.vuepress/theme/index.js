@@ -95,27 +95,25 @@ module.exports = (options, ctx) => ({
         excerpt,
         lastUpdated,
         path,
-        _strippedContent
+        _strippedContent,
+        frontmatter
       } = val
-      let { tags, title } = val.frontmatter
+      
+      let { tags, title, date } = frontmatter
+  
       if (_strippedContent) {
         _strippedContent = _strippedContent
           .replace(/[\n\r]/g, ' ')
           .replace(/\s+/, ' ')
-      }
-      if (_strippedContent) {
         const newStrippedContent = _strippedContent.slice(0, 100)
         const newExcerpt = newStrippedContent ? newStrippedContent + '......' : false
-        excerpt = excerpt || newExcerpt || ''
+        excerpt = excerpt || newExcerpt
         excerpt = excerpt.replace(/#/g, '').replace(/^\!(.+)(\.png\))$/, 'image')
       } else {
         excerpt = ''
       }
 
-      lastUpdated =
-        val.frontmatter.date ||
-        lastUpdated ||
-        moment().format('YYYY-MM-DD HH:mm:ss')
+      lastUpdated = date || lastUpdated || moment().format('YYYY-MM-DD HH:mm:ss')
       lastUpdated = changeDate(lastUpdated)
       tags = tags || ''
       title = title || '你忘记写title字段了'
@@ -136,30 +134,33 @@ module.exports = (options, ctx) => ({
 
       //生成标签页的数据
       //剔除不需要的数据
-      const t = {}
-      t.lastUpdated = lastUpdated
-      t.tags = tags
-      t.id = index
-      t.title = title
-      t.path = path
+      const tagItem = {
+        id: index,
+        lastUpdated,
+        tags,
+        title,
+        path
+      }
+
+      const handleUnClassifiedTags = () => {
+        const unClassifiedTag = tagsList['未分类']
+        if (!unClassifiedTag) {
+          unClassifiedTag = [{ name: '未分类' }]
+        }
+        unClassifiedTag.push(tagItem)
+      }
 
       if (!tags) {
-        if (!tagsList['未分类']) {
-          tagsList['未分类'] = [{ name: '未分类' }]
-        }
-        tagsList['未分类'].push(t)
+        handleUnClassifiedTags()
       } else {
         tags.forEach(tag => {
           if (tag === undefined) {
-            if (!tagsList['未分类']) {
-              tagsList['未分类'] = [{ name: '未分类' }]
-            }
-            tagsList['未分类'].push(t)
+            handleUnClassifiedTags()
           }
           if (!tagsList[tag]) {
             tagsList[tag] = [{ name: tag }]
           }
-          tagsList[tag].push(t)
+          tagsList[tag].push(tagItem)
         })
       }
     })
@@ -193,53 +194,36 @@ module.exports = (options, ctx) => ({
       }
     })
 
-    const dataPath = path.resolve(__dirname, 'data')
     log('正在写入本地数据,加快在客户端的速度~~')
 
-    const genDataFile = (filePath, fileData, errorCallback) => {
+    const genDataFile = (filePath, fileData) => {
       fs.writeFile(
-        `${dataPath}/${filePath}.js`,
+        `${resolve('data')}/${filePath}.js`,
         `export default ${JSON.stringify(fileData, null, 2)};`,
         error => {
-          errorCallback(error)
+          const logMsg = genLogFileMsg(filePath, error)
+          log(logMsg)
         }
       )
     }
 
-    const genLogMsg = (type, error) => {
-      const errMsg = error ? error.message : ''
-      const msgMap = {
-        content: { errorMsg: `写入首页content文件失败,原因是${errMsg}`, successMsg: '写入首页content文件成功' },
-        tagsList: { errorMsg: `写入标签页tagsList文件失败,原因是${errMsg}`, successMsg: '写入标签页tagsList文件成功' },
-        search: { errorMsg: `写入搜索search文件失败,原因是${errMsg}`, successMsg: '写入搜索search文件成功' },
-        poList: { errorMsg: `写入归档页poList文件失败,原因是${errMsg}`, successMsg: '写入归档页poList文件成功' }
+    const genLogFileMsg = (type, error) => {
+      const fileNameMap = {
+        content: '首页content',
+        tagList: '标签页tagList',
+        search: '搜索页search',
+        poList: '归档页postList'
       }
-
-      return msgMap[type]
+      const fileName = fileNameMap[type]
+      return error ? `写入${fileName}文件失败` : `写入${fileName}文件成功`
     }
 
-    genDataFile('content', archived, error => {
-      const logObj = genLogMsg('content')
-      const logMsg = error ? logObj.errorMsg : logObj.successMsg
-      log(logMsg)
-    })
+    genDataFile('content', archived)
 
-    genDataFile('tagsList', tagsList, error => {
-      const logObj = genLogMsg('tagsList')
-      const logMsg = error ? logObj.errorMsg : logObj.successMsg
-      log(logMsg)
-    })
+    genDataFile('tagsList', tagsList)
 
-    genDataFile('search', archived, error => {
-      const logObj = genLogMsg('search')
-      const logMsg = error ? logObj.errorMsg : logObj.successMsg
-      log(logMsg)
-    })
+    genDataFile('search', archived)
 
-    genDataFile('poList', archived, error => {
-      const logObj = genLogMsg('poList')
-      const logMsg = error ? logObj.errorMsg : logObj.successMsg
-      log(logMsg)
-    })
+    genDataFile('poList', archived)
   }
 })

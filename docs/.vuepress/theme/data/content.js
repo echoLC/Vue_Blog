@@ -1,14 +1,14 @@
 export default [
   {
-    "excerpt": " 定义 代理模式是为对象提供一个代用品或者占位符，以便控制对它的直接访问。当一个对象不想被外界直接访问，就可以使用代理，提供一个替身对象来控制对它的访问，替身对象对请求进行处理之后，再把请求转交......",
+    "excerpt": " 定义 迭代器模式就是提供一种方法顺序访问一个聚合对象中的各个元素，而又不需要暴露该对象的内部表示。在JavaScript中，例如forEach的实现就是一种迭代器模式，它可以遍历数组。jQue......",
     "tags": [
       "JavaScript",
       "设计模式"
     ],
     "id": 0,
-    "title": "代理模式",
-    "lastUpdated": "2019-05-28 22:59:54",
-    "path": "/posts/design-pattern/proxy-pattern.html"
+    "title": "迭代器模式",
+    "lastUpdated": "2019-05-22 22:37:28",
+    "path": "/posts/design-pattern/iterator-pattern.html"
   },
   {
     "excerpt": " 定义 发布-订阅模式是观察者模式的一种，它定义一个对象和多个对象之间的依赖关系，当对象的状态发生改变时，所有依赖它的对象都会收到通知。在JavaScript中，我们一般使用事件模型来代替传统的......",
@@ -22,15 +22,15 @@ export default [
     "path": "/posts/design-pattern/publisher-subscriber-pattern.html"
   },
   {
-    "excerpt": " 定义 迭代器模式就是提供一种方法顺序访问一个聚合对象中的各个元素，而又不需要暴露该对象的内部表示。在JavaScript中，例如forEach的实现就是一种迭代器模式，它可以遍历数组。jQue......",
+    "excerpt": " 定义 代理模式是为对象提供一个代用品或者占位符，以便控制对它的直接访问。当一个对象不想被外界直接访问，就可以使用代理，提供一个替身对象来控制对它的访问，替身对象对请求进行处理之后，再把请求转交......",
     "tags": [
       "JavaScript",
       "设计模式"
     ],
     "id": 2,
-    "title": "迭代器模式",
-    "lastUpdated": "2019-05-22 22:37:28",
-    "path": "/posts/design-pattern/iterator-pattern.html"
+    "title": "代理模式",
+    "lastUpdated": "2019-05-28 22:59:54",
+    "path": "/posts/design-pattern/proxy-pattern.html"
   },
   {
     "excerpt": " 定义 定义一系列算法，把它们一个个封装成策略类，具体的算法封装在策略类的内部方法里，并且使这些策略类可以互相替换。一个基于策略模式的设计至少由两部分组成，第一部分是一组策略类，每个策略类里封装......",
@@ -88,15 +88,15 @@ export default [
     "path": "/posts/design-pattern/decorator-pattern.html"
   },
   {
-    "excerpt": " 定义 享元模式是一种用于性能优化的模式，享元模式的核心是运用共享对象的技术来有效支持大量细粒度的对象。如果系统因为创建了大量对象而导致内存占用过高，享元模式就能发挥作用了。   一个简单......",
+    "excerpt": " 单一职责原则  定义 对于一个类而言，应该只有一个引起它变化的原因。在JavaScript中，单一职责原则更多地是被运用在对象或者方法级别上。单一职责原则（SRP）的职责定义为“引起变......",
     "tags": [
       "JavaScript",
       "设计模式"
     ],
     "id": 8,
-    "title": "享元模式",
-    "lastUpdated": "2019-05-29 14:28:29",
-    "path": "/posts/design-pattern/fly-weight-pattern.html"
+    "title": "设计模式中的一些原则",
+    "lastUpdated": "2019-06-15 14:32:58",
+    "path": "/posts/design-pattern/design-principle.html"
   },
   {
     "excerpt": " 定义 中介者模式的作用就是解除对象与对象之间的紧耦合关系，所有对象通过中介者来通信，而不是互相引用，所以当一个对象发生改变时，只需要通知中介者对象即可。 <br> <center> ![obj......",
@@ -110,15 +110,15 @@ export default [
     "path": "/posts/design-pattern/mediator-pattern.html"
   },
   {
-    "excerpt": " 单一职责原则  定义 对于一个类而言，应该只有一个引起它变化的原因。在JavaScript中，单一职责原则更多地是被运用在对象或者方法级别上。单一职责原则（SRP）的职责定义为“引起变......",
+    "excerpt": " 定义 享元模式是一种用于性能优化的模式，享元模式的核心是运用共享对象的技术来有效支持大量细粒度的对象。如果系统因为创建了大量对象而导致内存占用过高，享元模式就能发挥作用了。   一个简单......",
     "tags": [
       "JavaScript",
       "设计模式"
     ],
     "id": 10,
-    "title": "设计模式中的一些原则",
-    "lastUpdated": "2019-06-15 14:32:58",
-    "path": "/posts/design-pattern/design-principle.html"
+    "title": "享元模式",
+    "lastUpdated": "2019-05-29 14:28:29",
+    "path": "/posts/design-pattern/fly-weight-pattern.html"
   },
   {
     "excerpt": " 背景 到目前，JavaScript常见的设计模式系列我已经写得差不多了。在设计模式的一系列文章中，总是先写一段反例代码，然后再通过设计模式重构之前的代码，这种强烈的对比会加深我们对该设计模式的......",
@@ -132,25 +132,25 @@ export default [
     "path": "/posts/design-pattern/refactor-code.html"
   },
   {
-    "excerpt": " 定义 **允许一个对象在其内部状态改变时来改变它的行为**，对象看起来似乎修改了它的类。在状态模式中，我们把状态封装成独立的类，并将请求委托给当前的状态对象，所以当对象内部的状态改变时，对象会......",
-    "tags": [
-      "JavaScript",
-      "设计模式"
-    ],
-    "id": 12,
-    "title": "状态模式",
-    "lastUpdated": "2019-06-09 17:47:53",
-    "path": "/posts/design-pattern/state-pattern.html"
-  },
-  {
     "excerpt": " 定义 模板方法模式是一种只需要使用继承就可以实现的设计模式，它通常由两部分组成，第一部分是抽象父类，第二部分是具体的实现子类。在抽象父类中封装了子类的算法框架，包括一些公共的方法以及子类中所有......",
     "tags": [
       "JavaScript",
       "设计模式"
     ],
-    "id": 13,
+    "id": 12,
     "title": "模板方法模式",
     "lastUpdated": "2019-05-27 16:23:51",
     "path": "/posts/design-pattern/template-way-pattern.html"
+  },
+  {
+    "excerpt": " 定义 **允许一个对象在其内部状态改变时来改变它的行为**，对象看起来似乎修改了它的类。在状态模式中，我们把状态封装成独立的类，并将请求委托给当前的状态对象，所以当对象内部的状态改变时，对象会......",
+    "tags": [
+      "JavaScript",
+      "设计模式"
+    ],
+    "id": 13,
+    "title": "状态模式",
+    "lastUpdated": "2019-06-09 17:47:53",
+    "path": "/posts/design-pattern/state-pattern.html"
   }
 ];
