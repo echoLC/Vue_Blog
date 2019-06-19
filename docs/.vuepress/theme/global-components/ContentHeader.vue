@@ -1,21 +1,15 @@
 <template>
   <div class="content-header index-header" :class="headerClassName">
     <div class="container fade-scale in">
-      <h1 id="conentHeader" class="title" :class="{'post-content-header': isPosts}">{{title}}</h1>
-      <h5 class="subtitle">{{description}}</h5>
+      <h1 id="conentHeader" class="title" :class="{'post-content-header': isPosts}">{{ title }}</h1>
+      <h5 class="subtitle">{{ description }}</h5>
     </div>
   </div>
 </template>
 
 <script>
   export default {
-    name: "FixedHeader",
-    data() {
-      return {
-        description: "",
-        isPosts: false
-      };
-    },
+    name: 'FixedHeader',
     props: {
       content: {
         type: Array,
@@ -23,53 +17,45 @@
       }
     },
     computed: {
-      title() {
-        let t;
-        switch (this.$route.path.slice(1, 6)) {
-          case "posts":
-            t = this.$page.title;
-            this.isPosts = true;
-            this.description = this.$page.lastUpdated
-              ? this.$page.lastUpdated
-              : "";
-            break;
-          case "archi":
-            t = this.$themeConfig.menus.archieve || "文章归档";
-            this.isPosts = false;
-            if (this.content.length === 0) {
-              return (this.description = "");
-            }
-            setTimeout(() => {
-              this.description =
-                this.content[this.content.length - 1].lastUpdated.slice(0, 7) +
-                "~" +
-                this.content[0].lastUpdated.slice(0, 7) +
-                " ===>>> 共" +
-                this.content.length +
-                "篇";
-            }, 20);
-            break;
-          case "tags/":
-            t = this.$themeConfig.menus.tags || '标签分类';
-            this.isPosts = false;
-            this.description = "";
-            break;
-          case "about":
-            t = this.$themeConfig.menus.about || "自我介绍";
-            this.isPosts = false;
-            this.description = "";
-            break;
-          default:
-            t = this.$site.title || "欢迎光临";
-            this.isPosts = false;
-            this.description = this.$site.description || "期待与你的交流";
+      routePath () {
+        return this.$route.path.slice(1, 6)
+      },
+      isPosts () {
+        return this.routePath === 'posts' ? true : false
+      },
+      title () {
+        const { archieve, tags, about } = this.$themeConfig.menus
+        const title = this.$site.title
+        const titleMap = {
+          'posts': title,
+          'archi': archieve || '文章归档',
+          'tags/': tags || '标签分类',
+          'about': about || '自我介绍'
         }
-        return t;
+        return titleMap[this.routePath] || title
+      },
+      description () {
+        const getArchieveDesc = () => {
+          const contentLen = this.content.length
+          if (contentLen === 0) {
+            return ''
+          }
+          const postStartDate = this.content[contentLen - 1].lastUpdated.slice(0, 7)
+          const postEndDate = this.content[0].lastUpdated.slice(0, 7)
+          return `${postStartDate}~${postEndDate}===>>>${contentLen}篇`
+        }
+        const descriptionMap = {
+          'posts': this.$page.lastUpdated || '',
+          'archi': getArchieveDesc(),
+          'tags/': '' ,
+          'about': ''
+        }
+        const description = descriptionMap[this.routePath]
+        return description === undefined ? this.$site.description : description
       },
       headerClassName () {
-        const path = this.$route.path.slice(1, 6)
-        const classMap = new Map().set('about', 'about-header') .set('posts', 'post-header')
-        return classMap.get(path)
+        const classMap = new Map().set('about', 'about-header').set('posts', 'post-header')
+        return classMap.get(this.routePath)
       }
     }
   };

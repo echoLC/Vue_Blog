@@ -61,7 +61,7 @@ export default {
       }
       
       if (this.$route.path.indexOf("/tags/") > -1 && !componentName) {
-        componentName  = 'Tags'
+        componentName = 'Tags'
         document.title = `${tags} . ${this.$route.params.tag} . ${title}`
       }
       return componentName
