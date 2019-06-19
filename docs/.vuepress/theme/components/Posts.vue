@@ -125,7 +125,7 @@ export default {
       this.catalogList = []
       this.offsetList = []
       this.allH = []
-      const contentEl = document.querySelector('.content,default')
+      const contentEl = document.querySelector('.content__default')
       if (!contentEl) {
         return
       }
