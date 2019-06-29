@@ -25,14 +25,14 @@
       },
       title () {
         const { archieve, tags, about } = this.$themeConfig.menus
-        const title = this.$site.title
+        const title = this.$page.title
         const titleMap = {
           'posts': title,
           'archi': archieve || '文章归档',
           'tags/': tags || '标签分类',
           'about': about || '自我介绍'
         }
-        return titleMap[this.routePath] || title
+        return titleMap[this.routePath] || this.$site.title
       },
       description () {
         const getArchieveDesc = () => {

@@ -57,7 +57,7 @@ module.exports = (options, ctx) => ({
     }
     // 获取时间
     const getTime = (dateObj) => {
-      const date = dateObj['frontmatter']['date'] || dateObj['lastUpdated ']
+      const date = dateObj['frontmatter']['date'] || dateObj['lastUpdated']
       return (new Date(date) || new Date()).getTime()
     } 
     const { pages } = ctx
