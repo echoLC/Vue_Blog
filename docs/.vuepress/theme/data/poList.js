@@ -60,26 +60,14 @@ export default [
   [
     "2019-06",
     {
-      "excerpt": " 单一职责原则  定义 对于一个类而言，应该只有一个引起它变化的原因。在JavaScript中，单一职责原则更多地是被运用在对象或者方法级别上。单一职责原则（SRP）的职责定义为“引起变......",
+      "excerpt": " 历史 跟设计模式有关的第一本书籍是由建筑师[克里斯托佛·亚历山大](https://zh.wikipedia.org/wiki/%E5%85%8B%E9%87%8C%E6%96%AF%E6%8......",
       "tags": [
-        "JavaScript",
         "设计模式"
       ],
       "id": 5,
-      "title": "设计模式中的一些原则",
-      "lastUpdated": "2019-06-15 14:32:58",
-      "path": "/posts/design-pattern/design-principle.html"
-    },
-    {
-      "excerpt": " 定义 装饰者模式可以动态地给某个对象添加一些额外的职责，而不会影响这个类中派生的其他对象。装饰模式能够在不改变对象自身的基础上，在程序运行期间给对象动态地添加职责，跟继承相比，装饰者更加轻便灵......",
-      "tags": [
-        "JavaScript",
-        "设计模式"
-      ],
-      "id": 6,
-      "title": "装饰者模式",
-      "lastUpdated": "2019-06-01 11:42:50",
-      "path": "/posts/design-pattern/decorator-pattern.html"
+      "title": "设计模式概述",
+      "lastUpdated": "2019-06-29 16:39:50",
+      "path": "/posts/design-pattern/deign-patterns-intro.html"
     }
   ],
   [
@@ -90,10 +78,38 @@ export default [
         "JavaScript",
         "设计模式"
       ],
-      "id": 7,
+      "id": 6,
       "title": "命令模式",
       "lastUpdated": "2019-05-24 21:10:23",
       "path": "/posts/design-pattern/command-pattern.html"
+    }
+  ],
+  [
+    "2019-06",
+    {
+      "excerpt": " 定义 装饰者模式可以动态地给某个对象添加一些额外的职责，而不会影响这个类中派生的其他对象。装饰模式能够在不改变对象自身的基础上，在程序运行期间给对象动态地添加职责，跟继承相比，装饰者更加轻便灵......",
+      "tags": [
+        "JavaScript",
+        "设计模式"
+      ],
+      "id": 7,
+      "title": "装饰者模式",
+      "lastUpdated": "2019-06-01 11:42:50",
+      "path": "/posts/design-pattern/decorator-pattern.html"
+    }
+  ],
+  [
+    "2019-05",
+    {
+      "excerpt": " 定义 职责链模式的定义：使多个对象都有机会处理请求，从而避免了请求的发送者与多个接收者直接的耦合关系，将这些接收者连接成一条链，顺着这条链传递该请求，直到找到能处理该请求的对象。   应......",
+      "tags": [
+        "JavaScript",
+        "设计模式"
+      ],
+      "id": 8,
+      "title": "职责链模式",
+      "lastUpdated": "2019-05-29 14:28:29",
+      "path": "/posts/design-pattern/chain-of-responsibility.html"
     },
     {
       "excerpt": " 定义 享元模式是一种用于性能优化的模式，享元模式的核心是运用共享对象的技术来有效支持大量细粒度的对象。如果系统因为创建了大量对象而导致内存占用过高，享元模式就能发挥作用了。   一个简单......",
@@ -101,18 +117,35 @@ export default [
         "JavaScript",
         "设计模式"
       ],
-      "id": 8,
+      "id": 9,
       "title": "享元模式",
       "lastUpdated": "2019-05-29 14:28:29",
       "path": "/posts/design-pattern/fly-weight-pattern.html"
-    },
+    }
+  ],
+  [
+    "2019-06",
+    {
+      "excerpt": " 单一职责原则  定义 对于一个类而言，应该只有一个引起它变化的原因。在JavaScript中，单一职责原则更多地是被运用在对象或者方法级别上。单一职责原则（SRP）的职责定义为“引起变......",
+      "tags": [
+        "JavaScript",
+        "设计模式"
+      ],
+      "id": 10,
+      "title": "设计模式中的一些原则",
+      "lastUpdated": "2019-06-15 14:32:58",
+      "path": "/posts/design-pattern/design-principle.html"
+    }
+  ],
+  [
+    "2019-05",
     {
       "excerpt": " 定义 中介者模式的作用就是解除对象与对象之间的紧耦合关系，所有对象通过中介者来通信，而不是互相引用，所以当一个对象发生改变时，只需要通知中介者对象即可。 <br> <center> ![obj......",
       "tags": [
         "JavaScript",
         "设计模式"
       ],
-      "id": 9,
+      "id": 11,
       "title": "中介者模式",
       "lastUpdated": "2019-05-28 23:39:56",
       "path": "/posts/design-pattern/mediator-pattern.html"
@@ -126,21 +159,10 @@ export default [
         "JavaScript",
         "重构代码"
       ],
-      "id": 10,
+      "id": 12,
       "title": "代码重构",
       "lastUpdated": "2019-06-16 00:31:10",
       "path": "/posts/design-pattern/refactor-code.html"
-    },
-    {
-      "excerpt": " 定义 **允许一个对象在其内部状态改变时来改变它的行为**，对象看起来似乎修改了它的类。在状态模式中，我们把状态封装成独立的类，并将请求委托给当前的状态对象，所以当对象内部的状态改变时，对象会......",
-      "tags": [
-        "JavaScript",
-        "设计模式"
-      ],
-      "id": 11,
-      "title": "状态模式",
-      "lastUpdated": "2019-06-09 17:47:53",
-      "path": "/posts/design-pattern/state-pattern.html"
     }
   ],
   [
@@ -151,21 +173,24 @@ export default [
         "JavaScript",
         "设计模式"
       ],
-      "id": 12,
+      "id": 13,
       "title": "模板方法模式",
       "lastUpdated": "2019-05-27 16:23:51",
       "path": "/posts/design-pattern/template-way-pattern.html"
-    },
+    }
+  ],
+  [
+    "2019-06",
     {
-      "excerpt": " 定义 职责链模式的定义：使多个对象都有机会处理请求，从而避免了请求的发送者与多个接收者直接的耦合关系，将这些接收者连接成一条链，顺着这条链传递该请求，直到找到能处理该请求的对象。   应......",
+      "excerpt": " 定义 **允许一个对象在其内部状态改变时来改变它的行为**，对象看起来似乎修改了它的类。在状态模式中，我们把状态封装成独立的类，并将请求委托给当前的状态对象，所以当对象内部的状态改变时，对象会......",
       "tags": [
         "JavaScript",
         "设计模式"
       ],
-      "id": 13,
-      "title": "职责链模式",
-      "lastUpdated": "2019-05-29 14:28:29",
-      "path": "/posts/design-pattern/chain-of-responsibility.html"
+      "id": 14,
+      "title": "状态模式",
+      "lastUpdated": "2019-06-09 17:47:53",
+      "path": "/posts/design-pattern/state-pattern.html"
     }
   ]
 ];

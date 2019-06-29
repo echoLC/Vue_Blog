@@ -143,7 +143,7 @@ module.exports = (options, ctx) => ({
       }
 
       const handleUnClassifiedTags = () => {
-        const unClassifiedTag = tagsList['未分类']
+        let unClassifiedTag = tagsList['未分类']
         if (!unClassifiedTag) {
           unClassifiedTag = [{ name: '未分类' }]
         }

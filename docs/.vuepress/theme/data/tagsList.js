@@ -44,27 +44,7 @@ export default {
       "path": "/posts/design-pattern/strategy-pattern.html"
     },
     {
-      "id": 5,
-      "lastUpdated": "2019-06-15 14:32:58",
-      "tags": [
-        "JavaScript",
-        "设计模式"
-      ],
-      "title": "设计模式中的一些原则",
-      "path": "/posts/design-pattern/design-principle.html"
-    },
-    {
       "id": 6,
-      "lastUpdated": "2019-06-01 11:42:50",
-      "tags": [
-        "JavaScript",
-        "设计模式"
-      ],
-      "title": "装饰者模式",
-      "path": "/posts/design-pattern/decorator-pattern.html"
-    },
-    {
-      "id": 7,
       "lastUpdated": "2019-05-24 21:10:23",
       "tags": [
         "JavaScript",
@@ -74,7 +54,27 @@ export default {
       "path": "/posts/design-pattern/command-pattern.html"
     },
     {
+      "id": 7,
+      "lastUpdated": "2019-06-01 11:42:50",
+      "tags": [
+        "JavaScript",
+        "设计模式"
+      ],
+      "title": "装饰者模式",
+      "path": "/posts/design-pattern/decorator-pattern.html"
+    },
+    {
       "id": 8,
+      "lastUpdated": "2019-05-29 14:28:29",
+      "tags": [
+        "JavaScript",
+        "设计模式"
+      ],
+      "title": "职责链模式",
+      "path": "/posts/design-pattern/chain-of-responsibility.html"
+    },
+    {
+      "id": 9,
       "lastUpdated": "2019-05-29 14:28:29",
       "tags": [
         "JavaScript",
@@ -84,7 +84,17 @@ export default {
       "path": "/posts/design-pattern/fly-weight-pattern.html"
     },
     {
-      "id": 9,
+      "id": 10,
+      "lastUpdated": "2019-06-15 14:32:58",
+      "tags": [
+        "JavaScript",
+        "设计模式"
+      ],
+      "title": "设计模式中的一些原则",
+      "path": "/posts/design-pattern/design-principle.html"
+    },
+    {
+      "id": 11,
       "lastUpdated": "2019-05-28 23:39:56",
       "tags": [
         "JavaScript",
@@ -94,7 +104,7 @@ export default {
       "path": "/posts/design-pattern/mediator-pattern.html"
     },
     {
-      "id": 10,
+      "id": 12,
       "lastUpdated": "2019-06-16 00:31:10",
       "tags": [
         "JavaScript",
@@ -104,17 +114,7 @@ export default {
       "path": "/posts/design-pattern/refactor-code.html"
     },
     {
-      "id": 11,
-      "lastUpdated": "2019-06-09 17:47:53",
-      "tags": [
-        "JavaScript",
-        "设计模式"
-      ],
-      "title": "状态模式",
-      "path": "/posts/design-pattern/state-pattern.html"
-    },
-    {
-      "id": 12,
+      "id": 13,
       "lastUpdated": "2019-05-27 16:23:51",
       "tags": [
         "JavaScript",
@@ -124,14 +124,14 @@ export default {
       "path": "/posts/design-pattern/template-way-pattern.html"
     },
     {
-      "id": 13,
-      "lastUpdated": "2019-05-29 14:28:29",
+      "id": 14,
+      "lastUpdated": "2019-06-09 17:47:53",
       "tags": [
         "JavaScript",
         "设计模式"
       ],
-      "title": "职责链模式",
-      "path": "/posts/design-pattern/chain-of-responsibility.html"
+      "title": "状态模式",
+      "path": "/posts/design-pattern/state-pattern.html"
     }
   ],
   "设计模式": [
@@ -180,26 +180,15 @@ export default {
     },
     {
       "id": 5,
-      "lastUpdated": "2019-06-15 14:32:58",
+      "lastUpdated": "2019-06-29 16:39:50",
       "tags": [
-        "JavaScript",
         "设计模式"
       ],
-      "title": "设计模式中的一些原则",
-      "path": "/posts/design-pattern/design-principle.html"
+      "title": "设计模式概述",
+      "path": "/posts/design-pattern/deign-patterns-intro.html"
     },
     {
       "id": 6,
-      "lastUpdated": "2019-06-01 11:42:50",
-      "tags": [
-        "JavaScript",
-        "设计模式"
-      ],
-      "title": "装饰者模式",
-      "path": "/posts/design-pattern/decorator-pattern.html"
-    },
-    {
-      "id": 7,
       "lastUpdated": "2019-05-24 21:10:23",
       "tags": [
         "JavaScript",
@@ -209,7 +198,27 @@ export default {
       "path": "/posts/design-pattern/command-pattern.html"
     },
     {
+      "id": 7,
+      "lastUpdated": "2019-06-01 11:42:50",
+      "tags": [
+        "JavaScript",
+        "设计模式"
+      ],
+      "title": "装饰者模式",
+      "path": "/posts/design-pattern/decorator-pattern.html"
+    },
+    {
       "id": 8,
+      "lastUpdated": "2019-05-29 14:28:29",
+      "tags": [
+        "JavaScript",
+        "设计模式"
+      ],
+      "title": "职责链模式",
+      "path": "/posts/design-pattern/chain-of-responsibility.html"
+    },
+    {
+      "id": 9,
       "lastUpdated": "2019-05-29 14:28:29",
       "tags": [
         "JavaScript",
@@ -219,7 +228,17 @@ export default {
       "path": "/posts/design-pattern/fly-weight-pattern.html"
     },
     {
-      "id": 9,
+      "id": 10,
+      "lastUpdated": "2019-06-15 14:32:58",
+      "tags": [
+        "JavaScript",
+        "设计模式"
+      ],
+      "title": "设计模式中的一些原则",
+      "path": "/posts/design-pattern/design-principle.html"
+    },
+    {
+      "id": 11,
       "lastUpdated": "2019-05-28 23:39:56",
       "tags": [
         "JavaScript",
@@ -229,17 +248,7 @@ export default {
       "path": "/posts/design-pattern/mediator-pattern.html"
     },
     {
-      "id": 11,
-      "lastUpdated": "2019-06-09 17:47:53",
-      "tags": [
-        "JavaScript",
-        "设计模式"
-      ],
-      "title": "状态模式",
-      "path": "/posts/design-pattern/state-pattern.html"
-    },
-    {
-      "id": 12,
+      "id": 13,
       "lastUpdated": "2019-05-27 16:23:51",
       "tags": [
         "JavaScript",
@@ -249,14 +258,14 @@ export default {
       "path": "/posts/design-pattern/template-way-pattern.html"
     },
     {
-      "id": 13,
-      "lastUpdated": "2019-05-29 14:28:29",
+      "id": 14,
+      "lastUpdated": "2019-06-09 17:47:53",
       "tags": [
         "JavaScript",
         "设计模式"
       ],
-      "title": "职责链模式",
-      "path": "/posts/design-pattern/chain-of-responsibility.html"
+      "title": "状态模式",
+      "path": "/posts/design-pattern/state-pattern.html"
     }
   ],
   "http": [
@@ -294,7 +303,7 @@ export default {
       "name": "重构代码"
     },
     {
-      "id": 10,
+      "id": 12,
       "lastUpdated": "2019-06-16 00:31:10",
       "tags": [
         "JavaScript",
