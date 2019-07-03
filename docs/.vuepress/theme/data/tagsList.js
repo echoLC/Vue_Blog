@@ -49,8 +49,8 @@ export default {
         "JavaScript",
         "设计模式"
       ],
-      "title": "策略模式",
-      "path": "/posts/design-pattern/strategy-pattern.html"
+      "title": "职责链模式",
+      "path": "/posts/design-pattern/chain-of-responsibility.html"
     },
     {
       "id": 6,
@@ -69,8 +69,8 @@ export default {
         "JavaScript",
         "设计模式"
       ],
-      "title": "职责链模式",
-      "path": "/posts/design-pattern/chain-of-responsibility.html"
+      "title": "策略模式",
+      "path": "/posts/design-pattern/strategy-pattern.html"
     },
     {
       "id": 8,
@@ -184,8 +184,8 @@ export default {
         "JavaScript",
         "设计模式"
       ],
-      "title": "策略模式",
-      "path": "/posts/design-pattern/strategy-pattern.html"
+      "title": "职责链模式",
+      "path": "/posts/design-pattern/chain-of-responsibility.html"
     },
     {
       "id": 6,
@@ -204,8 +204,8 @@ export default {
         "JavaScript",
         "设计模式"
       ],
-      "title": "职责链模式",
-      "path": "/posts/design-pattern/chain-of-responsibility.html"
+      "title": "策略模式",
+      "path": "/posts/design-pattern/strategy-pattern.html"
     },
     {
       "id": 8,

@@ -6,7 +6,7 @@ Layout: Layout
 
 **职位：前端开发工程师**
                     
-**邮箱：651644100@qq.com**
+**邮箱：651644100luochao@gmail.com**
 <br>
 <br>
 ## 教育经历
@@ -21,5 +21,4 @@ Layout: Layout
 <p>3.熟悉<strong>Vue全家桶开发</strong>，能独立搭建<strong>Vue</strong>开发环境，有四个以上的<strong>Vue</strong>项目经验；</p>
 <p>4.<strong>熟悉常见的性能优化知识，比如JS按需加载，图片懒加载，图片的处理，资源预加载，HTTP缓存，Service Worker缓存，Reflow，Repaint等，并有一定实战经验</strong>；</p>
 <p>5.对<strong>PWA</strong>的一系列技术有一定的研究，并在项目中有实践；</p>
-<p>6.平时使用Mac开发，熟悉常见的Linux命令，对Nginx有一定的了解；</p>
-<p>7.平时通过<strong>Github，MDN，Stackoverflow</strong>等网站进行学习。</p>
+<p>6.平时通过<strong>Github，MDN，Stackoverflow</strong>等网站进行学习。</p>

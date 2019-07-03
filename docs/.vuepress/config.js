@@ -34,7 +34,7 @@ module.exports = {
     placeholder: '搜搜看', //搜索框的默认文章
     searchReply: '什么都没搜到，试一下其它搜索词~',
     author: 'echoLC', //侧边栏的设置
-    email: '651644100@qq.com',
+    email: '651644100luochao@gmail.com',
     pagination: '5', //每一页显示的文章个数
     avatar: '/avatar.png', //头像地址
     brand: '/avatar_bg.jpeg', //头像背景图片地址
