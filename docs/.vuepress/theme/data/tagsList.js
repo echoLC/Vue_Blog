@@ -5,7 +5,7 @@ export default {
     },
     {
       "id": 0,
-      "lastUpdated": "2019-06-29 16:45:02",
+      "lastUpdated": "2019-07-03 16:35:53",
       "tags": [
         "设计模式"
       ],
@@ -13,7 +13,17 @@ export default {
       "path": "/posts/design-pattern/deign-patterns-intro.html"
     },
     {
-      "id": 2,
+      "id": 1,
+      "lastUpdated": "2019-07-03 16:35:53",
+      "tags": [
+        "JavaScript",
+        "设计模式"
+      ],
+      "title": "装饰者模式",
+      "path": "/posts/design-pattern/decorator-pattern.html"
+    },
+    {
+      "id": 3,
       "lastUpdated": "2019-06-15 14:32:58",
       "tags": [
         "JavaScript",
@@ -23,7 +33,7 @@ export default {
       "path": "/posts/design-pattern/design-principle.html"
     },
     {
-      "id": 3,
+      "id": 4,
       "lastUpdated": "2019-06-09 17:47:53",
       "tags": [
         "JavaScript",
@@ -33,17 +43,17 @@ export default {
       "path": "/posts/design-pattern/state-pattern.html"
     },
     {
-      "id": 4,
-      "lastUpdated": "2019-06-01 11:42:50",
+      "id": 5,
+      "lastUpdated": "2019-05-29 14:28:29",
       "tags": [
         "JavaScript",
         "设计模式"
       ],
-      "title": "装饰者模式",
-      "path": "/posts/design-pattern/decorator-pattern.html"
+      "title": "策略模式",
+      "path": "/posts/design-pattern/strategy-pattern.html"
     },
     {
-      "id": 5,
+      "id": 6,
       "lastUpdated": "2019-05-29 14:28:29",
       "tags": [
         "JavaScript",
@@ -53,7 +63,7 @@ export default {
       "path": "/posts/design-pattern/chain-of-responsibility.html"
     },
     {
-      "id": 6,
+      "id": 7,
       "lastUpdated": "2019-05-29 14:28:29",
       "tags": [
         "JavaScript",
@@ -61,16 +71,6 @@ export default {
       ],
       "title": "享元模式",
       "path": "/posts/design-pattern/fly-weight-pattern.html"
-    },
-    {
-      "id": 7,
-      "lastUpdated": "2019-05-29 14:28:29",
-      "tags": [
-        "JavaScript",
-        "设计模式"
-      ],
-      "title": "策略模式",
-      "path": "/posts/design-pattern/strategy-pattern.html"
     },
     {
       "id": 8,
@@ -139,6 +139,16 @@ export default {
     },
     {
       "id": 1,
+      "lastUpdated": "2019-07-03 16:35:53",
+      "tags": [
+        "JavaScript",
+        "设计模式"
+      ],
+      "title": "装饰者模式",
+      "path": "/posts/design-pattern/decorator-pattern.html"
+    },
+    {
+      "id": 2,
       "lastUpdated": "2019-06-16 00:31:10",
       "tags": [
         "JavaScript",
@@ -148,7 +158,7 @@ export default {
       "path": "/posts/design-pattern/refactor-code.html"
     },
     {
-      "id": 2,
+      "id": 3,
       "lastUpdated": "2019-06-15 14:32:58",
       "tags": [
         "JavaScript",
@@ -158,7 +168,7 @@ export default {
       "path": "/posts/design-pattern/design-principle.html"
     },
     {
-      "id": 3,
+      "id": 4,
       "lastUpdated": "2019-06-09 17:47:53",
       "tags": [
         "JavaScript",
@@ -168,17 +178,17 @@ export default {
       "path": "/posts/design-pattern/state-pattern.html"
     },
     {
-      "id": 4,
-      "lastUpdated": "2019-06-01 11:42:50",
+      "id": 5,
+      "lastUpdated": "2019-05-29 14:28:29",
       "tags": [
         "JavaScript",
         "设计模式"
       ],
-      "title": "装饰者模式",
-      "path": "/posts/design-pattern/decorator-pattern.html"
+      "title": "策略模式",
+      "path": "/posts/design-pattern/strategy-pattern.html"
     },
     {
-      "id": 5,
+      "id": 6,
       "lastUpdated": "2019-05-29 14:28:29",
       "tags": [
         "JavaScript",
@@ -188,7 +198,7 @@ export default {
       "path": "/posts/design-pattern/chain-of-responsibility.html"
     },
     {
-      "id": 6,
+      "id": 7,
       "lastUpdated": "2019-05-29 14:28:29",
       "tags": [
         "JavaScript",
@@ -196,16 +206,6 @@ export default {
       ],
       "title": "享元模式",
       "path": "/posts/design-pattern/fly-weight-pattern.html"
-    },
-    {
-      "id": 7,
-      "lastUpdated": "2019-05-29 14:28:29",
-      "tags": [
-        "JavaScript",
-        "设计模式"
-      ],
-      "title": "策略模式",
-      "path": "/posts/design-pattern/strategy-pattern.html"
     },
     {
       "id": 8,
@@ -273,7 +273,7 @@ export default {
       "name": "重构代码"
     },
     {
-      "id": 1,
+      "id": 2,
       "lastUpdated": "2019-06-16 00:31:10",
       "tags": [
         "JavaScript",

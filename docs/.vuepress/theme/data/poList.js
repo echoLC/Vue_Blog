@@ -1,6 +1,6 @@
 export default [
   [
-    "2019-06",
+    "2019-07",
     {
       "excerpt": " 历史 跟设计模式有关的第一本书籍是由建筑师[克里斯托佛·亚历山大](https://zh.wikipedia.org/wiki/%E5%85%8B%E9%87%8C%E6%96%AF%E6%8......",
       "tags": [
@@ -8,16 +8,30 @@ export default [
       ],
       "id": 0,
       "title": "设计模式概述",
-      "lastUpdated": "2019-06-29 16:45:02",
+      "lastUpdated": "2019-07-03 16:35:53",
       "path": "/posts/design-pattern/deign-patterns-intro.html"
     },
+    {
+      "excerpt": " 定义 装饰者模式可以动态地给某个对象添加一些额外的职责，而不会影响这个类中派生的其他对象。装饰模式能够在不改变对象自身的基础上，在程序运行期间给对象动态地添加职责，跟继承相比，装饰者更加轻便灵......",
+      "tags": [
+        "JavaScript",
+        "设计模式"
+      ],
+      "id": 1,
+      "title": "装饰者模式",
+      "lastUpdated": "2019-07-03 16:35:53",
+      "path": "/posts/design-pattern/decorator-pattern.html"
+    }
+  ],
+  [
+    "2019-06",
     {
       "excerpt": " 背景 到目前，JavaScript常见的设计模式系列我已经写得差不多了。在设计模式的一系列文章中，总是先写一段反例代码，然后再通过设计模式重构之前的代码，这种强烈的对比会加深我们对该设计模式的......",
       "tags": [
         "JavaScript",
         "重构代码"
       ],
-      "id": 1,
+      "id": 2,
       "title": "代码重构",
       "lastUpdated": "2019-06-16 00:31:10",
       "path": "/posts/design-pattern/refactor-code.html"
@@ -28,7 +42,7 @@ export default [
         "JavaScript",
         "设计模式"
       ],
-      "id": 2,
+      "id": 3,
       "title": "设计模式中的一些原则",
       "lastUpdated": "2019-06-15 14:32:58",
       "path": "/posts/design-pattern/design-principle.html"
@@ -39,32 +53,32 @@ export default [
         "JavaScript",
         "设计模式"
       ],
-      "id": 3,
+      "id": 4,
       "title": "状态模式",
       "lastUpdated": "2019-06-09 17:47:53",
       "path": "/posts/design-pattern/state-pattern.html"
-    },
-    {
-      "excerpt": " 定义 装饰者模式可以动态地给某个对象添加一些额外的职责，而不会影响这个类中派生的其他对象。装饰模式能够在不改变对象自身的基础上，在程序运行期间给对象动态地添加职责，跟继承相比，装饰者更加轻便灵......",
-      "tags": [
-        "JavaScript",
-        "设计模式"
-      ],
-      "id": 4,
-      "title": "装饰者模式",
-      "lastUpdated": "2019-06-01 11:42:50",
-      "path": "/posts/design-pattern/decorator-pattern.html"
     }
   ],
   [
     "2019-05",
+    {
+      "excerpt": " 定义 定义一系列算法，把它们一个个封装成策略类，具体的算法封装在策略类的内部方法里，并且使这些策略类可以互相替换。一个基于策略模式的设计至少由两部分组成，第一部分是一组策略类，每个策略类里封装......",
+      "tags": [
+        "JavaScript",
+        "设计模式"
+      ],
+      "id": 5,
+      "title": "策略模式",
+      "lastUpdated": "2019-05-29 14:28:29",
+      "path": "/posts/design-pattern/strategy-pattern.html"
+    },
     {
       "excerpt": " 定义 职责链模式的定义：使多个对象都有机会处理请求，从而避免了请求的发送者与多个接收者直接的耦合关系，将这些接收者连接成一条链，顺着这条链传递该请求，直到找到能处理该请求的对象。   应......",
       "tags": [
         "JavaScript",
         "设计模式"
       ],
-      "id": 5,
+      "id": 6,
       "title": "职责链模式",
       "lastUpdated": "2019-05-29 14:28:29",
       "path": "/posts/design-pattern/chain-of-responsibility.html"
@@ -75,21 +89,10 @@ export default [
         "JavaScript",
         "设计模式"
       ],
-      "id": 6,
+      "id": 7,
       "title": "享元模式",
       "lastUpdated": "2019-05-29 14:28:29",
       "path": "/posts/design-pattern/fly-weight-pattern.html"
-    },
-    {
-      "excerpt": " 定义 定义一系列算法，把它们一个个封装成策略类，具体的算法封装在策略类的内部方法里，并且使这些策略类可以互相替换。一个基于策略模式的设计至少由两部分组成，第一部分是一组策略类，每个策略类里封装......",
-      "tags": [
-        "JavaScript",
-        "设计模式"
-      ],
-      "id": 7,
-      "title": "策略模式",
-      "lastUpdated": "2019-05-29 14:28:29",
-      "path": "/posts/design-pattern/strategy-pattern.html"
     },
     {
       "excerpt": " 定义 中介者模式的作用就是解除对象与对象之间的紧耦合关系，所有对象通过中介者来通信，而不是互相引用，所以当一个对象发生改变时，只需要通知中介者对象即可。 <br> <center> ![obj......",
