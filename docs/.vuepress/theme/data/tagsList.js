@@ -1,19 +1,10 @@
 export default {
-  "设计模式": [
+  "JavaScript": [
     {
-      "name": "设计模式"
+      "name": "JavaScript"
     },
     {
       "id": 0,
-      "lastUpdated": "2019-07-03 16:35:53",
-      "tags": [
-        "设计模式"
-      ],
-      "title": "设计模式概述",
-      "path": "/posts/design-pattern/deign-patterns-intro.html"
-    },
-    {
-      "id": 1,
       "lastUpdated": "2019-07-03 16:35:53",
       "tags": [
         "JavaScript",
@@ -21,6 +12,16 @@ export default {
       ],
       "title": "装饰者模式",
       "path": "/posts/design-pattern/decorator-pattern.html"
+    },
+    {
+      "id": 2,
+      "lastUpdated": "2019-06-16 00:31:10",
+      "tags": [
+        "JavaScript",
+        "重构代码"
+      ],
+      "title": "代码重构",
+      "path": "/posts/design-pattern/refactor-code.html"
     },
     {
       "id": 3,
@@ -59,8 +60,8 @@ export default {
         "JavaScript",
         "设计模式"
       ],
-      "title": "职责链模式",
-      "path": "/posts/design-pattern/chain-of-responsibility.html"
+      "title": "享元模式",
+      "path": "/posts/design-pattern/fly-weight-pattern.html"
     },
     {
       "id": 7,
@@ -69,8 +70,8 @@ export default {
         "JavaScript",
         "设计模式"
       ],
-      "title": "享元模式",
-      "path": "/posts/design-pattern/fly-weight-pattern.html"
+      "title": "职责链模式",
+      "path": "/posts/design-pattern/chain-of-responsibility.html"
     },
     {
       "id": 8,
@@ -133,12 +134,12 @@ export default {
       "path": "/posts/design-pattern/iterator-pattern.html"
     }
   ],
-  "JavaScript": [
+  "设计模式": [
     {
-      "name": "JavaScript"
+      "name": "设计模式"
     },
     {
-      "id": 1,
+      "id": 0,
       "lastUpdated": "2019-07-03 16:35:53",
       "tags": [
         "JavaScript",
@@ -148,14 +149,13 @@ export default {
       "path": "/posts/design-pattern/decorator-pattern.html"
     },
     {
-      "id": 2,
-      "lastUpdated": "2019-06-16 00:31:10",
+      "id": 1,
+      "lastUpdated": "2019-07-03 16:35:53",
       "tags": [
-        "JavaScript",
-        "重构代码"
+        "设计模式"
       ],
-      "title": "代码重构",
-      "path": "/posts/design-pattern/refactor-code.html"
+      "title": "设计模式概述",
+      "path": "/posts/design-pattern/deign-patterns-intro.html"
     },
     {
       "id": 3,
@@ -194,8 +194,8 @@ export default {
         "JavaScript",
         "设计模式"
       ],
-      "title": "职责链模式",
-      "path": "/posts/design-pattern/chain-of-responsibility.html"
+      "title": "享元模式",
+      "path": "/posts/design-pattern/fly-weight-pattern.html"
     },
     {
       "id": 7,
@@ -204,8 +204,8 @@ export default {
         "JavaScript",
         "设计模式"
       ],
-      "title": "享元模式",
-      "path": "/posts/design-pattern/fly-weight-pattern.html"
+      "title": "职责链模式",
+      "path": "/posts/design-pattern/chain-of-responsibility.html"
     },
     {
       "id": 8,

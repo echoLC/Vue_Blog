@@ -1,24 +1,24 @@
 export default [
   {
-    "excerpt": " 历史 跟设计模式有关的第一本书籍是由建筑师[克里斯托佛·亚历山大](https://zh.wikipedia.org/wiki/%E5%85%8B%E9%87%8C%E6%96%AF%E6%8......",
-    "tags": [
-      "设计模式"
-    ],
-    "id": 0,
-    "title": "设计模式概述",
-    "lastUpdated": "2019-07-03 16:35:53",
-    "path": "/posts/design-pattern/deign-patterns-intro.html"
-  },
-  {
     "excerpt": " 定义 装饰者模式可以动态地给某个对象添加一些额外的职责，而不会影响这个类中派生的其他对象。装饰模式能够在不改变对象自身的基础上，在程序运行期间给对象动态地添加职责，跟继承相比，装饰者更加轻便灵......",
     "tags": [
       "JavaScript",
       "设计模式"
     ],
-    "id": 1,
+    "id": 0,
     "title": "装饰者模式",
     "lastUpdated": "2019-07-03 16:35:53",
     "path": "/posts/design-pattern/decorator-pattern.html"
+  },
+  {
+    "excerpt": " 历史 跟设计模式有关的第一本书籍是由建筑师[克里斯托佛·亚历山大](https://zh.wikipedia.org/wiki/%E5%85%8B%E9%87%8C%E6%96%AF%E6%8......",
+    "tags": [
+      "设计模式"
+    ],
+    "id": 1,
+    "title": "设计模式概述",
+    "lastUpdated": "2019-07-03 16:35:53",
+    "path": "/posts/design-pattern/deign-patterns-intro.html"
   },
   {
     "excerpt": " 背景 到目前，JavaScript常见的设计模式系列我已经写得差不多了。在设计模式的一系列文章中，总是先写一段反例代码，然后再通过设计模式重构之前的代码，这种强烈的对比会加深我们对该设计模式的......",
@@ -65,26 +65,26 @@ export default [
     "path": "/posts/design-pattern/strategy-pattern.html"
   },
   {
-    "excerpt": " 定义 职责链模式的定义：使多个对象都有机会处理请求，从而避免了请求的发送者与多个接收者直接的耦合关系，将这些接收者连接成一条链，顺着这条链传递该请求，直到找到能处理该请求的对象。   应......",
-    "tags": [
-      "JavaScript",
-      "设计模式"
-    ],
-    "id": 6,
-    "title": "职责链模式",
-    "lastUpdated": "2019-05-29 14:28:29",
-    "path": "/posts/design-pattern/chain-of-responsibility.html"
-  },
-  {
     "excerpt": " 定义 享元模式是一种用于性能优化的模式，享元模式的核心是运用共享对象的技术来有效支持大量细粒度的对象。如果系统因为创建了大量对象而导致内存占用过高，享元模式就能发挥作用了。   一个简单......",
     "tags": [
       "JavaScript",
       "设计模式"
     ],
-    "id": 7,
+    "id": 6,
     "title": "享元模式",
     "lastUpdated": "2019-05-29 14:28:29",
     "path": "/posts/design-pattern/fly-weight-pattern.html"
+  },
+  {
+    "excerpt": " 定义 职责链模式的定义：使多个对象都有机会处理请求，从而避免了请求的发送者与多个接收者直接的耦合关系，将这些接收者连接成一条链，顺着这条链传递该请求，直到找到能处理该请求的对象。   应......",
+    "tags": [
+      "JavaScript",
+      "设计模式"
+    ],
+    "id": 7,
+    "title": "职责链模式",
+    "lastUpdated": "2019-05-29 14:28:29",
+    "path": "/posts/design-pattern/chain-of-responsibility.html"
   },
   {
     "excerpt": " 定义 中介者模式的作用就是解除对象与对象之间的紧耦合关系，所有对象通过中介者来通信，而不是互相引用，所以当一个对象发生改变时，只需要通知中介者对象即可。 <br> <center> ![obj......",
