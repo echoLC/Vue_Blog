@@ -11,7 +11,7 @@ import 'imStyles/content.styl'
 export default ({ Vue, router }) => {
   Vue.use(routes, { router })
   Vue.use(importElement)
-  document && integrateGitalk(router)
+  // document && integrateGitalk(router)
 }
 
 function integrateGitalk (router) {

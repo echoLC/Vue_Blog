@@ -1,24 +1,24 @@
 export default [
   {
+    "excerpt": " 历史 跟设计模式有关的第一本书籍是由[克里斯托佛·亚历山大](https://zh.wikipedia.org/wiki/%E5%85%8B%E9%87%8C%E6%96%AF%E6%89%9......",
+    "tags": [
+      "设计模式"
+    ],
+    "id": 0,
+    "title": "设计模式概述",
+    "lastUpdated": "2019-07-04 18:49:49",
+    "path": "/posts/design-pattern/deign-patterns-intro.html"
+  },
+  {
     "excerpt": " 定义 装饰者模式可以动态地给某个对象添加一些额外的职责，而不会影响这个类中派生的其他对象。装饰模式能够在不改变对象自身的基础上，在程序运行期间给对象动态地添加职责，跟继承相比，装饰者更加轻便灵......",
     "tags": [
       "JavaScript",
       "设计模式"
     ],
-    "id": 0,
+    "id": 1,
     "title": "装饰者模式",
     "lastUpdated": "2019-07-03 16:35:53",
     "path": "/posts/design-pattern/decorator-pattern.html"
-  },
-  {
-    "excerpt": " 历史 跟设计模式有关的第一本书籍是由建筑师[克里斯托佛·亚历山大](https://zh.wikipedia.org/wiki/%E5%85%8B%E9%87%8C%E6%96%AF%E6%8......",
-    "tags": [
-      "设计模式"
-    ],
-    "id": 1,
-    "title": "设计模式概述",
-    "lastUpdated": "2019-07-03 16:35:53",
-    "path": "/posts/design-pattern/deign-patterns-intro.html"
   },
   {
     "excerpt": " 背景 到目前，JavaScript常见的设计模式系列我已经写得差不多了。在设计模式的一系列文章中，总是先写一段反例代码，然后再通过设计模式重构之前的代码，这种强烈的对比会加深我们对该设计模式的......",
