@@ -56,7 +56,7 @@ export default {
         'about': `${about}${title}`,
       }
 
-      if (componentKey !== 'posts') {
+      if (componentKey !== 'posts' && typeof window !== 'undefined') {
         document.title = documentTitleMap[componentKey] || `${home}${title}`
       }
       
