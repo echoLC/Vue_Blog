@@ -8,7 +8,7 @@ export default [
       ],
       "id": 0,
       "title": "设计模式概述",
-      "lastUpdated": "2019-07-05 14:11:33",
+      "lastUpdated": "2019-07-12 14:47:11",
       "path": "/posts/design-pattern/deign-patterns-intro.html"
     },
     {
