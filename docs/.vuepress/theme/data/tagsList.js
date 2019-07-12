@@ -59,8 +59,8 @@ export default {
         "JavaScript",
         "设计模式"
       ],
-      "title": "享元模式",
-      "path": "/posts/design-pattern/fly-weight-pattern.html"
+      "title": "职责链模式",
+      "path": "/posts/design-pattern/chain-of-responsibility.html"
     },
     {
       "id": 7,
@@ -69,8 +69,8 @@ export default {
         "JavaScript",
         "设计模式"
       ],
-      "title": "职责链模式",
-      "path": "/posts/design-pattern/chain-of-responsibility.html"
+      "title": "享元模式",
+      "path": "/posts/design-pattern/fly-weight-pattern.html"
     },
     {
       "id": 8,
@@ -194,8 +194,8 @@ export default {
         "JavaScript",
         "设计模式"
       ],
-      "title": "享元模式",
-      "path": "/posts/design-pattern/fly-weight-pattern.html"
+      "title": "职责链模式",
+      "path": "/posts/design-pattern/chain-of-responsibility.html"
     },
     {
       "id": 7,
@@ -204,8 +204,8 @@ export default {
         "JavaScript",
         "设计模式"
       ],
-      "title": "职责链模式",
-      "path": "/posts/design-pattern/chain-of-responsibility.html"
+      "title": "享元模式",
+      "path": "/posts/design-pattern/fly-weight-pattern.html"
     },
     {
       "id": 8,
