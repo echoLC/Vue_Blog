@@ -1,10 +1,21 @@
 export default [
   {
+    "excerpt": "  背景  我们都知道JS模块化的演变经历了一个漫长的过程，从最初的**CommonJS** ，到后来的**AMD**和**CMD**，再到今天的**ES6模块**化方案。优胜劣汰，对于JS这门......",
+    "tags": [
+      "javascript",
+      "module"
+    ],
+    "id": 0,
+    "title": "CommonJS和ES6模块的区别",
+    "lastUpdated": "2020-04-20 14:24:03",
+    "path": "/posts/javascript/commonjs-and-esm.html"
+  },
+  {
     "excerpt": " 历史 跟设计模式有关的第一本书籍是由[克里斯托佛·亚历山大](https://zh.wikipedia.org/wiki/%E5%85%8B%E9%87%8C%E6%96%AF%E6%89%9......",
     "tags": [
       "设计模式"
     ],
-    "id": 0,
+    "id": 1,
     "title": "设计模式概述",
     "lastUpdated": "2019-07-12 14:47:11",
     "path": "/posts/design-pattern/deign-patterns-intro.html"
@@ -15,7 +26,7 @@ export default [
       "JavaScript",
       "设计模式"
     ],
-    "id": 1,
+    "id": 2,
     "title": "装饰者模式",
     "lastUpdated": "2019-07-03 16:35:53",
     "path": "/posts/design-pattern/decorator-pattern.html"
@@ -26,7 +37,7 @@ export default [
       "JavaScript",
       "重构代码"
     ],
-    "id": 2,
+    "id": 3,
     "title": "代码重构",
     "lastUpdated": "2019-06-16 00:31:10",
     "path": "/posts/design-pattern/refactor-code.html"
@@ -37,7 +48,7 @@ export default [
       "JavaScript",
       "设计模式"
     ],
-    "id": 3,
+    "id": 4,
     "title": "设计模式中的一些原则",
     "lastUpdated": "2019-06-15 14:32:58",
     "path": "/posts/design-pattern/design-principle.html"
@@ -48,21 +59,10 @@ export default [
       "JavaScript",
       "设计模式"
     ],
-    "id": 4,
+    "id": 5,
     "title": "状态模式",
     "lastUpdated": "2019-06-09 17:47:53",
     "path": "/posts/design-pattern/state-pattern.html"
-  },
-  {
-    "excerpt": " 定义 定义一系列算法，把它们一个个封装成策略类，具体的算法封装在策略类的内部方法里，并且使这些策略类可以互相替换。一个基于策略模式的设计至少由两部分组成，第一部分是一组策略类，每个策略类里封装......",
-    "tags": [
-      "JavaScript",
-      "设计模式"
-    ],
-    "id": 5,
-    "title": "策略模式",
-    "lastUpdated": "2019-05-29 14:28:29",
-    "path": "/posts/design-pattern/strategy-pattern.html"
   },
   {
     "excerpt": " 定义 职责链模式的定义：使多个对象都有机会处理请求，从而避免了请求的发送者与多个接收者直接的耦合关系，将这些接收者连接成一条链，顺着这条链传递该请求，直到找到能处理该请求的对象。   应......",
@@ -87,12 +87,23 @@ export default [
     "path": "/posts/design-pattern/fly-weight-pattern.html"
   },
   {
-    "excerpt": " 定义 中介者模式的作用就是解除对象与对象之间的紧耦合关系，所有对象通过中介者来通信，而不是互相引用，所以当一个对象发生改变时，只需要通知中介者对象即可。 <br> <center> ![obj......",
+    "excerpt": " 定义 定义一系列算法，把它们一个个封装成策略类，具体的算法封装在策略类的内部方法里，并且使这些策略类可以互相替换。一个基于策略模式的设计至少由两部分组成，第一部分是一组策略类，每个策略类里封装......",
     "tags": [
       "JavaScript",
       "设计模式"
     ],
     "id": 8,
+    "title": "策略模式",
+    "lastUpdated": "2019-05-29 14:28:29",
+    "path": "/posts/design-pattern/strategy-pattern.html"
+  },
+  {
+    "excerpt": " 定义 中介者模式的作用就是解除对象与对象之间的紧耦合关系，所有对象通过中介者来通信，而不是互相引用，所以当一个对象发生改变时，只需要通知中介者对象即可。 <br> <center> ![obj......",
+    "tags": [
+      "JavaScript",
+      "设计模式"
+    ],
+    "id": 9,
     "title": "中介者模式",
     "lastUpdated": "2019-05-28 23:39:56",
     "path": "/posts/design-pattern/mediator-pattern.html"
@@ -103,7 +114,7 @@ export default [
       "JavaScript",
       "设计模式"
     ],
-    "id": 9,
+    "id": 10,
     "title": "代理模式",
     "lastUpdated": "2019-05-28 22:59:54",
     "path": "/posts/design-pattern/proxy-pattern.html"
@@ -114,7 +125,7 @@ export default [
       "JavaScript",
       "设计模式"
     ],
-    "id": 10,
+    "id": 11,
     "title": "模板方法模式",
     "lastUpdated": "2019-05-27 16:23:51",
     "path": "/posts/design-pattern/template-way-pattern.html"
@@ -125,7 +136,7 @@ export default [
       "JavaScript",
       "设计模式"
     ],
-    "id": 11,
+    "id": 12,
     "title": "命令模式",
     "lastUpdated": "2019-05-24 21:10:23",
     "path": "/posts/design-pattern/command-pattern.html"
@@ -136,7 +147,7 @@ export default [
       "JavaScript",
       "设计模式"
     ],
-    "id": 12,
+    "id": 13,
     "title": "发布-订阅模式",
     "lastUpdated": "2019-05-23 17:55:46",
     "path": "/posts/design-pattern/publisher-subscriber-pattern.html"
@@ -147,7 +158,7 @@ export default [
       "JavaScript",
       "设计模式"
     ],
-    "id": 13,
+    "id": 14,
     "title": "迭代器模式",
     "lastUpdated": "2019-05-22 22:37:28",
     "path": "/posts/design-pattern/iterator-pattern.html"
@@ -158,7 +169,7 @@ export default [
       "http",
       "缓存"
     ],
-    "id": 14,
+    "id": 15,
     "title": "浅谈http缓存",
     "lastUpdated": "2019-05-19 10:40:26",
     "path": "/posts/http/http-stragies.html"
