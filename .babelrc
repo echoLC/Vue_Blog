@@ -1,5 +1,13 @@
 {
-  "presets": [["es2015", { "modules": false }]],
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "useBuiltIns": "usage",
+        "corejs": 2
+      }
+    ]
+  ],
   "plugins": [
     [
       "component",
@@ -11,6 +19,7 @@
         "libraryName": "element-ui",
         "styleLibraryName": "~theme"
       }
-    ]
+    ],
+    "@babel/plugin-transform-runtime"
   ]
 }
