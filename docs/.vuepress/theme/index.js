@@ -53,12 +53,12 @@ module.exports = (options, ctx) => ({
     const postsFilter = val => val.path.slice(1, 6) === 'posts'
     //排序函数
     const postsSorter = (prev, next) => {
-      return getTime(prev) - getTime(next) > 0 ? -1 : 1
+      return getTime(next) - getTime(prev)
     }
     // 获取时间
     const getTime = (dateObj) => {
       const date = dateObj['frontmatter']['date'] || dateObj['lastUpdated']
-      return (new Date(date) || new Date()).getTime()
+      return (date ? new Date(date) : new Date()).getTime()
     } 
     const { pages } = ctx
     //格式化 lastUpdated

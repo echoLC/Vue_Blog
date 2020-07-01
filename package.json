@@ -4,7 +4,8 @@
   "description": "template",
   "scripts": {
     "dev": "vuepress dev docs",
-    "build": "vuepress build docs"
+    "build": "vuepress build docs",
+    "release": "sh ./deploy.sh"
   },
   "keywords": [
     "vuepress",
@@ -26,7 +27,7 @@
     "eslint": "5.0.0",
     "eslint-plugin-vue": "5.2.2",
     "moment": "2.24.0",
-    "node-sass": "^4.13.1",
+    "node-sass": "^4.14.1",
     "sass-loader": "7.1.0",
     "vuepress": "^1.4.1"
   }
