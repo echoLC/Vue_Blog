@@ -6,7 +6,7 @@ export default [
     ],
     "id": 0,
     "title": "Webpack概述",
-    "lastUpdated": "2020-07-01 17:54:56",
+    "lastUpdated": "2020-07-01 17:56:22",
     "path": "/posts/webpack/basic-introduce.html"
   },
   {
