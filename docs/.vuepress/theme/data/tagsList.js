@@ -5,6 +5,15 @@ export default {
     },
     {
       "id": 0,
+      "lastUpdated": "2020-07-14 09:05:36",
+      "tags": [
+        "webpack"
+      ],
+      "title": "深入理解Webpack tree shaking",
+      "path": "/posts/webpack/dive-into-webpack-tree-shaking.html"
+    },
+    {
+      "id": 1,
       "lastUpdated": "2020-07-01 17:56:22",
       "tags": [
         "webpack"
@@ -18,7 +27,7 @@ export default {
       "name": "javascript"
     },
     {
-      "id": 1,
+      "id": 2,
       "lastUpdated": "2020-04-20 15:23:38",
       "tags": [
         "javascript",
@@ -33,7 +42,7 @@ export default {
       "name": "module"
     },
     {
-      "id": 1,
+      "id": 2,
       "lastUpdated": "2020-04-20 15:23:38",
       "tags": [
         "javascript",
@@ -48,7 +57,7 @@ export default {
       "name": "设计模式"
     },
     {
-      "id": 2,
+      "id": 3,
       "lastUpdated": "2019-07-12 14:47:11",
       "tags": [
         "设计模式"
@@ -57,7 +66,7 @@ export default {
       "path": "/posts/design-pattern/deign-patterns-intro.html"
     },
     {
-      "id": 3,
+      "id": 4,
       "lastUpdated": "2019-07-03 16:35:53",
       "tags": [
         "JavaScript",
@@ -67,7 +76,7 @@ export default {
       "path": "/posts/design-pattern/decorator-pattern.html"
     },
     {
-      "id": 5,
+      "id": 6,
       "lastUpdated": "2019-06-15 14:32:58",
       "tags": [
         "JavaScript",
@@ -77,7 +86,7 @@ export default {
       "path": "/posts/design-pattern/design-principle.html"
     },
     {
-      "id": 6,
+      "id": 7,
       "lastUpdated": "2019-06-09 17:47:53",
       "tags": [
         "JavaScript",
@@ -87,7 +96,7 @@ export default {
       "path": "/posts/design-pattern/state-pattern.html"
     },
     {
-      "id": 7,
+      "id": 8,
       "lastUpdated": "2019-05-29 14:28:29",
       "tags": [
         "JavaScript",
@@ -97,7 +106,7 @@ export default {
       "path": "/posts/design-pattern/chain-of-responsibility.html"
     },
     {
-      "id": 8,
+      "id": 9,
       "lastUpdated": "2019-05-29 14:28:29",
       "tags": [
         "JavaScript",
@@ -107,7 +116,7 @@ export default {
       "path": "/posts/design-pattern/fly-weight-pattern.html"
     },
     {
-      "id": 9,
+      "id": 10,
       "lastUpdated": "2019-05-29 14:28:29",
       "tags": [
         "JavaScript",
@@ -117,7 +126,7 @@ export default {
       "path": "/posts/design-pattern/strategy-pattern.html"
     },
     {
-      "id": 10,
+      "id": 11,
       "lastUpdated": "2019-05-28 23:39:56",
       "tags": [
         "JavaScript",
@@ -127,7 +136,7 @@ export default {
       "path": "/posts/design-pattern/mediator-pattern.html"
     },
     {
-      "id": 11,
+      "id": 12,
       "lastUpdated": "2019-05-28 22:59:54",
       "tags": [
         "JavaScript",
@@ -137,7 +146,7 @@ export default {
       "path": "/posts/design-pattern/proxy-pattern.html"
     },
     {
-      "id": 12,
+      "id": 13,
       "lastUpdated": "2019-05-27 16:23:51",
       "tags": [
         "JavaScript",
@@ -147,7 +156,7 @@ export default {
       "path": "/posts/design-pattern/template-way-pattern.html"
     },
     {
-      "id": 13,
+      "id": 14,
       "lastUpdated": "2019-05-24 21:10:23",
       "tags": [
         "JavaScript",
@@ -157,7 +166,7 @@ export default {
       "path": "/posts/design-pattern/command-pattern.html"
     },
     {
-      "id": 14,
+      "id": 15,
       "lastUpdated": "2019-05-23 17:55:46",
       "tags": [
         "JavaScript",
@@ -167,7 +176,7 @@ export default {
       "path": "/posts/design-pattern/publisher-subscriber-pattern.html"
     },
     {
-      "id": 15,
+      "id": 16,
       "lastUpdated": "2019-05-22 22:37:28",
       "tags": [
         "JavaScript",
@@ -182,7 +191,7 @@ export default {
       "name": "JavaScript"
     },
     {
-      "id": 3,
+      "id": 4,
       "lastUpdated": "2019-07-03 16:35:53",
       "tags": [
         "JavaScript",
@@ -192,7 +201,7 @@ export default {
       "path": "/posts/design-pattern/decorator-pattern.html"
     },
     {
-      "id": 4,
+      "id": 5,
       "lastUpdated": "2019-06-16 00:31:10",
       "tags": [
         "JavaScript",
@@ -202,7 +211,7 @@ export default {
       "path": "/posts/design-pattern/refactor-code.html"
     },
     {
-      "id": 5,
+      "id": 6,
       "lastUpdated": "2019-06-15 14:32:58",
       "tags": [
         "JavaScript",
@@ -212,7 +221,7 @@ export default {
       "path": "/posts/design-pattern/design-principle.html"
     },
     {
-      "id": 6,
+      "id": 7,
       "lastUpdated": "2019-06-09 17:47:53",
       "tags": [
         "JavaScript",
@@ -222,7 +231,7 @@ export default {
       "path": "/posts/design-pattern/state-pattern.html"
     },
     {
-      "id": 7,
+      "id": 8,
       "lastUpdated": "2019-05-29 14:28:29",
       "tags": [
         "JavaScript",
@@ -232,7 +241,7 @@ export default {
       "path": "/posts/design-pattern/chain-of-responsibility.html"
     },
     {
-      "id": 8,
+      "id": 9,
       "lastUpdated": "2019-05-29 14:28:29",
       "tags": [
         "JavaScript",
@@ -242,7 +251,7 @@ export default {
       "path": "/posts/design-pattern/fly-weight-pattern.html"
     },
     {
-      "id": 9,
+      "id": 10,
       "lastUpdated": "2019-05-29 14:28:29",
       "tags": [
         "JavaScript",
@@ -252,7 +261,7 @@ export default {
       "path": "/posts/design-pattern/strategy-pattern.html"
     },
     {
-      "id": 10,
+      "id": 11,
       "lastUpdated": "2019-05-28 23:39:56",
       "tags": [
         "JavaScript",
@@ -262,7 +271,7 @@ export default {
       "path": "/posts/design-pattern/mediator-pattern.html"
     },
     {
-      "id": 11,
+      "id": 12,
       "lastUpdated": "2019-05-28 22:59:54",
       "tags": [
         "JavaScript",
@@ -272,7 +281,7 @@ export default {
       "path": "/posts/design-pattern/proxy-pattern.html"
     },
     {
-      "id": 12,
+      "id": 13,
       "lastUpdated": "2019-05-27 16:23:51",
       "tags": [
         "JavaScript",
@@ -282,7 +291,7 @@ export default {
       "path": "/posts/design-pattern/template-way-pattern.html"
     },
     {
-      "id": 13,
+      "id": 14,
       "lastUpdated": "2019-05-24 21:10:23",
       "tags": [
         "JavaScript",
@@ -292,7 +301,7 @@ export default {
       "path": "/posts/design-pattern/command-pattern.html"
     },
     {
-      "id": 14,
+      "id": 15,
       "lastUpdated": "2019-05-23 17:55:46",
       "tags": [
         "JavaScript",
@@ -302,7 +311,7 @@ export default {
       "path": "/posts/design-pattern/publisher-subscriber-pattern.html"
     },
     {
-      "id": 15,
+      "id": 16,
       "lastUpdated": "2019-05-22 22:37:28",
       "tags": [
         "JavaScript",
@@ -317,7 +326,7 @@ export default {
       "name": "重构代码"
     },
     {
-      "id": 4,
+      "id": 5,
       "lastUpdated": "2019-06-16 00:31:10",
       "tags": [
         "JavaScript",
@@ -332,7 +341,7 @@ export default {
       "name": "http"
     },
     {
-      "id": 16,
+      "id": 17,
       "lastUpdated": "2019-05-19 10:40:26",
       "tags": [
         "http",
@@ -347,7 +356,7 @@ export default {
       "name": "缓存"
     },
     {
-      "id": 16,
+      "id": 17,
       "lastUpdated": "2019-05-19 10:40:26",
       "tags": [
         "http",

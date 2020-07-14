@@ -1,10 +1,20 @@
 export default [
   {
-    "excerpt": "如果2020年作为一个前端开发你还不知道 `Webpack` 是什么，真的就要考虑回炉重造了。很多人可能会得意洋洋，嘴角上扬回答：这谁不知道，不就是一个项目构建工具吗，我们的项目现在都用着了。这我当然......",
+    "excerpt": "  tree shaking 是什么 首先我们先搞清楚，tree shaking是个什么东东，来看下 MDN 给的介绍： > **Tree shaking** is a term commonly......",
     "tags": [
       "webpack"
     ],
     "id": 0,
+    "title": "深入理解Webpack tree shaking",
+    "lastUpdated": "2020-07-14 09:05:36",
+    "path": "/posts/webpack/dive-into-webpack-tree-shaking.html"
+  },
+  {
+    "excerpt": "如果2020年作为一个前端开发你还不知道 `Webpack` 是什么，真的就要考虑回炉重造了。很多人可能会得意洋洋，嘴角上扬回答：这谁不知道，不就是一个项目构建工具吗，我们的项目现在都用着了。这我当然......",
+    "tags": [
+      "webpack"
+    ],
+    "id": 1,
     "title": "Webpack概述",
     "lastUpdated": "2020-07-01 17:56:22",
     "path": "/posts/webpack/basic-introduce.html"
@@ -15,7 +25,7 @@ export default [
       "javascript",
       "module"
     ],
-    "id": 1,
+    "id": 2,
     "title": "CommonJS和ES6模块的区别",
     "lastUpdated": "2020-04-20 15:23:38",
     "path": "/posts/javascript/commonjs-and-esm.html"
@@ -25,7 +35,7 @@ export default [
     "tags": [
       "设计模式"
     ],
-    "id": 2,
+    "id": 3,
     "title": "设计模式概述",
     "lastUpdated": "2019-07-12 14:47:11",
     "path": "/posts/design-pattern/deign-patterns-intro.html"
@@ -36,7 +46,7 @@ export default [
       "JavaScript",
       "设计模式"
     ],
-    "id": 3,
+    "id": 4,
     "title": "装饰者模式",
     "lastUpdated": "2019-07-03 16:35:53",
     "path": "/posts/design-pattern/decorator-pattern.html"
@@ -47,7 +57,7 @@ export default [
       "JavaScript",
       "重构代码"
     ],
-    "id": 4,
+    "id": 5,
     "title": "代码重构",
     "lastUpdated": "2019-06-16 00:31:10",
     "path": "/posts/design-pattern/refactor-code.html"
@@ -58,7 +68,7 @@ export default [
       "JavaScript",
       "设计模式"
     ],
-    "id": 5,
+    "id": 6,
     "title": "设计模式中的一些原则",
     "lastUpdated": "2019-06-15 14:32:58",
     "path": "/posts/design-pattern/design-principle.html"
@@ -69,7 +79,7 @@ export default [
       "JavaScript",
       "设计模式"
     ],
-    "id": 6,
+    "id": 7,
     "title": "状态模式",
     "lastUpdated": "2019-06-09 17:47:53",
     "path": "/posts/design-pattern/state-pattern.html"
@@ -80,7 +90,7 @@ export default [
       "JavaScript",
       "设计模式"
     ],
-    "id": 7,
+    "id": 8,
     "title": "职责链模式",
     "lastUpdated": "2019-05-29 14:28:29",
     "path": "/posts/design-pattern/chain-of-responsibility.html"
@@ -91,7 +101,7 @@ export default [
       "JavaScript",
       "设计模式"
     ],
-    "id": 8,
+    "id": 9,
     "title": "享元模式",
     "lastUpdated": "2019-05-29 14:28:29",
     "path": "/posts/design-pattern/fly-weight-pattern.html"
@@ -102,7 +112,7 @@ export default [
       "JavaScript",
       "设计模式"
     ],
-    "id": 9,
+    "id": 10,
     "title": "策略模式",
     "lastUpdated": "2019-05-29 14:28:29",
     "path": "/posts/design-pattern/strategy-pattern.html"
@@ -113,7 +123,7 @@ export default [
       "JavaScript",
       "设计模式"
     ],
-    "id": 10,
+    "id": 11,
     "title": "中介者模式",
     "lastUpdated": "2019-05-28 23:39:56",
     "path": "/posts/design-pattern/mediator-pattern.html"
@@ -124,7 +134,7 @@ export default [
       "JavaScript",
       "设计模式"
     ],
-    "id": 11,
+    "id": 12,
     "title": "代理模式",
     "lastUpdated": "2019-05-28 22:59:54",
     "path": "/posts/design-pattern/proxy-pattern.html"
@@ -135,7 +145,7 @@ export default [
       "JavaScript",
       "设计模式"
     ],
-    "id": 12,
+    "id": 13,
     "title": "模板方法模式",
     "lastUpdated": "2019-05-27 16:23:51",
     "path": "/posts/design-pattern/template-way-pattern.html"
@@ -146,7 +156,7 @@ export default [
       "JavaScript",
       "设计模式"
     ],
-    "id": 13,
+    "id": 14,
     "title": "命令模式",
     "lastUpdated": "2019-05-24 21:10:23",
     "path": "/posts/design-pattern/command-pattern.html"
@@ -157,7 +167,7 @@ export default [
       "JavaScript",
       "设计模式"
     ],
-    "id": 14,
+    "id": 15,
     "title": "发布-订阅模式",
     "lastUpdated": "2019-05-23 17:55:46",
     "path": "/posts/design-pattern/publisher-subscriber-pattern.html"
@@ -168,7 +178,7 @@ export default [
       "JavaScript",
       "设计模式"
     ],
-    "id": 15,
+    "id": 16,
     "title": "迭代器模式",
     "lastUpdated": "2019-05-22 22:37:28",
     "path": "/posts/design-pattern/iterator-pattern.html"
@@ -179,7 +189,7 @@ export default [
       "http",
       "缓存"
     ],
-    "id": 16,
+    "id": 17,
     "title": "浅谈http缓存",
     "lastUpdated": "2019-05-19 10:40:26",
     "path": "/posts/http/http-stragies.html"
