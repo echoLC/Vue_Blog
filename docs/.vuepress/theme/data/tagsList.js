@@ -5,7 +5,7 @@ export default {
     },
     {
       "id": 0,
-      "lastUpdated": "2020-07-14 09:05:36",
+      "lastUpdated": "2020-07-14 10:00:58",
       "tags": [
         "webpack"
       ],
@@ -112,8 +112,8 @@ export default {
         "JavaScript",
         "设计模式"
       ],
-      "title": "享元模式",
-      "path": "/posts/design-pattern/fly-weight-pattern.html"
+      "title": "策略模式",
+      "path": "/posts/design-pattern/strategy-pattern.html"
     },
     {
       "id": 10,
@@ -122,8 +122,8 @@ export default {
         "JavaScript",
         "设计模式"
       ],
-      "title": "策略模式",
-      "path": "/posts/design-pattern/strategy-pattern.html"
+      "title": "享元模式",
+      "path": "/posts/design-pattern/fly-weight-pattern.html"
     },
     {
       "id": 11,
@@ -247,8 +247,8 @@ export default {
         "JavaScript",
         "设计模式"
       ],
-      "title": "享元模式",
-      "path": "/posts/design-pattern/fly-weight-pattern.html"
+      "title": "策略模式",
+      "path": "/posts/design-pattern/strategy-pattern.html"
     },
     {
       "id": 10,
@@ -257,8 +257,8 @@ export default {
         "JavaScript",
         "设计模式"
       ],
-      "title": "策略模式",
-      "path": "/posts/design-pattern/strategy-pattern.html"
+      "title": "享元模式",
+      "path": "/posts/design-pattern/fly-weight-pattern.html"
     },
     {
       "id": 11,
