@@ -8,7 +8,7 @@ export default [
       ],
       "id": 0,
       "title": "深入理解Webpack tree shaking",
-      "lastUpdated": "2020-07-14 10:00:58",
+      "lastUpdated": "2020-07-15 14:22:37",
       "path": "/posts/webpack/dive-into-webpack-tree-shaking.html"
     },
     {
@@ -110,26 +110,26 @@ export default [
       "path": "/posts/design-pattern/chain-of-responsibility.html"
     },
     {
-      "excerpt": " 定义 定义一系列算法，把它们一个个封装成策略类，具体的算法封装在策略类的内部方法里，并且使这些策略类可以互相替换。一个基于策略模式的设计至少由两部分组成，第一部分是一组策略类，每个策略类里封装......",
-      "tags": [
-        "JavaScript",
-        "设计模式"
-      ],
-      "id": 9,
-      "title": "策略模式",
-      "lastUpdated": "2019-05-29 14:28:29",
-      "path": "/posts/design-pattern/strategy-pattern.html"
-    },
-    {
       "excerpt": " 定义 享元模式是一种用于性能优化的模式，享元模式的核心是运用共享对象的技术来有效支持大量细粒度的对象。如果系统因为创建了大量对象而导致内存占用过高，享元模式就能发挥作用了。   一个简单......",
       "tags": [
         "JavaScript",
         "设计模式"
       ],
-      "id": 10,
+      "id": 9,
       "title": "享元模式",
       "lastUpdated": "2019-05-29 14:28:29",
       "path": "/posts/design-pattern/fly-weight-pattern.html"
+    },
+    {
+      "excerpt": " 定义 定义一系列算法，把它们一个个封装成策略类，具体的算法封装在策略类的内部方法里，并且使这些策略类可以互相替换。一个基于策略模式的设计至少由两部分组成，第一部分是一组策略类，每个策略类里封装......",
+      "tags": [
+        "JavaScript",
+        "设计模式"
+      ],
+      "id": 10,
+      "title": "策略模式",
+      "lastUpdated": "2019-05-29 14:28:29",
+      "path": "/posts/design-pattern/strategy-pattern.html"
     },
     {
       "excerpt": " 定义 中介者模式的作用就是解除对象与对象之间的紧耦合关系，所有对象通过中介者来通信，而不是互相引用，所以当一个对象发生改变时，只需要通知中介者对象即可。 <br> <center> ![obj......",
