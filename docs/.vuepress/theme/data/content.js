@@ -6,7 +6,7 @@ export default [
     ],
     "id": 0,
     "title": "再谈 Webpack 性能优化",
-    "lastUpdated": "2020-08-03 11:14:06",
+    "lastUpdated": "2020-08-03 12:11:46",
     "path": "/posts/webpack/webpack-perfomance.html"
   },
   {
@@ -95,23 +95,12 @@ export default [
     "path": "/posts/design-pattern/state-pattern.html"
   },
   {
-    "excerpt": " 定义 职责链模式的定义：使多个对象都有机会处理请求，从而避免了请求的发送者与多个接收者直接的耦合关系，将这些接收者连接成一条链，顺着这条链传递该请求，直到找到能处理该请求的对象。   应......",
-    "tags": [
-      "JavaScript",
-      "设计模式"
-    ],
-    "id": 9,
-    "title": "职责链模式",
-    "lastUpdated": "2019-05-29 14:28:29",
-    "path": "/posts/design-pattern/chain-of-responsibility.html"
-  },
-  {
     "excerpt": " 定义 享元模式是一种用于性能优化的模式，享元模式的核心是运用共享对象的技术来有效支持大量细粒度的对象。如果系统因为创建了大量对象而导致内存占用过高，享元模式就能发挥作用了。   一个简单......",
     "tags": [
       "JavaScript",
       "设计模式"
     ],
-    "id": 10,
+    "id": 9,
     "title": "享元模式",
     "lastUpdated": "2019-05-29 14:28:29",
     "path": "/posts/design-pattern/fly-weight-pattern.html"
@@ -122,10 +111,21 @@ export default [
       "JavaScript",
       "设计模式"
     ],
-    "id": 11,
+    "id": 10,
     "title": "策略模式",
     "lastUpdated": "2019-05-29 14:28:29",
     "path": "/posts/design-pattern/strategy-pattern.html"
+  },
+  {
+    "excerpt": " 定义 职责链模式的定义：使多个对象都有机会处理请求，从而避免了请求的发送者与多个接收者直接的耦合关系，将这些接收者连接成一条链，顺着这条链传递该请求，直到找到能处理该请求的对象。   应......",
+    "tags": [
+      "JavaScript",
+      "设计模式"
+    ],
+    "id": 11,
+    "title": "职责链模式",
+    "lastUpdated": "2019-05-29 14:28:29",
+    "path": "/posts/design-pattern/chain-of-responsibility.html"
   },
   {
     "excerpt": " 定义 中介者模式的作用就是解除对象与对象之间的紧耦合关系，所有对象通过中介者来通信，而不是互相引用，所以当一个对象发生改变时，只需要通知中介者对象即可。 <br> <center> ![obj......",

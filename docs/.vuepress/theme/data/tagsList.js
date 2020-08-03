@@ -5,7 +5,7 @@ export default {
     },
     {
       "id": 0,
-      "lastUpdated": "2020-08-03 11:14:06",
+      "lastUpdated": "2020-08-03 12:11:46",
       "tags": [
         "webpack"
       ],
@@ -111,8 +111,8 @@ export default {
         "JavaScript",
         "设计模式"
       ],
-      "title": "职责链模式",
-      "path": "/posts/design-pattern/chain-of-responsibility.html"
+      "title": "享元模式",
+      "path": "/posts/design-pattern/fly-weight-pattern.html"
     },
     {
       "id": 10,
@@ -121,8 +121,8 @@ export default {
         "JavaScript",
         "设计模式"
       ],
-      "title": "享元模式",
-      "path": "/posts/design-pattern/fly-weight-pattern.html"
+      "title": "策略模式",
+      "path": "/posts/design-pattern/strategy-pattern.html"
     },
     {
       "id": 11,
@@ -131,8 +131,8 @@ export default {
         "JavaScript",
         "设计模式"
       ],
-      "title": "策略模式",
-      "path": "/posts/design-pattern/strategy-pattern.html"
+      "title": "职责链模式",
+      "path": "/posts/design-pattern/chain-of-responsibility.html"
     },
     {
       "id": 12,
@@ -246,8 +246,8 @@ export default {
         "JavaScript",
         "设计模式"
       ],
-      "title": "职责链模式",
-      "path": "/posts/design-pattern/chain-of-responsibility.html"
+      "title": "享元模式",
+      "path": "/posts/design-pattern/fly-weight-pattern.html"
     },
     {
       "id": 10,
@@ -256,8 +256,8 @@ export default {
         "JavaScript",
         "设计模式"
       ],
-      "title": "享元模式",
-      "path": "/posts/design-pattern/fly-weight-pattern.html"
+      "title": "策略模式",
+      "path": "/posts/design-pattern/strategy-pattern.html"
     },
     {
       "id": 11,
@@ -266,8 +266,8 @@ export default {
         "JavaScript",
         "设计模式"
       ],
-      "title": "策略模式",
-      "path": "/posts/design-pattern/strategy-pattern.html"
+      "title": "职责链模式",
+      "path": "/posts/design-pattern/chain-of-responsibility.html"
     },
     {
       "id": 12,
